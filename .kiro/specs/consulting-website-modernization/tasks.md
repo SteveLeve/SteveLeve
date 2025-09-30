@@ -35,10 +35,11 @@
   - Create contact.astro page integrating the contact form
   - _Requirements: 2.3, 2.4, 5.2_
 
-- [ ] 6. Develop Cloudflare Worker for contact form processing
-  - Create Worker script for handling form submissions
-  - Implement form data validation and sanitization
-  - Add rate limiting and spam protection mechanisms
+- [ ] 6. Develop Cloudflare Worker with Hono for contact form processing
+  - Set up Hono framework with TypeScript for Worker development
+  - Create RESTful API endpoints for form submission handling
+  - Implement Zod schemas for request validation and type safety
+  - Add Hono middleware for rate limiting and CORS handling
   - Create email template system for notifications
   - _Requirements: 2.1, 2.2, 6.4_
 

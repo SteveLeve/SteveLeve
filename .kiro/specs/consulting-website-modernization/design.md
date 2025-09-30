@@ -111,18 +111,29 @@ src/
 - Content collections for structured data management
 - Responsive design maintaining current Material Design inspiration
 
-### Backend Services (Cloudflare Workers)
+### Backend Services (Cloudflare Workers with Hono)
+
+**Technology Stack:**
+- Hono framework for fast, lightweight API development
+- TypeScript for type safety and better developer experience
+- Zod for runtime validation and type inference
+- Cloudflare Workers runtime optimizations
 
 **Contact Form Handler:**
 ```typescript
-// Worker API Structure
-interface ContactFormData {
-  name: string;
-  email: string;
-  company?: string;
-  message: string;
-  subject: 'consultation' | 'employment' | 'general';
-}
+// Hono app structure with typed routes
+import { Hono } from 'hono';
+import { z } from 'zod';
+
+const contactFormSchema = z.object({
+  name: z.string().min(1).max(100),
+  email: z.string().email(),
+  company: z.string().optional(),
+  message: z.string().min(10).max(1000),
+  subject: z.enum(['consultation', 'employment', 'general'])
+});
+
+type ContactFormData = z.infer<typeof contactFormSchema>;
 
 interface EmailTemplate {
   to: string;
@@ -134,11 +145,12 @@ interface EmailTemplate {
 ```
 
 **Worker Responsibilities:**
-- Form validation and sanitization
-- Rate limiting and spam protection
+- RESTful API endpoints with Hono routing
+- Request validation with Zod schemas
+- Rate limiting and spam protection middleware
 - Email formatting and delivery
 - Response logging for analytics
-- CORS handling for cross-origin requests
+- CORS handling with Hono middleware
 
 ### Infrastructure Components
 
