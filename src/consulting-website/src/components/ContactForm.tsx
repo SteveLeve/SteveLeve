@@ -2,248 +2,256 @@ import { useState } from 'react';
 import type { FormEvent } from 'react';
 
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  subject: 'consultation' | 'employment' | 'general';
-  message: string;
+    name: string;
+    email: string;
+    company: string;
+    subject: string;
+    message: string;
 }
 
 interface FormErrors {
-  name?: string;
-  email?: string;
-  message?: string;
+    name?: string;
+    email?: string;
+    subject?: string;
+    message?: string;
 }
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    subject: 'consultation',
-    message: ''
-  });
+    const [formData, setFormData] = useState<FormData>({
+        name: '',
+        email: '',
+        company: '',
+        subject: '',
+        message: ''
+    });
 
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [errors, setErrors] = useState<FormErrors>({});
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const validateForm = (): boolean => {
-    const newErrors: FormErrors = {};
+    const validateForm = (): boolean => {
+        const newErrors: FormErrors = {};
 
-    // Name validation
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    } else if (formData.name.trim().length < 2) {
-      newErrors.name = 'Name must be at least 2 characters';
-    }
+        // Name validation
+        if (!formData.name.trim()) {
+            newErrors.name = 'Name is required';
+        } else if (formData.name.trim().length < 2) {
+            newErrors.name = 'Name must be at least 2 characters';
+        }
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-    }
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!formData.email.trim()) {
+            newErrors.email = 'Email is required';
+        } else if (!emailRegex.test(formData.email)) {
+            newErrors.email = 'Please enter a valid email address';
+        }
 
-    // Message validation
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters';
-    }
+        // Message validation
+        if (!formData.subject.trim()) {
+            newErrors.subject = 'Subject is required';
+        } else if (formData.subject.trim().length < 10) {
+            newErrors.subject = 'Subject must be at least 10 characters';
+        }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
+        // Message validation
+        if (!formData.message.trim()) {
+            newErrors.message = 'Message is required';
+        } else if (formData.message.trim().length < 10) {
+            newErrors.message = 'Message must be at least 10 characters';
+        }
 
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
 
-    try {
-      // TODO: Replace with actual API endpoint when Cloudflare Worker is ready
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+    const handleSubmit = async (e: FormEvent) => {
+        e.preventDefault();
 
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          subject: 'consultation',
-          message: ''
-        });
-      } else {
-        throw new Error('Failed to send message');
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+        if (!validateForm()) {
+            return;
+        }
 
-  const handleInputChange = (field: keyof FormData, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-    
-    // Clear error when user starts typing
-    if (errors[field as keyof FormErrors]) {
-      setErrors(prev => ({ ...prev, [field]: undefined }));
-    }
-  };
+        setIsSubmitting(true);
+        setSubmitStatus('idle');
 
-  return (
-    <form onSubmit={handleSubmit} className="contact-form">
-      <div className="form-grid">
-        {/* Name Field */}
-        <div className="form-group">
-          <label htmlFor="name" className="form-label">
-            Name *
-          </label>
-          <input
-            type="text"
-            id="name"
-            value={formData.name}
-            onChange={(e) => handleInputChange('name', e.target.value)}
-            className={`form-input ${errors.name ? 'error' : ''}`}
-            placeholder="Your full name"
-            disabled={isSubmitting}
-          />
-          {errors.name && <span className="error-message">{errors.name}</span>}
-        </div>
+        try {
+            // TODO: Replace with actual API endpoint when Cloudflare Worker is ready
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
 
-        {/* Email Field */}
-        <div className="form-group">
-          <label htmlFor="email" className="form-label">
-            Email *
-          </label>
-          <input
-            type="email"
-            id="email"
-            value={formData.email}
-            onChange={(e) => handleInputChange('email', e.target.value)}
-            className={`form-input ${errors.email ? 'error' : ''}`}
-            placeholder="your.email@example.com"
-            disabled={isSubmitting}
-          />
-          {errors.email && <span className="error-message">{errors.email}</span>}
-        </div>
+            if (response.ok) {
+                setSubmitStatus('success');
+                setFormData({
+                    name: '',
+                    email: '',
+                    company: '',
+                    subject: '',
+                    message: ''
+                });
+            } else {
+                throw new Error('Failed to send message');
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
-        {/* Company Field */}
-        <div className="form-group">
-          <label htmlFor="company" className="form-label">
-            Company
-          </label>
-          <input
-            type="text"
-            id="company"
-            value={formData.company}
-            onChange={(e) => handleInputChange('company', e.target.value)}
-            className="form-input"
-            placeholder="Your company (optional)"
-            disabled={isSubmitting}
-          />
-        </div>
+    const handleInputChange = (field: keyof FormData, value: string) => {
+        setFormData(prev => ({ ...prev, [field]: value }));
 
-        {/* Subject Field */}
-        <div className="form-group">
-          <label htmlFor="subject" className="form-label">
-            Subject
-          </label>
-          <select
-            id="subject"
-            value={formData.subject}
-            onChange={(e) => handleInputChange('subject', e.target.value as FormData['subject'])}
-            className="form-input"
-            disabled={isSubmitting}
-          >
-            <option value="consultation">Consulting Services</option>
-            <option value="employment">Employment Opportunity</option>
-            <option value="general">General Inquiry</option>
-          </select>
-        </div>
-      </div>
+        // Clear error when user starts typing
+        if (errors[field as keyof FormErrors]) {
+            setErrors(prev => ({ ...prev, [field]: undefined }));
+        }
+    };
 
-      {/* Message Field */}
-      <div className="form-group">
-        <label htmlFor="message" className="form-label">
-          Message *
-        </label>
-        <textarea
-          id="message"
-          value={formData.message}
-          onChange={(e) => handleInputChange('message', e.target.value)}
-          className={`form-textarea ${errors.message ? 'error' : ''}`}
-          placeholder="Tell me about your project, timeline, and goals..."
-          rows={5}
-          disabled={isSubmitting}
-        />
-        {errors.message && <span className="error-message">{errors.message}</span>}
-      </div>
+    return (
+        <form onSubmit={handleSubmit} className="contact-form">
+            <div className="form-grid">
+                {/* Name Field */}
+                <div className="form-group">
+                    <label htmlFor="name" className="form-label">
+                        Name *
+                    </label>
+                    <input
+                        type="text"
+                        id="name"
+                        value={formData.name}
+                        onChange={(e) => handleInputChange('name', e.target.value)}
+                        className={`form-input ${errors.name ? 'error' : ''}`}
+                        placeholder="Your full name"
+                        disabled={isSubmitting}
+                    />
+                    {errors.name && <span className="error-message">{errors.name}</span>}
+                </div>
 
-      {/* Submit Button */}
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="submit-button"
-      >
-        {isSubmitting ? (
-          <>
-            <span className="material-symbols-outlined spinning">sync</span>
-            Sending...
-          </>
-        ) : (
-          <>
-            <span className="material-symbols-outlined">send</span>
-            Send Message
-          </>
-        )}
-      </button>
+                {/* Email Field */}
+                <div className="form-group">
+                    <label htmlFor="email" className="form-label">
+                        Email *
+                    </label>
+                    <input
+                        type="email"
+                        id="email"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        className={`form-input ${errors.email ? 'error' : ''}`}
+                        placeholder="your.email@example.com"
+                        disabled={isSubmitting}
+                    />
+                    {errors.email && <span className="error-message">{errors.email}</span>}
+                </div>
 
-      {/* Status Messages */}
-      {submitStatus === 'success' && (
-        <div className="status-message success">
-          <span className="material-symbols-outlined">check_circle</span>
-          <div>
-            <strong>Message sent successfully!</strong>
-            <p>I'll get back to you within 24 hours.</p>
-          </div>
-        </div>
-      )}
+                {/* Company Field */}
+                <div className="form-group">
+                    <label htmlFor="company" className="form-label">
+                        Company
+                    </label>
+                    <input
+                        type="text"
+                        id="company"
+                        value={formData.company}
+                        onChange={(e) => handleInputChange('company', e.target.value)}
+                        className="form-input"
+                        placeholder="Your company (optional)"
+                        disabled={isSubmitting}
+                    />
+                </div>
 
-      {submitStatus === 'error' && (
-        <div className="status-message error">
-          <span className="material-symbols-outlined">error</span>
-          <div>
-            <strong>Failed to send message</strong>
-            <p>Please try again or contact me directly via LinkedIn.</p>
-          </div>
-        </div>
-      )}
+                {/* Subject Field */}
+                <div className="form-group">
+                    <label htmlFor="subject" className="form-label">
+                        Subject *
+                    </label>
+                    <input
+                        type="text"
+                        id="subject"
+                        value={formData.subject}
+                        onChange={(e) => handleInputChange('subject', e.target.value)}
+                        className={`form-input ${errors.subject ? 'error' : ''}`}
+                        placeholder="Brief description of your inquiry"
+                        disabled={isSubmitting}
+                    />
+                    {errors.subject && <span className="error-message">{errors.subject}</span>}
+                </div>
+            </div>
 
-      <style jsx>{`
+            {/* Message Field */}
+            <div className="form-group">
+                <label htmlFor="message" className="form-label">
+                    Message *
+                </label>
+                <textarea
+                    id="message"
+                    value={formData.message}
+                    onChange={(e) => handleInputChange('message', e.target.value)}
+                    className={`form-textarea ${errors.message ? 'error' : ''}`}
+                    placeholder="Tell me about your project, timeline, and goals..."
+                    rows={5}
+                    disabled={isSubmitting}
+                />
+                {errors.message && <span className="error-message">{errors.message}</span>}
+            </div>
+
+            {/* Submit Button */}
+            <button
+                type="submit"
+                disabled={isSubmitting}
+                className="submit-button"
+            >
+                {isSubmitting ? (
+                    <>
+                        <span className="material-symbols-outlined spinning">sync</span>
+                        Sending...
+                    </>
+                ) : (
+                    <>
+                        <span className="material-symbols-outlined">send</span>
+                        Send Message
+                    </>
+                )}
+            </button>
+
+            {/* Status Messages */}
+            {submitStatus === 'success' && (
+                <div className="status-message success">
+                    <span className="material-symbols-outlined">check_circle</span>
+                    <div>
+                        <strong>Message sent successfully!</strong>
+                        <p>I'll get back to you within 24 hours.</p>
+                    </div>
+                </div>
+            )}
+
+            {submitStatus === 'error' && (
+                <div className="status-message error">
+                    <span className="material-symbols-outlined">error</span>
+                    <div>
+                        <strong>Failed to send message</strong>
+                        <p>Please try again or contact me directly via LinkedIn.</p>
+                    </div>
+                </div>
+            )}
+
+            <style>{`
         .contact-form {
           max-width: 600px;
           margin: 0 auto;
         }
 
         .form-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
+          display: flex;
+          flex-direction: column;
           gap: 1rem;
           margin-bottom: 1rem;
         }
@@ -369,12 +377,7 @@ export default function ContactForm() {
           font-size: 0.9rem;
         }
 
-        /* Mobile responsive */
-        @media (max-width: 768px) {
-          .form-grid {
-            grid-template-columns: 1fr;
-          }
-        }
+        /* Mobile responsive - no changes needed for single column */
 
         /* Dark theme adjustments */
         :global([data-theme="dark"]) .status-message.success {
@@ -389,6 +392,6 @@ export default function ContactForm() {
           color: #fca5a5;
         }
       `}</style>
-    </form>
-  );
+        </form>
+    );
 }
