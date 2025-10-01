@@ -29,6 +29,8 @@
 
 - [ ] 3. Migrate and enhance homepage content
   - Create Hero.astro component with animated background canvas
+
+
   - Implement ServicePillars.astro component with card layouts
   - Build responsive grid system for service cards
   - Add proper semantic HTML and accessibility attributes
