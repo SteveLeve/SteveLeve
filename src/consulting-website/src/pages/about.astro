@@ -1,0 +1,282 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const highlights = [
+  {
+    title: 'What I\'m known for',
+    items: [
+      'Reliability under constraint — incident response, SLOs, and observability.',
+      'Legacy-to-cloud modernization — AWS migration, portfolio rationalization, platform consolidation.',
+      'Hybrid leadership — servant leadership, developer experience, clear roadmaps backed by execution.'
+    ]
+  },
+  {
+    title: 'Recent highlights',
+    items: [
+      'Led a data center exit in under 12 months.',
+      'Drove zero-downtime AWS migration and observability upgrades.',
+      'Guided M&A platform consolidation with revenue protection.',
+      'Cut infra/observability costs with targeted optimizations.'
+    ]
+  }
+];
+---
+
+<Layout 
+  title="About — Steve Leve" 
+  currentPage="about"
+  description="About Steve Leve — senior technologist focused on reliability, modernization, and pragmatic results."
+>
+  <div class="container">
+    <header class="hero surface">
+      <h1 class="hero-title">
+        <span class="material-symbols-outlined">person</span> 
+        Hi, I'm Steve
+      </h1>
+      <p class="hero-content">
+        Technologist with 25+ years of hands-on engineering and leadership in marketing technology. 
+        I thrive on solving complex cross-functional challenges with pragmatic, customer-focused solutions. 
+        I emphasize data-driven decisions, documentation-driven development, and automation as enablers 
+        of agility and resilience.
+      </p>
+    </header>
+
+    <section class="highlights-grid">
+      {highlights.map(section => (
+        <article class="highlight-card surface">
+          <h3 class="highlight-title">{section.title}</h3>
+          <ul class="highlight-list">
+            {section.items.map(item => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </section>
+
+    <section class="working-style surface">
+      <div class="style-content">
+        <h2>Working style</h2>
+        <p>Empathetic, partner-like, and iterative. Start small, show value early, then scale what works.</p>
+      </div>
+      <a href="/services" class="style-cta">See services</a>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+
+  .hero-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-title .material-symbols-outlined {
+    font-size: 2.25rem;
+    color: var(--brand);
+  }
+
+  .hero-content {
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+  }
+
+  .highlight-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+  }
+
+  .highlight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .1), 0 4px 12px rgba(0, 0, 0, .1);
+  }
+
+  .highlight-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 1rem 0;
+    line-height: 1.3;
+  }
+
+  .highlight-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .highlight-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .highlight-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--brand);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .working-style {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin: 3rem 0;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .style-content h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .style-content p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.5;
+    font-size: 1.05rem;
+  }
+
+  .style-cta {
+    flex-shrink: 0;
+    padding: 0.75rem 1.5rem;
+    background: var(--brand);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .style-cta:hover {
+    background: var(--brand-ink);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(103, 80, 164, 0.3);
+  }
+
+  /* Dark theme adjustments */
+  :global([data-theme="dark"]) .highlight-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .3), 0 4px 12px rgba(0, 0, 0, .2);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 2.5rem 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .hero-title {
+      font-size: 1.75rem;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .hero-title .material-symbols-outlined {
+      font-size: 1.75rem;
+    }
+
+    .hero-content {
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .highlights-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .highlight-card {
+      padding: 1.25rem;
+    }
+
+    .working-style {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      padding: 1.5rem;
+    }
+
+    .style-cta {
+      align-self: center;
+      width: 100%;
+      text-align: center;
+      max-width: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 2rem 1rem;
+    }
+
+    .hero-title {
+      font-size: 1.5rem;
+    }
+
+    .highlight-card {
+      padding: 1rem;
+    }
+
+    .highlight-title {
+      font-size: 1.1rem;
+    }
+
+    .highlight-list li {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+</style>

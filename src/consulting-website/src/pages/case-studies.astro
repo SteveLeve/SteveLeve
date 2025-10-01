@@ -1,0 +1,288 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const caseStudies = [
+  {
+    title: 'Data Center Exit under Austerity',
+    challenge: 'Looming data center closure, 20+ undocumented physical servers, high business risk.',
+    action: 'Reverse-engineered systems, scripted migrations, consolidated into VMware private cloud within 12 months.',
+    result: 'Eliminated existential risk, created foundation for AWS migration, no revenue loss.'
+  },
+  {
+    title: 'AWS Migration & Observability',
+    challenge: 'Managed hosting bottleneck, performance and compliance pressures.',
+    action: 'Planned and executed a 6-month AWS migration with zero downtime; introduced Datadog/OpsGenie observability-first approach.',
+    result: 'Improved resilience, incident response time down 40%, featured in AWS case study.'
+  },
+  {
+    title: 'Platform Consolidation',
+    challenge: 'Needed to merge ShareASale into parent platform, protect revenue streams during migration.',
+    action: 'Designed cross-system integrations (Cloudflare Workers + AWS Lambda), guided account/transaction migration.',
+    result: 'Protected 99.5% of revenue, migrated 250K publisher & 10K merchant accounts on schedule.'
+  }
+];
+---
+
+<Layout 
+  title="Case Studies — Steve Leve" 
+  currentPage="case-studies"
+  description="Case studies in reliability, modernization, and platform consolidation by Steve Leve."
+>
+  <div class="container">
+    <header class="hero surface">
+      <h1 class="hero-title">
+        <span class="material-symbols-outlined">folder_open</span> 
+        Case Studies
+      </h1>
+      <p class="hero-content">
+        Selected stories from 25+ years in technology: high-stakes reliability, 
+        pragmatic modernization, and measurable impact.
+      </p>
+    </header>
+
+    <section class="case-studies-grid">
+      {caseStudies.map(study => (
+        <article class="case-study-card surface">
+          <h3 class="study-title">{study.title}</h3>
+          
+          <div class="study-section">
+            <h4 class="section-label">Challenge:</h4>
+            <p class="section-content">{study.challenge}</p>
+          </div>
+          
+          <div class="study-section">
+            <h4 class="section-label">Action:</h4>
+            <p class="section-content">{study.action}</p>
+          </div>
+          
+          <div class="study-section">
+            <h4 class="section-label">Result:</h4>
+            <p class="section-content result">{study.result}</p>
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <section class="conversation-cta surface">
+      <div class="cta-content">
+        <h2>Want the full story?</h2>
+        <p>I can walk through these case studies in detail and connect lessons learned to your challenges.</p>
+      </div>
+      <a href="/contact" class="cta-button">Start a conversation</a>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+
+  .hero-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-title .material-symbols-outlined {
+    font-size: 2.25rem;
+    color: var(--brand);
+  }
+
+  .hero-content {
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+  }
+
+  .case-study-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+  }
+
+  .case-study-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .1), 0 4px 12px rgba(0, 0, 0, .1);
+  }
+
+  .study-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 1.5rem 0;
+    line-height: 1.3;
+  }
+
+  .study-section {
+    margin-bottom: 1rem;
+  }
+
+  .study-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--brand);
+    margin: 0 0 0.25rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .section-content {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .section-content.result {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .conversation-cta {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin: 3rem 0;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .cta-content h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .cta-content p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .cta-button {
+    flex-shrink: 0;
+    padding: 0.75rem 1.5rem;
+    background: var(--brand);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .cta-button:hover {
+    background: var(--brand-ink);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(103, 80, 164, 0.3);
+  }
+
+  /* Dark theme adjustments */
+  :global([data-theme="dark"]) .case-study-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .3), 0 4px 12px rgba(0, 0, 0, .2);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 2.5rem 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .hero-title {
+      font-size: 1.75rem;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .hero-title .material-symbols-outlined {
+      font-size: 1.75rem;
+    }
+
+    .case-studies-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .case-study-card {
+      padding: 1.25rem;
+    }
+
+    .conversation-cta {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      padding: 1.5rem;
+    }
+
+    .cta-button {
+      align-self: center;
+      width: 100%;
+      text-align: center;
+      max-width: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 2rem 1rem;
+    }
+
+    .hero-title {
+      font-size: 1.5rem;
+    }
+
+    .case-study-card {
+      padding: 1rem;
+    }
+
+    .study-title {
+      font-size: 1.1rem;
+    }
+
+    .case-studies-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

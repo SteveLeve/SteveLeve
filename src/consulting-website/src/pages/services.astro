@@ -1,0 +1,339 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CallToAction from '../components/CallToAction.astro';
+
+const services = [
+  {
+    id: 'reliability',
+    icon: 'monitoring',
+    title: 'Reliability & Incident Response Audit',
+    pricing: 'Fixed-fee • 1–2 weeks',
+    features: [
+      'SLO/SLI review and error budget setup',
+      'Alert hygiene & on-call playbooks',
+      'Observability gaps (Datadog/CloudWatch/OpsGenie)',
+      'Prioritized remediation plan'
+    ]
+  },
+  {
+    id: 'modernization',
+    icon: 'psychology',
+    title: 'Technology Risk & Modernization Assessment',
+    pricing: 'Fixed-fee • 2–3 weeks',
+    features: [
+      'Architecture & tech-debt risk review',
+      'Roadmap with near-term wins and guardrails',
+      'Cloud adoption & cost optimization guidance',
+      'Executive summary + team-level action plan'
+    ]
+  },
+  {
+    id: 'advisor',
+    icon: 'psychology',
+    title: 'Trusted Advisor / Fractional Support',
+    pricing: 'Hybrid • Monthly',
+    features: [
+      'Founder/CTO sounding board',
+      'Architecture and roadmap reviews',
+      'Hands-on troubleshooting when needed',
+      'Hiring support and developer experience'
+    ]
+  },
+  {
+    id: 'ai',
+    icon: 'smart_toy',
+    title: 'AI Readiness & Integration Workshop',
+    pricing: 'Fixed-fee • 1–2 weeks',
+    features: [
+      'Use-case discovery (coding, analytics, ops)',
+      'Security, governance, and data boundaries',
+      'Pilot plan + KPIs for measurable impact',
+      'Tooling recommendations and risk profile'
+    ]
+  }
+];
+---
+
+<Layout 
+  title="Services — Steve Leve" 
+  currentPage="services"
+  description="Fixed-fee assessments and hybrid advisory-execution services for reliability and modernization."
+>
+  <div class="container">
+    <header class="hero surface">
+      <h1 class="hero-title">
+        <span class="material-symbols-outlined">build</span> 
+        Pragmatic services, clear outcomes
+      </h1>
+      <p class="hero-content">
+        Start small, deliver value, iterate. Fixed-fee assessments for quick clarity, 
+        or hybrid advisory with hands-on execution.
+      </p>
+    </header>
+
+    <section class="services-grid">
+      {services.map(service => (
+        <article id={service.id} class="service-card surface">
+          <div class="service-header">
+            <span class="material-symbols-outlined service-icon">{service.icon}</span>
+            <h3>{service.title}</h3>
+          </div>
+          <p class="service-pricing">{service.pricing}</p>
+          <ul class="service-features">
+            {service.features.map(feature => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </section>
+
+    <section class="custom-services surface">
+      <div class="custom-content">
+        <h2>Need something specific?</h2>
+        <p>Happy to tailor scope for MarTech platforms, M&A integration, or cloud cost analysis.</p>
+      </div>
+      <a href="/contact" class="custom-cta">Start a conversation</a>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+
+  .hero-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-title .material-symbols-outlined {
+    font-size: 2.25rem;
+    color: var(--brand);
+  }
+
+  .hero-content {
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+  }
+
+  .service-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .1), 0 4px 12px rgba(0, 0, 0, .1);
+  }
+
+  .service-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-icon {
+    font-size: 1.75rem;
+    color: var(--brand);
+    background: rgba(103, 80, 164, 0.1);
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+
+  .service-card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  .service-pricing {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .service-features li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--brand);
+    font-weight: bold;
+  }
+
+  .custom-services {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin: 3rem 0;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .custom-content h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .custom-content p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .custom-cta {
+    flex-shrink: 0;
+    padding: 0.75rem 1.5rem;
+    background: var(--brand);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .custom-cta:hover {
+    background: var(--brand-ink);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(103, 80, 164, 0.3);
+  }
+
+  /* Dark theme adjustments */
+  :global([data-theme="dark"]) .service-icon {
+    background: rgba(208, 188, 255, 0.15);
+  }
+
+  :global([data-theme="dark"]) .service-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .3), 0 4px 12px rgba(0, 0, 0, .2);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 2.5rem 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .hero-title {
+      font-size: 1.75rem;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .hero-title .material-symbols-outlined {
+      font-size: 1.75rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .service-card {
+      padding: 1.25rem;
+    }
+
+    .custom-services {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      padding: 1.5rem;
+    }
+
+    .custom-cta {
+      align-self: center;
+      width: 100%;
+      text-align: center;
+      max-width: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 2rem 1rem;
+    }
+
+    .hero-title {
+      font-size: 1.5rem;
+    }
+
+    .service-card {
+      padding: 1rem;
+    }
+
+    .service-header {
+      gap: 0.5rem;
+    }
+
+    .service-icon {
+      font-size: 1.5rem;
+      padding: 0.4rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.1rem;
+    }
+  }
+</style>
