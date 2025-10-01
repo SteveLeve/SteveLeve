@@ -1,0 +1,332 @@
+---
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  primaryCta?: { text: string; href: string };
+  secondaryCta?: { text: string; href: string };
+}
+
+const {
+  title = "Reliability-first. Pragmatic by design.",
+  subtitle = "Consulting focused on troubleshooting, modernization, and pragmatic reliability under constraint.",
+  description = "I help agencies and small businesses solve hard technology problems and ship with confidence — from incident response and observability to cloud migration and modernization roadmaps.",
+  primaryCta = { text: "Explore Services", href: "/services" },
+  secondaryCta = { text: "Book a consultation", href: "/contact" }
+} = Astro.props;
+---
+
+<section class="hero surface hero-surface">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  
+  <div class="hero-content">
+    <h1 class="hero-title">
+      <span class="material-symbols-outlined hero-icon">api</span> 
+      {title}
+    </h1>
+    <h2 class="hero-subtitle">{subtitle}</h2>
+    <p class="hero-description">{description}</p>
+    <div class="hero-ctas">
+      <a href={primaryCta.href} class="cta-primary">{primaryCta.text}</a>
+      <a href={secondaryCta.href} class="cta-secondary">{secondaryCta.text}</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Simple animated background for hero section
+  function initHeroCanvas() {
+    const canvas = document.getElementById('heroCanvas') as HTMLCanvasElement;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let animationId: number;
+    let particles: Array<{
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+    }> = [];
+
+    function resizeCanvas() {
+      const rect = canvas.parentElement?.getBoundingClientRect();
+      if (rect) {
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+      }
+    }
+
+    function createParticles() {
+      particles = [];
+      const particleCount = Math.min(50, Math.floor(canvas.width / 20));
+      
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          size: Math.random() * 2 + 1,
+          opacity: Math.random() * 0.3 + 0.1
+        });
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Update and draw particles
+      particles.forEach(particle => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+        
+        // Draw particle
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(103, 80, 164, ${particle.opacity})`;
+        ctx.fill();
+      });
+      
+      // Draw connections
+      particles.forEach((particle, i) => {
+        particles.slice(i + 1).forEach(otherParticle => {
+          const dx = particle.x - otherParticle.x;
+          const dy = particle.y - otherParticle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.strokeStyle = `rgba(103, 80, 164, ${0.1 * (1 - distance / 100)})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        });
+      });
+      
+      animationId = requestAnimationFrame(animate);
+    }
+
+    function init() {
+      resizeCanvas();
+      createParticles();
+      animate();
+    }
+
+    // Initialize
+    init();
+
+    // Handle resize
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      createParticles();
+    });
+
+    // Handle animation toggle
+    const toggleButton = document.querySelector('[data-animation-toggle]');
+    let isAnimating = true;
+    
+    toggleButton?.addEventListener('click', () => {
+      isAnimating = !isAnimating;
+      const icon = toggleButton.querySelector('[data-animation-icon]');
+      
+      if (isAnimating) {
+        animate();
+        if (icon) icon.textContent = 'pause';
+      } else {
+        cancelAnimationFrame(animationId);
+        if (icon) icon.textContent = 'play_arrow';
+      }
+    });
+
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', () => {
+      cancelAnimationFrame(animationId);
+    });
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHeroCanvas);
+  } else {
+    initHeroCanvas();
+  }
+</script>
+
+<style>
+  .hero {
+    position: relative;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #heroCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+  }
+
+  .hero-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-icon {
+    font-size: 2.5rem;
+    color: var(--brand);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-primary {
+    background: var(--brand);
+    color: white;
+    box-shadow: 0 4px 12px rgba(103, 80, 164, 0.3);
+  }
+
+  .cta-primary:hover {
+    background: var(--brand-ink);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(103, 80, 164, 0.4);
+  }
+
+  .cta-secondary {
+    background: transparent;
+    color: var(--brand);
+    border: 2px solid var(--brand);
+  }
+
+  .cta-secondary:hover {
+    background: var(--brand);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(103, 80, 164, 0.3);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3rem 1.5rem;
+      margin: 1rem 0;
+      min-height: 400px;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .hero-icon {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+
+    .hero-ctas {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-primary,
+    .cta-secondary {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 2rem 1rem;
+    }
+
+    .hero-title {
+      font-size: 1.75rem;
+    }
+
+    .hero-icon {
+      font-size: 1.75rem;
+    }
+  }
+</style>

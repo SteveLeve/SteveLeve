@@ -1,0 +1,135 @@
+---
+const projects = [
+  {
+    title: "Reliability Lab",
+    description: "Demonstration project — Kubernetes, Terraform, GitHub Actions, observability-first patterns."
+  },
+  {
+    title: "Consultancy Launch", 
+    description: "Professional services offering — Fixed-fee assessments + hybrid advisory/execution."
+  },
+  {
+    title: "Cloudflare Experiments",
+    description: "Exploring Serverless — Headless CMS + Workers/Pages with Terraform & Wrangler."
+  }
+];
+---
+
+<section class="stripe surface">
+  <div class="stripe-content">
+    <h2>Workshop Projects</h2>
+    <ul class="checklist">
+      {projects.map(project => (
+        <li>
+          <strong>{project.title}:</strong> {project.description}
+        </li>
+      ))}
+    </ul>
+  </div>
+  <a href="/about" class="stripe-cta">About Steve</a>
+</section>
+
+<style>
+  .stripe {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin: 3rem 0;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .stripe-content h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .checklist li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .checklist li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--brand);
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .checklist li strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .stripe-cta {
+    flex-shrink: 0;
+    padding: 0.75rem 1.5rem;
+    background: var(--brand);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .stripe-cta:hover {
+    background: var(--brand-ink);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(103, 80, 164, 0.3);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .stripe {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      padding: 1.5rem;
+    }
+
+    .stripe-content {
+      width: 100%;
+    }
+
+    .stripe-cta {
+      align-self: center;
+      width: 100%;
+      text-align: center;
+      max-width: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stripe {
+      padding: 1.25rem;
+    }
+
+    .stripe-content h2 {
+      font-size: 1.25rem;
+    }
+
+    .checklist li {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+</style>

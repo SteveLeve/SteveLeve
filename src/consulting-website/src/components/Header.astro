@@ -44,9 +44,9 @@ const navItems = [
         class="theme-toggle" 
         type="button" 
         aria-label="Toggle color theme"
-        data-theme-toggle
+        id="theme-toggle"
       >
-        <span class="theme-toggle__icon material-symbols-outlined" data-theme-icon>
+        <span class="theme-toggle__icon material-symbols-outlined" id="theme-icon">
           light_mode
         </span>
       </button>
@@ -183,3 +183,58 @@ const navItems = [
     }
   }
 </style>
+
+<script>
+  function initThemeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    
+    if (!themeToggle || !themeIcon) return;
+
+    // Initialize theme from localStorage or system preference
+    function getInitialTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) return savedTheme;
+      
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    // Apply theme to document
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      themeIcon.textContent = theme === 'light' ? 'dark_mode' : 'light_mode';
+      localStorage.setItem('theme', theme);
+    }
+
+    // Toggle theme
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      applyTheme(newTheme);
+    }
+
+    // Initialize theme on page load
+    const initialTheme = getInitialTheme();
+    applyTheme(initialTheme);
+
+    // Add click event listener
+    themeToggle.addEventListener('click', toggleTheme);
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initThemeToggle);
+  } else {
+    initThemeToggle();
+  }
+
+  // Re-initialize on navigation (for SPA-like behavior)
+  document.addEventListener('astro:page-load', initThemeToggle);
+</script>

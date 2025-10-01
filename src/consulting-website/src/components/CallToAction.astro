@@ -1,0 +1,135 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  ctaText?: string;
+  ctaHref?: string;
+}
+
+const {
+  title = "Ready to reduce risk and move faster?",
+  description = "Let's start with a short conversation and a focused plan.",
+  ctaText = "Get in touch",
+  ctaHref = "/contact"
+} = Astro.props;
+---
+
+<section class="cta surface">
+  <div class="cta-content">
+    <h2 class="cta-title">{title}</h2>
+    <p class="cta-description">{description}</p>
+    <a href={ctaHref} class="cta-button">{ctaText}</a>
+  </div>
+</section>
+
+<style>
+  .cta {
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-ink) 100%);
+    border-radius: var(--radius);
+    padding: 3rem 2rem;
+    margin: 3rem 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    pointer-events: none;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .cta-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.5;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: white;
+    color: var(--brand);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: var(--brand-ink);
+  }
+
+  .cta-button::after {
+    content: '→';
+    transition: transform 0.2s ease;
+  }
+
+  .cta-button:hover::after {
+    transform: translateX(3px);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .cta {
+      padding: 2.5rem 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .cta-title {
+      font-size: 1.75rem;
+    }
+
+    .cta-description {
+      font-size: 1rem;
+    }
+
+    .cta-button {
+      padding: 0.875rem 1.75rem;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cta {
+      padding: 2rem 1rem;
+    }
+
+    .cta-title {
+      font-size: 1.5rem;
+    }
+
+    .cta-button {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+  }
+</style>
