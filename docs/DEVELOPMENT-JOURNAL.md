@@ -599,6 +599,114 @@ The spec creation process helped clarify priorities and technical approach. Havi
 
 ---
 
+## 2025-01-30: Background Animation Removal - Simplified Design
+
+### Context
+
+Decided to remove the animated particle background from the Hero component to achieve a cleaner, simpler design that focuses on content rather than visual effects.
+
+### Changes Made
+
+#### Hero.astro Component
+
+- **Removed Canvas Element**: Eliminated `<canvas id="heroCanvas">` and all associated animation JavaScript
+- **Simplified Styling**: Removed canvas positioning, z-index layering, and overflow hidden properties
+- **Cleaner Layout**: Hero section now uses straightforward flexbox layout without animation complexity
+
+#### Header.astro Component  
+
+- **Removed Animation Toggle**: Eliminated the animation pause/play button from navigation controls
+- **Simplified Controls**: Navigation now only contains the theme toggle button
+- **Updated Styling**: Removed animation-toggle specific CSS rules
+
+### Technical Benefits
+
+- **Reduced Bundle Size**: Eliminated ~100 lines of animation JavaScript code
+- **Better Performance**: No canvas rendering or requestAnimationFrame loops
+- **Simpler Maintenance**: Fewer moving parts and potential animation bugs
+- **Faster Loading**: Less JavaScript to parse and execute on page load
+
+### Design Impact
+
+- **Cleaner Aesthetic**: Focus on typography and content hierarchy
+- **Professional Appearance**: More suitable for business/consulting context
+- **Better Accessibility**: No motion for users who prefer reduced motion
+- **Mobile Optimization**: Simpler layout performs better on mobile devices
+
+### Validation Results
+
+- ✅ Development server runs without errors
+- ✅ Build completes successfully with no TypeScript issues
+- ✅ All pages load correctly (200 status codes)
+- ✅ Theme toggle functionality preserved
+- ✅ Hero component maintains responsive design
+- ✅ Navigation controls simplified appropriately
+
+### Business Rationale
+
+- **Professional Focus**: Consulting website should emphasize expertise over visual effects
+- **Performance Priority**: Faster loading times more important for job applications
+- **Maintenance Simplicity**: Fewer potential issues during deployment and updates
+- **User Experience**: Content-first approach aligns with consulting business goals
+
+### Next Steps
+
+The site is now even more production-ready with this simplified approach. Ready to proceed with:
+
+1. Task 6: Cloudflare Worker development for contact form
+2. Task 8: Production deployment setup
+3. Remaining infrastructure and optimization tasks
+
+---
+
+## 2025-01-30: Dark Theme Brand Color Adjustment
+
+### Context
+
+The brand color `#D0BCFF` in dark theme was too bright and didn't provide appropriate contrast for its use cases. Updated to a darker shade in the same purple palette for better visual hierarchy and readability.
+
+### Changes Made
+
+#### Color Update
+
+- **Previous**: `#D0BCFF` (very light purple)
+- **New**: `#9C88FF` (darker purple, better contrast)
+- **Locations Updated**:
+  - `src/consulting-website/src/layouts/Layout.astro` (both media query and data-theme selectors)
+  - `static_site/styles.css` (for consistency with original static site)
+
+### Design Rationale
+
+- **Better Contrast**: Darker color provides better readability against dark backgrounds
+- **Professional Appearance**: Less "neon" appearance, more suitable for business context
+- **Accessibility**: Improved contrast ratios for better accessibility compliance
+- **Visual Hierarchy**: Better distinction between brand elements and other UI components
+
+### Technical Implementation
+
+- Updated CSS custom property `--brand` in all dark theme contexts
+- Maintained consistency across both Astro project and static site reference
+- Preserved all other color relationships in the design system
+
+### Validation Results
+
+- ✅ Build completes successfully with no errors
+- ✅ No TypeScript or CSS diagnostics issues
+- ✅ Color change applies to all brand elements (buttons, icons, links)
+- ✅ Theme switching functionality preserved
+- ✅ Consistent across all pages and components
+
+### Visual Impact
+
+The new color `#9C88FF` provides:
+
+- Better readability in dark theme
+- More professional appearance
+- Improved accessibility compliance
+- Maintained brand identity while enhancing usability
+
+---
+
 ## Template for Future Entries
 
 ### [Date]: [Brief Description]

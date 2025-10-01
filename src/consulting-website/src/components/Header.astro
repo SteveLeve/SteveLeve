@@ -30,17 +30,6 @@ const navItems = [
     </div>
     <div class="nav__controls">
       <button 
-        class="animation-toggle" 
-        type="button" 
-        aria-label="Pause animation" 
-        title="Pause animation"
-        data-animation-toggle
-      >
-        <span class="material-symbols-outlined animation-toggle__icon" data-animation-icon>
-          pause
-        </span>
-      </button>
-      <button 
         class="theme-toggle" 
         type="button" 
         aria-label="Toggle color theme"
@@ -117,7 +106,6 @@ const navItems = [
     font-size: 1.1rem;
   }
 
-  .animation-toggle,
   .theme-toggle {
     display: flex;
     align-items: center;
@@ -132,7 +120,6 @@ const navItems = [
     transition: all 0.2s ease;
   }
 
-  .animation-toggle:hover,
   .theme-toggle:hover {
     background: var(--border);
     color: var(--ink);
