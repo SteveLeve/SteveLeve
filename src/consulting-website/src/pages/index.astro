@@ -1,22 +1,202 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import TestReactComponent from '../components/TestReactComponent.tsx';
 ---
 
-<Layout title="Steve Leve — Reliability-first Modernization">
-  <main class="min-h-screen bg-gray-50 flex items-center justify-center">
-    <div class="text-center">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">
-        Steve Leve Consulting
-      </h1>
-      <p class="text-xl text-gray-600 mb-8">
+<Layout title="Steve Leve — Reliability-first Modernization" currentPage="home">
+  <div class="container">
+    <section class="hero surface hero-surface">
+      <h1 class="hero-title">
+        <span class="material-symbols-outlined">api</span> 
         Reliability-first. Pragmatic by design.
+      </h1>
+      <h2 class="hero-subtitle">
+        Consulting focused on troubleshooting, modernization, and pragmatic reliability under constraint.
+      </h2>
+      <p class="hero-content">
+        I help agencies and small businesses solve hard technology problems and
+        ship with confidence — from incident response and observability to cloud
+        migration and modernization roadmaps.
       </p>
-      <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded">
-        Astro + React + TypeScript + Tailwind CSS setup complete!
+      <div class="hero-ctas">
+        <a href="/services" class="cta-primary">Explore Services</a>
+        <a href="/contact" class="cta-secondary">Book a consultation</a>
       </div>
-      
-      <TestReactComponent client:load />
-    </div>
-  </main>
+    </section>
+
+    <section class="status-message">
+      <div class="status-card">
+        <span class="material-symbols-outlined">check_circle</span>
+        <div>
+          <h3>Development Progress</h3>
+          <p>Core layout components and navigation system implemented successfully!</p>
+        </div>
+      </div>
+    </section>
+  </div>
 </Layout>
+
+<style>
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+
+  .hero-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-title .material-symbols-outlined {
+    font-size: 2.5rem;
+    color: var(--brand);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .hero-content {
+    font-size: 1.1rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+
+  .cta-primary {
+    background: var(--brand);
+    color: white;
+  }
+
+  .cta-primary:hover {
+    background: var(--brand-ink);
+    transform: translateY(-1px);
+  }
+
+  .cta-secondary {
+    background: transparent;
+    color: var(--brand);
+    border: 2px solid var(--brand);
+  }
+
+  .cta-secondary:hover {
+    background: var(--brand);
+    color: white;
+    transform: translateY(-1px);
+  }
+
+  .status-message {
+    margin: 2rem 0;
+  }
+
+  .status-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #f0f9ff;
+    border: 1px solid #0ea5e9;
+    border-radius: 8px;
+    color: #0c4a6e;
+  }
+
+  .status-card .material-symbols-outlined {
+    font-size: 2rem;
+    color: #0ea5e9;
+  }
+
+  .status-card h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .status-card p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  /* Dark theme adjustments */
+  :global([data-theme="dark"]) .status-card {
+    background: rgba(14, 165, 233, 0.1);
+    border-color: rgba(14, 165, 233, 0.3);
+    color: #7dd3fc;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3rem 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .hero-title .material-symbols-outlined {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .hero-content {
+      font-size: 1rem;
+    }
+
+    .hero-ctas {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-primary,
+    .cta-secondary {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+    }
+  }
+</style>

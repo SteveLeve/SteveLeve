@@ -1,0 +1,185 @@
+---
+export interface Props {
+  currentPage?: string;
+}
+
+const { currentPage = 'home' } = Astro.props;
+
+const navItems = [
+  { href: '/', label: 'Home', icon: 'api', id: 'home' },
+  { href: '/services', label: 'Services', icon: 'build', id: 'services' },
+  { href: '/case-studies', label: 'Case Studies', icon: 'folder_open', id: 'case-studies' },
+  { href: '/about', label: 'About', icon: 'person', id: 'about' },
+  { href: '/contact', label: 'Contact', icon: 'contact_mail', id: 'contact' }
+];
+---
+
+<header class="topbar" data-page={currentPage}>
+  <div class="topbar-title">Steve Leve</div>
+  <nav class="nav">
+    <div class="nav__links">
+      {navItems.map(item => (
+        <a 
+          href={item.href} 
+          class={`nav__link ${currentPage === item.id ? 'is-active' : ''}`}
+        >
+          <span class="material-symbols-outlined">{item.icon}</span>
+          {item.label}
+        </a>
+      ))}
+    </div>
+    <div class="nav__controls">
+      <button 
+        class="animation-toggle" 
+        type="button" 
+        aria-label="Pause animation" 
+        title="Pause animation"
+        data-animation-toggle
+      >
+        <span class="material-symbols-outlined animation-toggle__icon" data-animation-icon>
+          pause
+        </span>
+      </button>
+      <button 
+        class="theme-toggle" 
+        type="button" 
+        aria-label="Toggle color theme"
+        data-theme-toggle
+      >
+        <span class="theme-toggle__icon material-symbols-outlined" data-theme-icon>
+          light_mode
+        </span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .topbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    backdrop-filter: blur(10px);
+  }
+
+  .topbar-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav__links {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .nav__controls {
+    display: flex;
+    gap: 0.35rem;
+  }
+
+  .nav__link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 5pt;
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .nav__link:hover {
+    background: #ECE6F0;
+    color: var(--brand-ink);
+  }
+
+  .nav__link.is-active {
+    background: #ECE6F0;
+    color: var(--brand-ink);
+  }
+
+  .nav__link .material-symbols-outlined {
+    font-size: 1.1rem;
+  }
+
+  .animation-toggle,
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .animation-toggle:hover,
+  .theme-toggle:hover {
+    background: var(--border);
+    color: var(--ink);
+  }
+
+  /* Dark theme styles */
+  :global([data-theme="dark"]) .nav__link:hover {
+    background: rgba(208, 188, 255, 0.16);
+    color: var(--brand);
+  }
+
+  :global([data-theme="dark"]) .nav__link.is-active {
+    background: rgba(208, 188, 255, 0.16);
+    color: var(--brand);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .topbar {
+      padding: 0.75rem 1rem;
+    }
+    
+    .nav {
+      gap: 1rem;
+    }
+    
+    .nav__links {
+      gap: 0.25rem;
+    }
+    
+    .nav__link {
+      padding: 0.3rem 0.5rem;
+      font-size: 0.8rem;
+    }
+    
+    .nav__link .material-symbols-outlined {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .nav__link span {
+      display: none;
+    }
+    
+    .nav__link {
+      padding: 0.5rem;
+    }
+  }
+</style>

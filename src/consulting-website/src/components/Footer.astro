@@ -1,0 +1,98 @@
+---
+const currentYear = new Date().getFullYear();
+
+const socialLinks = [
+  {
+    href: 'https://github.com/SteveLeve',
+    label: 'GitHub',
+    icon: 'code'
+  },
+  {
+    href: 'https://www.linkedin.com/in/steve-leve',
+    label: 'LinkedIn', 
+    icon: 'work'
+  }
+];
+---
+
+<footer class="footer">
+  <span class="footer-copyright">
+    © <span id="current-year">{currentYear}</span> Steve Leve
+  </span>
+  <span class="spacer"></span>
+  {socialLinks.map(link => (
+    <a 
+      href={link.href} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="footer__link"
+    >
+      <span class="material-symbols-outlined">{link.icon}</span>
+      {link.label}
+    </a>
+  ))}
+</footer>
+
+<style>
+  .footer {
+    display: flex;
+    align-items: center;
+    max-width: 1120px;
+    margin: 2rem auto 3rem;
+    padding: 0 1.5rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-copyright {
+    color: var(--muted);
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .footer__link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .footer__link:hover {
+    color: var(--brand);
+    text-decoration: none;
+  }
+
+  .footer__link .material-symbols-outlined {
+    font-size: 1.1rem;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 640px) {
+    .footer {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+      margin: 1.5rem auto 2rem;
+    }
+
+    .spacer {
+      display: none;
+    }
+
+    .footer__link {
+      margin-left: 0;
+    }
+
+    .footer__link:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+</style>
