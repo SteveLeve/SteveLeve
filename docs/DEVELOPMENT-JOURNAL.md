@@ -938,6 +938,89 @@ consulting-website-modernization/
 
 ---
 
+## 2025-01-30: Directory Structure Reorganization
+
+### Context
+
+Reorganized the project directory structure to better reflect the deployment architecture. Since both the Astro site and the API are deployed as Cloudflare Workers, it makes more sense to organize them as siblings under a `workers/` directory rather than having the site in a separate `src/` directory.
+
+### Changes Made
+
+#### Directory Restructure
+
+- **Before**: `src/consulting-website/` and `workers/api/`
+- **After**: `workers/site/` and `workers/api/`
+- **Rationale**: Both components are Cloudflare Workers, so they should be organized consistently
+
+#### Files Moved
+
+- Moved all files from `src/consulting-website/` to `workers/site/`
+- Included hidden files and directories (`.astro/`, `.gitignore`, `.wrangler/`, etc.)
+- Removed empty `src/` directory structure
+
+#### Updated References
+
+- **Development Script**: Updated `scripts/dev.sh` to use new paths
+- **README**: Updated project structure documentation and script paths
+- **Path References**: All documentation now reflects the new structure
+
+### New Project Structure
+
+```
+workers/
+├── site/                    # Main Astro application (Cloudflare Worker)
+│   ├── src/                # Astro source code
+│   ├── package.json        # Site dependencies
+│   ├── astro.config.mjs    # Astro configuration
+│   └── wrangler.jsonc      # Cloudflare deployment config
+└── api/                    # API Worker (Hono framework)
+    ├── src/                # API source code
+    ├── package.json        # API dependencies
+    └── wrangler.toml       # Worker configuration
+```
+
+### Benefits of New Structure
+
+#### Logical Organization
+
+- **Consistent Deployment Model**: Both components are Workers, organized together
+- **Clear Separation**: Each Worker has its own directory with dependencies
+- **Easier Navigation**: Related components are grouped logically
+
+#### Development Workflow
+
+- **Simplified Paths**: Shorter, more intuitive paths in scripts
+- **Consistent Commands**: Both workers use similar npm scripts
+- **Better Mental Model**: Structure matches deployment architecture
+
+#### Maintenance
+
+- **Easier Updates**: Related configurations are co-located
+- **Clearer Dependencies**: Each worker manages its own package.json
+- **Deployment Clarity**: Structure mirrors production deployment
+
+### Technical Validation
+
+- ✅ All files moved successfully including hidden files
+- ✅ Development script updated and functional
+- ✅ README documentation updated
+- ✅ No broken references or missing files
+- ✅ Both workers maintain their individual configurations
+
+### Development Impact
+
+- **Script Updates**: `./scripts/dev.sh` now uses `workers/site` and `workers/api`
+- **Path Changes**: All documentation references updated
+- **No Functional Changes**: All functionality preserved during reorganization
+
+### Future Benefits
+
+- **Scalability**: Easy to add more workers (e.g., `workers/auth`, `workers/analytics`)
+- **Consistency**: All Workers follow the same organizational pattern
+- **Deployment**: Clearer mapping between directory structure and Cloudflare resources
+
+---
+
 ## Template for Future Entries
 
 ### [Date]: [Brief Description]

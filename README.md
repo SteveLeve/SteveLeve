@@ -36,40 +36,41 @@ This website modernizes a static GitHub Pages site into a dynamic, scalable web 
 ## 📁 Project Structure
 
 ```
-├── src/consulting-website/          # Main Astro application
-│   ├── src/
-│   │   ├── components/             # Reusable UI components
-│   │   │   ├── Header.astro        # Navigation with theme toggle
-│   │   │   ├── Footer.astro        # Social links and copyright
-│   │   │   ├── Hero.astro          # Clean hero sections
-│   │   │   ├── ServicePillars.astro # Service grid cards
-│   │   │   ├── ContactForm.tsx     # React contact form component
-│   │   │   └── ...
-│   │   ├── layouts/
-│   │   │   └── Layout.astro        # Master page layout
-│   │   ├── pages/                  # Route-based pages
-│   │   │   ├── index.astro         # Homepage
-│   │   │   ├── services.astro      # Service offerings
-│   │   │   ├── case-studies.astro  # Project examples
-│   │   │   ├── about.astro         # Professional background
-│   │   │   ├── contact.astro       # Contact page with form
-│   │   │   └── api/contact.ts      # API proxy endpoint
-│   │   └── styles/
-│   │       └── global.css          # Global styles and Tailwind
-│   ├── astro.config.mjs           # Astro configuration
-│   ├── wrangler.jsonc             # Cloudflare deployment config
-│   └── package.json               # Dependencies and scripts
-├── workers/api/                   # Cloudflare Worker API
-│   ├── src/
-│   │   ├── index.ts               # Main Hono app
-│   │   ├── types.ts               # TypeScript interfaces and Zod schemas
-│   │   ├── email.ts               # Email service with templates
-│   │   ├── middleware.ts          # CORS, rate limiting, error handling
-│   │   └── routes/contact.ts      # Contact form endpoint logic
-│   ├── package.json               # Worker dependencies
-│   ├── wrangler.toml             # Worker configuration
-│   ├── tsconfig.json             # TypeScript configuration
-│   └── README.md                 # API documentation
+├── workers/                       # Cloudflare Workers
+│   ├── site/                      # Main Astro application (deployed as Worker)
+│   │   ├── src/
+│   │   │   ├── components/        # Reusable UI components
+│   │   │   │   ├── Header.astro   # Navigation with theme toggle
+│   │   │   │   ├── Footer.astro   # Social links and copyright
+│   │   │   │   ├── Hero.astro     # Clean hero sections
+│   │   │   │   ├── ServicePillars.astro # Service grid cards
+│   │   │   │   ├── ContactForm.tsx # React contact form component
+│   │   │   │   └── ...
+│   │   │   ├── layouts/
+│   │   │   │   └── Layout.astro   # Master page layout
+│   │   │   ├── pages/             # Route-based pages
+│   │   │   │   ├── index.astro    # Homepage
+│   │   │   │   ├── services.astro # Service offerings
+│   │   │   │   ├── case-studies.astro # Project examples
+│   │   │   │   ├── about.astro    # Professional background
+│   │   │   │   ├── contact.astro  # Contact page with form
+│   │   │   │   └── api/contact.ts # API proxy endpoint
+│   │   │   └── styles/
+│   │   │       └── global.css     # Global styles and Tailwind
+│   │   ├── astro.config.mjs       # Astro configuration
+│   │   ├── wrangler.jsonc         # Cloudflare deployment config
+│   │   └── package.json           # Dependencies and scripts
+│   └── api/                       # Cloudflare Worker API
+│       ├── src/
+│       │   ├── index.ts           # Main Hono app
+│       │   ├── types.ts           # TypeScript interfaces and Zod schemas
+│       │   ├── email.ts           # Email service with templates
+│       │   ├── middleware.ts      # CORS, rate limiting, error handling
+│       │   └── routes/contact.ts  # Contact form endpoint logic
+│       ├── package.json           # Worker dependencies
+│       ├── wrangler.toml         # Worker configuration
+│       ├── tsconfig.json         # TypeScript configuration
+│       └── README.md             # API documentation
 ├── scripts/                       # Development and deployment scripts
 │   └── dev.sh                    # Parallel dev server script
 ├── docs/                          # Project documentation
@@ -139,7 +140,7 @@ This website modernizes a static GitHub Pages site into a dynamic, scalable web 
 
 ### Available Scripts
 
-#### Main Website (src/consulting-website/)
+#### Main Website (workers/site/)
 
 - `npm run dev` - Start Astro development server
 - `npm run build` - Build for production
@@ -154,7 +155,7 @@ This website modernizes a static GitHub Pages site into a dynamic, scalable web 
 
 #### Development (project root)
 
-- `./scripts/dev.sh` - Start both Astro and Worker dev servers
+- `./scripts/dev.sh` - Start both site and API dev servers
 
 ## 📋 Development Workflow
 

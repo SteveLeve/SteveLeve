@@ -15,7 +15,7 @@ cleanup() {
 # Set up trap to cleanup on script exit
 trap cleanup SIGINT SIGTERM
 
-# Start Worker dev server in background
+# Start Worker API dev server in background
 echo "📡 Starting Cloudflare Worker API server..."
 cd workers/api && npm run dev &
 WORKER_PID=$!
@@ -23,13 +23,13 @@ WORKER_PID=$!
 # Wait a moment for Worker to start
 sleep 3
 
-# Start Astro dev server in background
-echo "🌟 Starting Astro development server..."
-cd ../../src/consulting-website && npm run dev &
+# Start Astro site dev server in background
+echo "🌟 Starting Astro site development server..."
+cd ../site && npm run dev &
 ASTRO_PID=$!
 
 echo "✅ Development servers started!"
-echo "   - Astro: http://localhost:4321"
+echo "   - Astro Site: http://localhost:4321"
 echo "   - Worker API: http://localhost:8787"
 echo ""
 echo "Press Ctrl+C to stop both servers"
