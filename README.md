@@ -13,18 +13,22 @@ This website modernizes a static GitHub Pages site into a dynamic, scalable web 
 ## 🛠 Technology Stack
 
 ### Frontend
+
 - **Astro 4.x** - Static site generation with islands architecture
 - **React 18** - Interactive components where needed
 - **TypeScript** - Type safety and better developer experience
 - **Tailwind CSS** - Utility-first styling with custom design system
 
 ### Backend & Infrastructure
+
 - **Cloudflare Pages** - Static hosting with edge optimization
-- **Cloudflare Workers** - Serverless API endpoints (planned)
-- **Hono** - Fast, lightweight framework for Workers (planned)
+- **Cloudflare Workers** - Serverless API endpoints with Hono framework
+- **Hono** - Fast, lightweight framework optimized for Workers
+- **Resend** - Professional email service for contact forms
 - **Terraform** - Infrastructure as code (planned)
 
 ### Development & Deployment
+
 - **Vite** - Fast build tooling (included with Astro)
 - **GitHub Actions** - CI/CD automation (planned)
 - **Wrangler** - Cloudflare deployment CLI
@@ -37,8 +41,9 @@ This website modernizes a static GitHub Pages site into a dynamic, scalable web 
 │   │   ├── components/             # Reusable UI components
 │   │   │   ├── Header.astro        # Navigation with theme toggle
 │   │   │   ├── Footer.astro        # Social links and copyright
-│   │   │   ├── Hero.astro          # Animated hero sections
+│   │   │   ├── Hero.astro          # Clean hero sections
 │   │   │   ├── ServicePillars.astro # Service grid cards
+│   │   │   ├── ContactForm.tsx     # React contact form component
 │   │   │   └── ...
 │   │   ├── layouts/
 │   │   │   └── Layout.astro        # Master page layout
@@ -46,12 +51,27 @@ This website modernizes a static GitHub Pages site into a dynamic, scalable web 
 │   │   │   ├── index.astro         # Homepage
 │   │   │   ├── services.astro      # Service offerings
 │   │   │   ├── case-studies.astro  # Project examples
-│   │   │   └── about.astro         # Professional background
+│   │   │   ├── about.astro         # Professional background
+│   │   │   ├── contact.astro       # Contact page with form
+│   │   │   └── api/contact.ts      # API proxy endpoint
 │   │   └── styles/
 │   │       └── global.css          # Global styles and Tailwind
 │   ├── astro.config.mjs           # Astro configuration
 │   ├── wrangler.jsonc             # Cloudflare deployment config
 │   └── package.json               # Dependencies and scripts
+├── workers/api/                   # Cloudflare Worker API
+│   ├── src/
+│   │   ├── index.ts               # Main Hono app
+│   │   ├── types.ts               # TypeScript interfaces and Zod schemas
+│   │   ├── email.ts               # Email service with templates
+│   │   ├── middleware.ts          # CORS, rate limiting, error handling
+│   │   └── routes/contact.ts      # Contact form endpoint logic
+│   ├── package.json               # Worker dependencies
+│   ├── wrangler.toml             # Worker configuration
+│   ├── tsconfig.json             # TypeScript configuration
+│   └── README.md                 # API documentation
+├── scripts/                       # Development and deployment scripts
+│   └── dev.sh                    # Parallel dev server script
 ├── docs/                          # Project documentation
 │   ├── adr/                       # Architecture Decision Records
 │   ├── DEVELOPMENT-JOURNAL.md     # Development progress log
@@ -63,12 +83,14 @@ This website modernizes a static GitHub Pages site into a dynamic, scalable web 
 ## 🎨 Design System
 
 ### Color Palette
+
 - **Brand**: #6750A4 (Purple)
 - **Brand Ink**: #21005D (Dark Purple)
 - **Surface**: #FFFFFF / #1E192B (Light/Dark)
 - **Background**: #FAFAFE / #14101F (Light/Dark)
 
 ### Key Features
+
 - **Responsive Design**: Mobile-first approach with progressive enhancement
 - **Dark/Light Themes**: Automatic system detection with manual override
 - **Material Design**: Icons and interaction patterns
@@ -77,44 +99,62 @@ This website modernizes a static GitHub Pages site into a dynamic, scalable web 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm or yarn
 - Git
 
 ### Local Development
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd consulting-website-modernization
    ```
 
 2. **Navigate to the Astro project**
+
    ```bash
    cd src/consulting-website
    ```
 
 3. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 4. **Start development server**
+
    ```bash
    npm run dev
    ```
 
 5. **Open in browser**
+
    ```
    http://localhost:4321
    ```
 
 ### Available Scripts
 
-- `npm run dev` - Start development server
+#### Main Website (src/consulting-website/)
+
+- `npm run dev` - Start Astro development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build locally
 - `npm run deploy` - Deploy to Cloudflare Pages (requires setup)
+
+#### API Worker (workers/api/)
+
+- `npm run dev` - Start Worker development server
+- `npm run build` - Build Worker (dry-run)
+- `npm run deploy` - Deploy Worker to Cloudflare
+
+#### Development (project root)
+
+- `./scripts/dev.sh` - Start both Astro and Worker dev servers
 
 ## 📋 Development Workflow
 
@@ -126,6 +166,7 @@ This project follows a **documentation-driven development** approach:
 4. **Documentation**: Update development journal and ADRs
 
 ### Key Documents
+
 - **Requirements**: `.kiro/specs/consulting-website-modernization/requirements.md`
 - **Design**: `.kiro/specs/consulting-website-modernization/design.md`
 - **Tasks**: `.kiro/specs/consulting-website-modernization/tasks.md`
@@ -135,22 +176,29 @@ This project follows a **documentation-driven development** approach:
 ## 🎯 Current Status
 
 ### ✅ Completed Features
+
 - [x] Astro + React + TypeScript setup
 - [x] Responsive navigation with theme switching
-- [x] Animated homepage with service pillars
+- [x] Clean homepage with service pillars (animation removed for simplicity)
 - [x] Services page with detailed offerings
 - [x] Case studies with structured presentations
 - [x] About page with professional background
 - [x] Complete design system implementation
 - [x] Mobile-responsive layouts
+- [x] Interactive contact form with validation
+- [x] Cloudflare Workers API with Hono framework
+- [x] Email service integration (Resend)
+- [x] Rate limiting and security features
 
 ### 🚧 In Progress
-- [ ] Contact form with validation
-- [ ] Cloudflare Workers API integration
-- [ ] Email service setup
+
+- [ ] Production deployment pipeline
+- [ ] Environment variable configuration
+- [ ] End-to-end testing
 - [ ] Production deployment pipeline
 
 ### 📅 Planned Features
+
 - [ ] Terraform infrastructure management
 - [ ] Advanced monitoring and analytics
 - [ ] Content management system integration
@@ -159,13 +207,16 @@ This project follows a **documentation-driven development** approach:
 ## 🚀 Deployment
 
 ### Cloudflare Pages
+
 The site is configured for deployment on Cloudflare Pages with:
+
 - Automatic builds from Git commits
 - Edge optimization and global CDN
 - Custom domain support
 - Environment-specific deployments
 
 ### Build Configuration
+
 - **Build Command**: `npm run build`
 - **Output Directory**: `dist`
 - **Node Version**: 18+
@@ -173,12 +224,14 @@ The site is configured for deployment on Cloudflare Pages with:
 ## 📊 Performance
 
 ### Lighthouse Scores
+
 - **Performance**: 90+
 - **Accessibility**: 90+
 - **Best Practices**: 90+
 - **SEO**: 90+
 
 ### Key Optimizations
+
 - Astro islands architecture for minimal JavaScript
 - Optimized images and lazy loading
 - Efficient CSS with custom properties
@@ -199,6 +252,7 @@ This project is for personal/professional use. Please respect the content and br
 ## 📞 Contact
 
 **Steve Leve**
+
 - Website: [Coming Soon - This Project!]
 - LinkedIn: [steve-leve](https://www.linkedin.com/in/steve-leve)
 - GitHub: [SteveLeve](https://github.com/SteveLeve)

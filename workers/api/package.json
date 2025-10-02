@@ -1,0 +1,20 @@
+{
+  "name": "consulting-website-api",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker API for consulting website contact form",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "wrangler deploy --dry-run",
+    "types": "wrangler types"
+  },
+  "dependencies": {
+    "hono": "^4.6.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241218.0",
+    "wrangler": "^3.84.1"
+  }
+}

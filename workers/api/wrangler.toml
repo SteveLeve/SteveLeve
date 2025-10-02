@@ -1,0 +1,21 @@
+name = "consulting-website-api"
+main = "src/index.ts"
+compatibility_date = "2024-12-18"
+
+# Environment variables for email service
+[vars]
+# These will be set via wrangler secret put
+# RESEND_API_KEY = "your-resend-api-key"
+# CONTACT_EMAIL = "steve@steveleve.com"
+
+# CORS settings for production
+[env.production]
+name = "consulting-website-api"
+
+[env.staging]
+name = "consulting-website-api-staging"
+
+# Custom domains (to be configured later)
+# [[env.production.routes]]
+# pattern = "api.steveleve.com/*"
+# custom_domain = true
