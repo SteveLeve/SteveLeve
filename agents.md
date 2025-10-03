@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-**Steve Leve Consulting Website Modernization**
+**Steve Leve Consulting Website**
 
-A comprehensive modernization of a static consulting website into a dynamic, performance-optimized web application using Astro + React and Cloudflare infrastructure. This project serves as both a professional consulting platform and a demonstration of modern web development practices.
+A personal consultancy website, performance-optimized web application using Astro + React and Cloudflare infrastructure. This project serves as both a professional consulting platform and a demonstration of modern web development practices.
 
 ## Agent Collaboration Context
 
@@ -35,11 +35,11 @@ A comprehensive modernization of a static consulting website into a dynamic, per
 
 ## Development Approach
 
-### Documentation-Driven Development
-- Requirements → Design → Implementation → Documentation
-- Architecture Decision Records (ADRs) for key decisions
-- Development journal tracking progress and learnings
-- Spec-driven task management with clear acceptance criteria
+### Test-Driven, Documentation-Driven Development
+- **Test First**: Write a failing test before writing implementation code, following the process in `docs/TESTING.md`.
+- **Document First**: Create or update design documents and ADRs before implementation.
+- **Implement**: Write the code to pass the tests.
+- **Log Progress**: Update the development journal to track progress and learnings.
 
 ### Quality Standards
 - TypeScript for type safety
@@ -53,14 +53,15 @@ A comprehensive modernization of a static consulting website into a dynamic, per
 ### When Working on This Project
 
 1. **Read Context First**
-   - Review `docs/DEVELOPMENT-JOURNAL.md` for current progress
-   - Check `.kiro/specs/consulting-website-modernization/` for requirements
-   - Understand current task status in `tasks.md`
+   - Review `docs/DEVELOPMENT-JOURNAL.md` for current progress.
+   - Review `docs/TESTING.md` to understand the testing strategy.
+   - Check `.kiro/specs/consulting-website-modernization/` for requirements.
+   - Understand current task status in `tasks.md`.
 
-2. **Follow Documentation Standards**
-   - Update development journal after significant changes
-   - Create ADRs for architectural decisions
-   - Maintain clear commit messages and progress tracking
+2. **Follow TDD and Documentation Standards**
+   - Write a failing test before any implementation.
+   - Create ADRs for architectural decisions.
+   - Update development journal after significant changes.
 
 3. **Respect Design System**
    - Use established CSS custom properties
@@ -144,10 +145,13 @@ const { title, description } = Astro.props;
 
 ### Testing Approach
 
-- Manual testing across browsers and devices
-- Lighthouse performance auditing
-- Accessibility testing with screen readers
-- Cross-platform deployment validation
+This project follows a comprehensive testing strategy outlined in `docs/TESTING.md`. All agents must adhere to the processes defined in that document, including:
+
+- **Test-Driven Development (TDD)**
+- **Unit & Integration Testing (Vitest)**
+- **End-to-End Testing (Playwright)**
+- **Performance Auditing (Lighthouse)**
+- **Manual & Cross-Browser Testing**
 
 ## Business Context
 
