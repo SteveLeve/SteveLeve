@@ -5,6 +5,10 @@
 
 echo "🚀 Starting development servers..."
 
+# Get script directory and project root
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+
 # Function to cleanup background processes
 cleanup() {
     echo "🛑 Shutting down development servers..."
@@ -17,7 +21,7 @@ trap cleanup SIGINT SIGTERM
 
 # Start Worker API dev server in background
 echo "📡 Starting Cloudflare Worker API server..."
-cd workers/api && npm run dev &
+(cd "$PROJECT_ROOT/workers/api" && npm run dev) &
 WORKER_PID=$!
 
 # Wait a moment for Worker to start
@@ -25,7 +29,7 @@ sleep 3
 
 # Start Astro site dev server in background
 echo "🌟 Starting Astro site development server..."
-cd ../site && npm run dev &
+(cd "$PROJECT_ROOT/workers/site" && npm run dev) &
 ASTRO_PID=$!
 
 echo "✅ Development servers started!"
