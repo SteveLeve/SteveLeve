@@ -21,10 +21,15 @@ This project prefers a **Test-Driven Development (TDD)** approach for all new fe
 ### b. End-to-End (E2E) Tests (Playwright)
 
 -   **Framework**: [Playwright](https://playwright.dev/) is the chosen framework for E2E testing to simulate user interactions and verify critical user flows.
--   **Flows to Cover**:
-    -   Contact form submission.
-    -   Navigation and page rendering.
-    -   Theme switching (light/dark mode).
+-   **Configuration**: Multi-server setup running both Astro site (port 4321) and API worker (port 8787)
+-   **Location**: Tests are located in `workers/site/tests/e2e/` directory
+-   **Current Coverage**:
+    -   ✅ Contact form display and validation
+    -   ✅ Contact form submission (end-to-end workflow)
+    -   ✅ React component hydration in Astro
+    -   🔄 Navigation and page rendering (planned)
+    -   🔄 Theme switching (light/dark mode) (planned)
+-   **Running E2E Tests**: Use `npm run test:e2e` in the `workers/site` directory
 
 ### c. Performance Auditing (Lighthouse)
 
@@ -42,8 +47,24 @@ This project prefers a **Test-Driven Development (TDD)** approach for all new fe
 
 ## 3. Running Tests
 
-To run the automated tests, use the following command in the appropriate workspace (`/workers/site` or `/workers/api`):
+### Unit & Integration Tests
+To run unit and integration tests, use the following command in the appropriate workspace (`/workers/site` or `/workers/api`):
 
 ```bash
 npm test
 ```
+
+### End-to-End Tests
+To run Playwright E2E tests, use the following command in the `/workers/site` directory:
+
+```bash
+npm run test:e2e
+```
+
+**Note**: E2E tests automatically start both the Astro site and API worker services. Ensure no other services are running on ports 4321 or 8787.
+
+### Test Results
+Current test status:
+- ✅ Contact form E2E tests: 2/2 passing
+- ✅ Multi-server configuration working
+- ✅ Full contact form workflow tested

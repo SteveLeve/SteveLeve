@@ -1079,3 +1079,114 @@ Automated tests and clearer messaging remove a major friction point for verifyin
 
 #### Reflection
 [Thoughts on progress, process, learnings]
+
+---
+
+## 2025-10-04: Playwright E2E Testing Implementation and Troubleshooting
+
+### Context
+Implemented and troubleshot comprehensive end-to-end testing for the contact form using Playwright. The initial test setup encountered timeout issues that required systematic debugging and resolution.
+
+### Issues Encountered and Solutions
+
+#### Primary Issue: Test Timeout on Form Submission
+**Problem**: `page.fill: Test timeout of 30000ms exceeded` when trying to fill `input[name="name"]`
+**Root Cause Analysis**:
+1. **Selector Mismatch**: Test used `input[name="name"]` but ContactForm.tsx uses `id="name"` (no name attributes)
+2. **Missing API Worker**: Contact form proxy failed because API worker wasn't running on port 8787
+3. **React Hydration**: Form component needed time to hydrate before interaction
+
+#### Solution Implementation
+
+##### 1. Fixed Selector Strategy
+```typescript
+// Before: input[name="name"]
+// After: #name
+await page.fill('#name', 'Test User');
+```
+
+##### 2. Multi-Server Playwright Configuration
+Updated `playwright.config.ts` to run both services:
+```typescript
+webServer: [
+  {
+    command: 'npm run dev',
+    url: 'http://localhost:8787',
+    cwd: '../api',
+    reuseExistingServer: !process.env.CI,
+  },
+  {
+    command: 'npm run dev',
+    url: 'http://localhost:4321',
+    reuseExistingServer: !process.env.CI,
+  },
+]
+```
+
+##### 3. Proper Wait Strategies
+```typescript
+// Wait for React component hydration
+await page.waitForSelector('#name', { state: 'visible' });
+
+// Wait for form submission response
+await page.waitForSelector('.status-message', { timeout: 20000 });
+```
+
+### Test Suite Implementation
+
+#### Comprehensive Test Coverage
+1. **Form Display Test**: Verifies all form elements are present and visible
+2. **Form Submission Test**: Tests complete user workflow with proper error/success handling
+
+#### Technical Improvements
+- **Flexible Assertions**: Handles both success and error responses appropriately
+- **Debugging Support**: Console logging for troubleshooting test failures
+- **Timeout Management**: Appropriate timeouts for different operations
+- **Element Targeting**: Reliable selectors using ID attributes
+
+### Validation Results
+- ✅ Contact form E2E tests passing consistently (2/2 tests)
+- ✅ Multi-server configuration working reliably
+- ✅ Form submission workflow tested end-to-end
+- ✅ API integration verified (message sent successfully)
+- ✅ React component hydration handled properly
+
+### Technical Insights
+
+#### Form Architecture Understanding
+- ContactForm.tsx uses `id` attributes for form fields, not `name` attributes
+- Form validation requires minimum character counts (subject: 10 chars, message: 10 chars)
+- API proxy setup requires both Astro site and API worker running simultaneously
+
+#### Playwright Best Practices Applied
+- Use ID selectors for reliable element targeting
+- Implement proper wait strategies for dynamic content
+- Configure multi-server setups for full-stack testing
+- Handle both success and error scenarios in assertions
+
+### Documentation Updates
+- ✅ Updated ADR-006 (E2E Testing with Playwright) to "Implemented" status
+- ✅ Added technical implementation details and results
+- ✅ Updated ADR-005 (Contact Form Architecture) with testing completion
+- ✅ Documented troubleshooting process and solutions
+
+### Business Impact
+- **Quality Assurance**: Automated testing prevents contact form regressions
+- **Deployment Confidence**: E2E tests verify complete user workflows
+- **Development Velocity**: Reliable test suite enables faster iteration
+- **User Experience**: Ensures contact form works consistently across environments
+
+### Learning Outcomes
+- **Playwright Configuration**: Multi-server setup for full-stack applications
+- **React + Astro Testing**: Handling component hydration in E2E tests
+- **Debugging Methodology**: Systematic approach to timeout and selector issues
+- **Test Design**: Flexible assertions for different environment responses
+
+### Next Steps
+- Expand E2E test coverage to navigation and theme switching
+- Integrate Playwright tests into CI/CD pipeline
+- Add visual regression testing capabilities
+- Consider cross-browser testing implementation
+
+### Reflection
+This troubleshooting exercise demonstrated the importance of understanding the full application architecture when writing E2E tests. The systematic approach to identifying selector mismatches, missing services, and timing issues provided valuable insights into both the application structure and Playwright best practices.
