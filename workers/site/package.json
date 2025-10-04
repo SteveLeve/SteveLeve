@@ -8,7 +8,8 @@
 		"preview": "astro build && wrangler dev",
 		"astro": "astro",
 		"deploy": "astro build && wrangler deploy",
-		"cf-typegen": "wrangler types"
+		"cf-typegen": "wrangler types",
+		"test": "vitest run"
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "^12.6.9",
@@ -22,7 +23,12 @@
 		"tailwindcss": "^4.1.13"
 	},
 	"devDependencies": {
+		"@testing-library/jest-dom": "^6.6.3",
+		"@testing-library/react": "^16.2.0",
+		"@testing-library/user-event": "^14.6.1",
 		"@types/node": "^24.6.1",
+		"jsdom": "^26.0.0",
+		"vitest": "^2.1.8",
 		"wrangler": "^4.40.3"
 	}
 }

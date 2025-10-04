@@ -16,6 +16,19 @@ interface FormErrors {
     message?: string;
 }
 
+interface ContactApiResponse {
+    success: boolean;
+    message?: string;
+    error?: string;
+    data?: {
+        timestamp?: string;
+        delivery?: {
+            mode?: 'stub' | 'live';
+            delivered?: boolean;
+        };
+    };
+}
+
 export default function ContactForm() {
     const [formData, setFormData] = useState<FormData>({
         name: '',
@@ -28,6 +41,8 @@ export default function ContactForm() {
     const [errors, setErrors] = useState<FormErrors>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [statusMessage, setStatusMessage] = useState<string | null>(null);
+    const [statusDetail, setStatusDetail] = useState<string | null>(null);
 
     const validateForm = (): boolean => {
         const newErrors: FormErrors = {};
@@ -75,6 +90,8 @@ export default function ContactForm() {
 
         setIsSubmitting(true);
         setSubmitStatus('idle');
+        setStatusMessage(null);
+        setStatusDetail(null);
 
         try {
             // TODO: Replace with actual API endpoint when Cloudflare Worker is ready
@@ -86,21 +103,37 @@ export default function ContactForm() {
                 body: JSON.stringify(formData),
             });
 
-            if (response.ok) {
-                setSubmitStatus('success');
-                setFormData({
-                    name: '',
-                    email: '',
-                    company: '',
-                    subject: '',
-                    message: ''
-                });
-            } else {
-                throw new Error('Failed to send message');
+            const responseData: ContactApiResponse | null = await response.json().catch(() => null);
+
+            if (!response.ok) {
+                const errorMessage = responseData?.error ?? responseData?.message ?? `Failed to send message (status ${response.status})`;
+                throw new Error(errorMessage);
             }
+
+            const successMessage = responseData?.message ?? 'Message sent successfully!';
+            setSubmitStatus('success');
+            setStatusMessage(successMessage);
+
+            const deliveryMode = responseData?.data?.delivery?.mode;
+            if (deliveryMode === 'stub') {
+                setStatusDetail('Email delivery is disabled in this environment. Configure the API worker before going live.');
+            } else {
+                setStatusDetail("I'll get back to you within 24 hours.");
+            }
+
+            setFormData({
+                name: '',
+                email: '',
+                company: '',
+                subject: '',
+                message: ''
+            });
         } catch (error) {
             console.error('Form submission error:', error);
             setSubmitStatus('error');
+            const errorMessage = error instanceof Error ? error.message : 'Failed to send message';
+            setStatusMessage(errorMessage);
+            setStatusDetail('Please try again or contact me directly via LinkedIn.');
         } finally {
             setIsSubmitting(false);
         }
@@ -227,8 +260,8 @@ export default function ContactForm() {
                 <div className="status-message success">
                     <span className="material-symbols-outlined">check_circle</span>
                     <div>
-                        <strong>Message sent successfully!</strong>
-                        <p>I'll get back to you within 24 hours.</p>
+                        <strong>{statusMessage ?? 'Message sent successfully!'}</strong>
+                        <p>{statusDetail ?? "I'll get back to you within 24 hours."}</p>
                     </div>
                 </div>
             )}
@@ -238,7 +271,8 @@ export default function ContactForm() {
                     <span className="material-symbols-outlined">error</span>
                     <div>
                         <strong>Failed to send message</strong>
-                        <p>Please try again or contact me directly via LinkedIn.</p>
+                        <p>{statusMessage ?? 'An unexpected error occurred.'}</p>
+                        <p>{statusDetail ?? 'Please try again or contact me directly via LinkedIn.'}</p>
                     </div>
                 </div>
             )}

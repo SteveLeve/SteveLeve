@@ -43,25 +43,10 @@ contact.post('/submit', async (c) => {
     }
     
     const formData = validationResult.data;
-    
-    // Check for required environment variables
-    const resendApiKey = c.env.RESEND_API_KEY;
-    const contactEmail = c.env.CONTACT_EMAIL;
-    
-    if (!resendApiKey || !contactEmail) {
-      console.error('Missing required environment variables:', {
-        hasResendKey: !!resendApiKey,
-        hasContactEmail: !!contactEmail,
-      });
-      
-      const response: ApiResponse = {
-        success: false,
-        error: 'Email service configuration error',
-      };
-      return c.json(response, 500);
-    }
-    
-    // Prepare email data
+
+    const contactModeRaw = c.env.CONTACT_FORM_MODE ?? 'stub';
+    const contactMode = contactModeRaw.toLowerCase() === 'live' ? 'live' : 'stub';
+
     const emailData: EmailTemplateData = {
       ...formData,
       timestamp: new Date().toLocaleString('en-US', {
@@ -74,11 +59,53 @@ contact.post('/submit', async (c) => {
         timeZoneName: 'short',
       }),
     };
-    
+
+    if (contactMode === 'stub') {
+      console.info('Contact form submission captured in stub mode:', {
+        name: formData.name,
+        email: formData.email.replace(/(.{2}).*(@.*)/, '$1***$2'),
+        company: formData.company,
+        subject: formData.subject,
+        mode: contactMode,
+        timestamp: emailData.timestamp,
+      });
+
+      const response: ApiResponse = {
+        success: true,
+        message: 'Message received in stub mode. Email delivery is disabled in this environment.',
+        data: {
+          timestamp: emailData.timestamp,
+          delivery: {
+            mode: contactMode,
+            delivered: false,
+          },
+        },
+      };
+
+      return c.json(response, 200);
+    }
+
+    // Live mode requires email configuration
+    const resendApiKey = c.env.RESEND_API_KEY;
+    const contactEmail = c.env.CONTACT_EMAIL;
+
+    if (!resendApiKey || !contactEmail) {
+      console.error('Missing required environment variables:', {
+        hasResendKey: !!resendApiKey,
+        hasContactEmail: !!contactEmail,
+      });
+      
+      const response: ApiResponse = {
+        success: false,
+        error: 'Email service configuration error',
+      };
+      return c.json(response, 500);
+    }
+
     // Send email notification
     const emailService = new EmailService(resendApiKey);
     const emailSent = await emailService.sendContactNotification(emailData, contactEmail);
-    
+
     if (!emailSent) {
       const response: ApiResponse = {
         success: false,

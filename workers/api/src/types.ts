@@ -15,6 +15,7 @@ export type ContactFormData = z.infer<typeof ContactFormSchema>;
 export interface Env {
   RESEND_API_KEY: string;
   CONTACT_EMAIL: string;
+  CONTACT_FORM_MODE?: 'stub' | 'live';
 }
 
 // API response types
