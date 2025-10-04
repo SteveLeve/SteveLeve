@@ -9,9 +9,9 @@
 		"astro": "astro",
 		"deploy": "astro build && wrangler deploy",
 		"cf-typegen": "wrangler types",
-		"test": "vitest run"
-	},
-	"dependencies": {
+		    "test": "vitest run",
+		    "test:e2e": "playwright test"
+		  },	"dependencies": {
 		"@astrojs/cloudflare": "^12.6.9",
 		"@astrojs/react": "^4.4.0",
 		"@tailwindcss/vite": "^4.1.13",
@@ -23,6 +23,7 @@
 		"tailwindcss": "^4.1.13"
 	},
 	"devDependencies": {
+		"@playwright/test": "^1.55.1",
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/react": "^16.2.0",
 		"@testing-library/user-event": "^14.6.1",

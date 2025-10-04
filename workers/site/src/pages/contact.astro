@@ -1,308 +1,319 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ContactForm from '../components/ContactForm.tsx';
+import Layout from "../layouts/Layout.astro";
+import ContactForm from "../components/ContactForm.tsx";
 
 const contactMethods = [
-  {
-    icon: 'email',
-    title: 'Email',
-    description: 'Preferred method for detailed inquiries',
-    action: 'steve@steveleve.com',
-    href: 'mailto:steve@steveleve.com'
-  },
-  {
-    icon: 'work',
-    title: 'LinkedIn',
-    description: 'Professional networking and quick questions',
-    action: 'Connect on LinkedIn',
-    href: 'https://www.linkedin.com/in/steve-leve'
-  },
-  {
-    icon: 'schedule',
-    title: 'Response Time',
-    description: 'Typical response within 24 hours',
-    action: 'Business days priority',
-    href: null
-  }
+    {
+        icon: "work",
+        title: "LinkedIn",
+        description: "Professional networking and quick questions",
+        action: "Connect on LinkedIn",
+        href: "https://www.linkedin.com/in/steve-leve",
+    },
+    {
+        icon: "schedule",
+        title: "Response Time",
+        description: "Typical response within 24 hours",
+        action: "Business days priority",
+        href: null,
+    },
 ];
 ---
 
-<Layout 
-  title="Contact — Steve Leve" 
-  currentPage="contact"
-  description="Get in touch with Steve Leve for consulting services, project inquiries, or professional opportunities."
+<Layout
+    title="Contact — Steve Leve"
+    currentPage="contact"
+    description="Get in touch with Steve Leve for consulting services, project inquiries, or professional opportunities."
 >
-  <div class="container">
-    <header class="hero surface">
-      <h1 class="hero-title">
-        <span class="material-symbols-outlined">contact_mail</span> 
-        Let's start a conversation
-      </h1>
-      <p class="hero-content">
-        Ready to tackle your technology challenges? I'd love to hear about your project, 
-        timeline, and goals. Let's discuss how we can work together.
-      </p>
-    </header>
+    <div class="container">
+        <header class="hero surface">
+            <h1 class="hero-title">
+                <span class="material-symbols-outlined">contact_mail</span>
+                Let's start a conversation
+            </h1>
+            <p class="hero-content">
+                Ready to tackle your technology challenges? I'd love to hear
+                about your project, timeline, and goals. Let's discuss how we
+                can work together.
+            </p>
+        </header>
 
-    <div class="contact-layout">
-      <section class="contact-form-section">
-        <h2 class="section-title">Send a Message</h2>
-        <ContactForm client:load />
-      </section>
+        <div class="contact-layout">
+            <section class="contact-form-section">
+                <h2 class="section-title">Send a Message</h2>
+                <ContactForm client:load />
+            </section>
 
-      <aside class="contact-info">
-        <h2 class="section-title">Other Ways to Connect</h2>
-        <div class="contact-methods">
-          {contactMethods.map(method => (
-            <div class="contact-method">
-              <div class="method-header">
-                <span class="material-symbols-outlined method-icon">{method.icon}</span>
-                <h3 class="method-title">{method.title}</h3>
-              </div>
-              <p class="method-description">{method.description}</p>
-              {method.href ? (
-                <a 
-                  href={method.href} 
-                  class="method-action"
-                  target={method.href.startsWith('http') ? '_blank' : undefined}
-                  rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                >
-                  {method.action}
-                </a>
-              ) : (
-                <span class="method-info">{method.action}</span>
-              )}
-            </div>
-          ))}
+            <aside class="contact-info">
+                <h2 class="section-title">Other Ways to Connect</h2>
+                <div class="contact-methods">
+                    {
+                        contactMethods.map((method) => (
+                            <div class="contact-method">
+                                <div class="method-header">
+                                    <span class="material-symbols-outlined method-icon">
+                                        {method.icon}
+                                    </span>
+                                    <h3 class="method-title">{method.title}</h3>
+                                </div>
+                                <p class="method-description">
+                                    {method.description}
+                                </p>
+                                {method.href ? (
+                                    <a
+                                        href={method.href}
+                                        class="method-action"
+                                        target={
+                                            method.href.startsWith("http")
+                                                ? "_blank"
+                                                : undefined
+                                        }
+                                        rel={
+                                            method.href.startsWith("http")
+                                                ? "noopener noreferrer"
+                                                : undefined
+                                        }
+                                    >
+                                        {method.action}
+                                    </a>
+                                ) : (
+                                    <span class="method-info">
+                                        {method.action}
+                                    </span>
+                                )}
+                            </div>
+                        ))
+                    }
+                </div>
+
+                <div class="availability-note">
+                    <h3>Current Availability</h3>
+                    <p>
+                        I'm actively seeking new opportunities and available for
+                        immediate engagement. Whether you're looking for
+                        full-time talent, project-based consulting, or advisory
+                        support, I'm ready to help.
+                    </p>
+                </div>
+            </aside>
         </div>
-
-        <div class="availability-note">
-          <h3>Current Availability</h3>
-          <p>
-            I'm actively seeking new opportunities and available for immediate engagement. 
-            Whether you're looking for full-time talent, project-based consulting, or 
-            advisory support, I'm ready to help.
-          </p>
-        </div>
-      </aside>
     </div>
-  </div>
 </Layout>
 
 <style>
-  .container {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-
-  .hero {
-    text-align: center;
-    padding: 3rem 2rem;
-    margin: 2rem 0;
-    border-radius: var(--radius);
-    background: var(--surface);
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border);
-  }
-
-  .hero-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: 1rem;
-    line-height: 1.2;
-  }
-
-  .hero-title .material-symbols-outlined {
-    font-size: 2.25rem;
-    color: var(--brand);
-  }
-
-  .hero-content {
-    font-size: 1.1rem;
-    color: var(--muted);
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .contact-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    margin: 3rem 0;
-  }
-
-  .contact-form-section {
-    background: var(--surface);
-    border-radius: var(--radius);
-    padding: 2rem;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border);
-  }
-
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--ink);
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-methods {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .contact-method {
-    background: var(--surface);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border);
-  }
-
-  .method-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .method-icon {
-    font-size: 1.5rem;
-    color: var(--brand);
-    background: rgba(103, 80, 164, 0.1);
-    padding: 0.5rem;
-    border-radius: 8px;
-  }
-
-  .method-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--ink);
-    margin: 0;
-  }
-
-  .method-description {
-    color: var(--muted);
-    font-size: 0.9rem;
-    margin-bottom: 0.75rem;
-    line-height: 1.4;
-  }
-
-  .method-action {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    color: var(--brand);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: color 0.2s ease;
-  }
-
-  .method-action:hover {
-    color: var(--brand-ink);
-    text-decoration: underline;
-  }
-
-  .method-info {
-    color: var(--muted);
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-
-  .availability-note {
-    background: var(--surface);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border);
-  }
-
-  .availability-note h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--ink);
-    margin: 0 0 0.75rem 0;
-  }
-
-  .availability-note p {
-    color: var(--muted);
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  /* Dark theme adjustments */
-  :global([data-theme="dark"]) .method-icon {
-    background: rgba(208, 188, 255, 0.15);
-  }
-
-  /* Mobile responsive */
-  @media (max-width: 968px) {
-    .contact-layout {
-      grid-template-columns: 1fr;
-      gap: 2rem;
+    .container {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
     }
-  }
 
-  @media (max-width: 768px) {
     .hero {
-      padding: 2.5rem 1.5rem;
-      margin: 1rem 0;
+        text-align: center;
+        padding: 3rem 2rem;
+        margin: 2rem 0;
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
     }
 
     .hero-title {
-      font-size: 1.75rem;
-      flex-direction: column;
-      gap: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 1rem;
+        line-height: 1.2;
     }
 
     .hero-title .material-symbols-outlined {
-      font-size: 1.75rem;
+        font-size: 2.25rem;
+        color: var(--brand);
+    }
+
+    .hero-content {
+        font-size: 1.1rem;
+        color: var(--muted);
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+        margin: 3rem 0;
     }
 
     .contact-form-section {
-      padding: 1.5rem;
+        background: var(--surface);
+        border-radius: var(--radius);
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-methods {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
     .contact-method {
-      padding: 1.25rem;
+        background: var(--surface);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+    }
+
+    .method-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .method-icon {
+        font-size: 1.5rem;
+        color: var(--brand);
+        background: rgba(103, 80, 164, 0.1);
+        padding: 0.5rem;
+        border-radius: 8px;
+    }
+
+    .method-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin: 0;
+    }
+
+    .method-description {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .method-action {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        color: var(--brand);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: color 0.2s ease;
+    }
+
+    .method-action:hover {
+        color: var(--brand-ink);
+        text-decoration: underline;
+    }
+
+    .method-info {
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-weight: 500;
     }
 
     .availability-note {
-      padding: 1.25rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .hero {
-      padding: 2rem 1rem;
+        background: var(--surface);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
     }
 
-    .hero-title {
-      font-size: 1.5rem;
+    .availability-note h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin: 0 0 0.75rem 0;
     }
 
-    .contact-form-section {
-      padding: 1rem;
+    .availability-note p {
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin: 0;
     }
 
-    .contact-method {
-      padding: 1rem;
+    /* Dark theme adjustments */
+    :global([data-theme="dark"]) .method-icon {
+        background: rgba(208, 188, 255, 0.15);
     }
-  }
+
+    /* Mobile responsive */
+    @media (max-width: 968px) {
+        .contact-layout {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            padding: 2.5rem 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .hero-title {
+            font-size: 1.75rem;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .hero-title .material-symbols-outlined {
+            font-size: 1.75rem;
+        }
+
+        .contact-form-section {
+            padding: 1.5rem;
+        }
+
+        .contact-method {
+            padding: 1.25rem;
+        }
+
+        .availability-note {
+            padding: 1.25rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero {
+            padding: 2rem 1rem;
+        }
+
+        .hero-title {
+            font-size: 1.5rem;
+        }
+
+        .contact-form-section {
+            padding: 1rem;
+        }
+
+        .contact-method {
+            padding: 1rem;
+        }
+    }
 </style>
