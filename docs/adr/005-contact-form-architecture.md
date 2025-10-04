@@ -14,11 +14,11 @@ The contact form must function reliably during local development and in producti
 ## Decision
 We introduced a three-tier contact form architecture with explicit delivery modes:
 
-1. **React ContactForm component** – Handles validation, submission status, and displays API-supplied feedback. Client logic now parses API responses, surfaces error details, and differentiates between stub and live delivery states.
-2. **Astro  proxy** – Continues to proxy requests during development so the UI can talk to the worker using same-origin relative URLs.
-3. **Hono worker  endpoint** – Owns validation (Zod), rate limiting, and email dispatch via Resend. The worker now honours a  environment variable:
-   -  (default) captures submissions, logs sanitized payloads, and returns a success response without sending email.
-   -  requires  and , then delivers notifications via Resend.
+1. **React `ContactForm` component** – Handles validation, submission status, and displays API-supplied feedback. Client logic now parses API responses, surfaces error details, and differentiates between stub and live delivery states.
+2. **Astro `/api/contact` proxy** – Continues to proxy requests during development so the UI can talk to the worker using same-origin relative URLs.
+3. **Hono worker `/contact/submit` endpoint** – Owns validation (Zod), rate limiting, and email dispatch via Resend. The worker now honours a `CONTACT_FORM_MODE` environment variable:
+   - `stub` (default) captures submissions, logs sanitized payloads, and returns a success response without sending email.
+   - `live` requires `RESEND_API_KEY` and `CONTACT_EMAIL`, then delivers notifications via Resend.
 
 Automated tests cover both layers: Vitest exercises worker behaviour for stub and live modes, and React Testing Library verifies that the client surfaces success and failure messages.
 
@@ -31,16 +31,16 @@ Automated tests cover both layers: Vitest exercises worker behaviour for stub an
 ## Consequences
 ### Positive
 - Local development works out-of-the-box with meaningful UI feedback.
-- Production can switch to real email delivery by setting  alongside Resend secrets.
+- Production can switch to real email delivery by setting `CONTACT_FORM_MODE=live` alongside Resend secrets.
 - Automated tests establish a baseline safety net for both API and client behaviour.
 - Documentation now captures the delivery-mode contract for future collaborators.
 
 ### Negative
-- Additional environment management is required; deployments must ensure  is correct per environment.
+- Additional environment management is required; deployments must ensure `CONTACT_FORM_MODE` is correct per environment.
 - Worker logic is slightly more complex due to dual-mode handling.
 
 ## Follow-Up Actions
-- Configure deployment pipelines to set  in production and stage environments once secrets are available.
+- Configure deployment pipelines to set `CONTACT_FORM_MODE=live` in production and stage environments once secrets are available.
 - Implement integration tests (Playwright) to exercise the full browser-to-worker flow.
 - Add monitoring/alerting around contact form failures once deployed.
 

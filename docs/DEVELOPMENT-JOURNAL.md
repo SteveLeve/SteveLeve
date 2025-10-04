@@ -1031,6 +1031,33 @@ workers/
 
 ---
 
+## 2025-02-03: Contact Form Stub Mode & Testing Enablement
+
+### Context
+While running the Astro site and Cloudflare worker locally, the contact form returned opaque 500 errors because the worker expected Resend credentials that are not available during development. We also lacked automated coverage for the contact workflow, making it difficult to verify behaviour without manual testing.
+
+### Decisions Made
+- Added `CONTACT_FORM_MODE` to the API worker so local development defaults to a safe `stub` mode, while production can opt into `live` delivery once secrets are configured (captured in ADR-005).
+- Updated the React `ContactForm` component to parse API responses, surface descriptive error messages, and highlight when the system is running in stub mode.
+- Introduced Vitest-based automated tests for both the worker (`POST /contact/submit` stub/live flows) and the client component to catch regressions early.
+
+### Technical Insights
+- Astro's API routes can stream requests to the worker, but meaningful error messages must originate from the worker response payload; aligning the client to read `message`/`error` fields dramatically improved UX.
+- Providing a stub delivery path allows us to run the full stack locally without secrets while still exercising validation, rate limiting, and logging logic.
+- React Testing Library with jsdom is sufficient to assert UI feedback states without standing up the Astro dev server.
+
+### Challenges Encountered
+- Initial tests failed because the worker always required `RESEND_API_KEY` and `CONTACT_EMAIL`. Introducing the delivery mode toggle resolved the issue while keeping live delivery safe.
+- The ADR authoring pipeline stripped inline code references when created via the CLI. Corrected the document to restore endpoint and environment variable references.
+
+### Next Steps
+- Wire up Playwright end-to-end coverage for the contact page once routing stabilises.
+- Configure deployment environments to set `CONTACT_FORM_MODE=live` alongside Resend secrets before launch.
+- Add observability around contact submissions (metrics/log shipping) in a future task.
+
+### Reflection
+Automated tests and clearer messaging remove a major friction point for verifying the contact experience. The stub/live split provides a solid foundation for integrating email delivery later without blocking local work.
+
 ## Template for Future Entries
 
 ### [Date]: [Brief Description]

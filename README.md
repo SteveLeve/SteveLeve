@@ -111,31 +111,33 @@ This website modernizes a static GitHub Pages site into a dynamic, scalable web 
 
    ```bash
    git clone <repository-url>
-   cd consulting-website-modernization
+   cd SteveLeve
    ```
 
-2. **Navigate to the Astro project**
+2. **Install dependencies**
 
    ```bash
-   cd src/consulting-website
+   cd workers/site && npm install
+   cd ../api && npm install
    ```
 
-3. **Install dependencies**
+3. **Run both servers**
 
    ```bash
-   npm install
+   cd ../../
+   ./scripts/dev.sh
    ```
 
-4. **Start development server**
+   - Astro site: http://localhost:4321
+   - Contact API worker: http://localhost:8787
+
+   The worker defaults to `CONTACT_FORM_MODE=stub`, allowing contact submissions without email secrets.
+
+4. **Run automated tests**
 
    ```bash
-   npm run dev
-   ```
-
-5. **Open in browser**
-
-   ```
-   http://localhost:4321
+   cd workers/api && npm test    # Worker contact endpoint tests
+   cd ../site && npm test        # React contact form tests
    ```
 
 ### Available Scripts
@@ -146,12 +148,14 @@ This website modernizes a static GitHub Pages site into a dynamic, scalable web 
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build locally
 - `npm run deploy` - Deploy to Cloudflare Pages (requires setup)
+- `npm test` - Run React component tests (Vitest)
 
 #### API Worker (workers/api/)
 
 - `npm run dev` - Start Worker development server
 - `npm run build` - Build Worker (dry-run)
 - `npm run deploy` - Deploy Worker to Cloudflare
+- `npm test` - Run Hono route tests (Vitest)
 
 #### Development (project root)
 
@@ -188,12 +192,12 @@ This project follows a **documentation-driven development** approach:
 - [x] Mobile-responsive layouts
 - [x] Interactive contact form with validation
 - [x] Cloudflare Workers API with Hono framework
+- [x] Contact form stub/live delivery modes with automated tests
 - [x] Email service integration (Resend)
 - [x] Rate limiting and security features
 
 ### 🚧 In Progress
 
-- [ ] Production deployment pipeline
 - [ ] Environment variable configuration
 - [ ] End-to-end testing
 - [ ] Production deployment pipeline
