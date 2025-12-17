@@ -1,83 +1,74 @@
 # Services
 
-## Pragmatic Solutions for Complex Challenges
+I work with companies that need senior technical capability without the overhead of a full-time executive hire—or teams building AI applications that need to actually ship.
 
-I offer a range of services, from focused assessments to hands-on transformations, backed by 25+ years of experience and a track record of delivering measurable results: zero-downtime migrations, 25% cost reductions, and 99.5% revenue protection during critical transitions.
+---
 
-## Service Categories
+## AI Application Development
 
-### AI & Emerging Technology
+**From prototype to production.**
 
-**[AI & Emerging Technology Adoption](services/ai-adoption.md)** — Transform AI from buzzword to business value. Build production-ready prototypes in weeks, establish governance that enables innovation without chaos, and empower your teams with AI-assisted workflows that deliver 2-3x productivity gains.
+Most AI demos don't survive contact with real users. I build applications with the reliability, observability, and operational maturity that production demands.
 
-*   AI Readiness Assessment & Strategy
-*   AI Governance & Responsible AI Frameworks  
-*   AI-Powered Developer Productivity (proven 2-3x velocity gains)
-*   Rapid Prototyping & Proof-of-Concept Development
+**What I deliver:**
+- RAG systems with sub-second latency and streaming responses
+- Multi-LLM architectures (OpenAI, Anthropic, open-source models)
+- Custom evaluation frameworks that measure quality, not just vibes
+- Production deployment across platforms (Vercel, Cloudflare Workers, traditional cloud)
+- Vector database design and optimization
 
-*Best for: Companies ready to move beyond AI experimentation to production implementations.*
+**Recent work:** Shipped 4 production RAG systems in December 2025, including two live demos. Built custom evaluation framework achieving +15% precision improvement through systematic testing.
 
-### Technical Leadership & Strategy
+*Best for: Teams building AI features who need someone who's shipped production AI applications, not just completed tutorials.*
 
-**[Technical Leadership & Strategy](services/technical-leadership.md)** — Need senior technical leadership but not ready for a full-time hire? I provide battle-tested guidance as a Fractional CTO, helping startups and scale-ups make critical architectural decisions, mentor senior engineers, and navigate M&A integrations.
+---
 
-*   Fractional CTO / Interim Technical Leadership
-*   Engineering Team Building & Mentoring
-*   Digital Transformation & Change Management
-*   M&A Technical Due Diligence & Integration (proven in multi-platform consolidations)
+## Technical Leadership
 
-*Best for: Startups, SMBs, and companies in transition needing strategic technical leadership.*
+**Strategic guidance without the full-time commitment.**
 
-### Legacy System Modernization
+Fractional CTO and advisory services for companies navigating technical complexity. I help with the decisions that are hard to undo—architecture choices, team structure, technology bets.
 
-**[Legacy System Modernization & Migration](services/legacy-modernization.md)** — Is your legacy system a bottleneck? I've led complex migrations—from emergency data center exits to full AWS transformations—with zero downtime and zero revenue loss. Turn technical debt into competitive advantage.
+**What I offer:**
+- Fractional CTO / interim technical leadership
+- Architecture review and technology strategy
+- Engineering team mentoring and growth planning
+- Enterprise architecture and roadmap development
+- Technical due diligence for M&A or investment
 
-*   Legacy System Assessment & Modernization Roadmap
-*   Cloud Migration (AWS) — proven zero-downtime track record
-*   Monolith to Microservices Decomposition
-*   Technology Stack Upgrade & Refactoring
+**Background:** 17+ years leading technical teams through acquisitions, migrations, and transformations. Scaled engineering teams, established governance frameworks, led AI adoption initiatives.
 
-*Best for: Companies with aging infrastructure that's limiting growth or creating risk.*
+*Best for: Startups needing senior technical leadership, companies in transition, or teams facing architectural decisions with long-term consequences.*
 
-### Cloud Strategy & Operations
+---
 
-**[Cloud Strategy & Cost Optimization](services/cloud-strategy.md)** — Cloud bill spiraling out of control? I've delivered 25% AWS cost reductions and 50% observability savings while improving performance. Get a data-driven plan to cut waste, implement FinOps, and make cloud spending a shared responsibility.
+## Marketing Technology
 
-*   Cloud Cost Optimization Assessment (proven 25-50% savings)
-*   Observability & Logging Strategy
-*   Cloud Governance & Security (ISO 27001, NIST)
-*   FinOps & Cloud Financial Management
+**Deep expertise in revenue-critical MarTech infrastructure.**
 
-*Best for: Cloud-native companies struggling with rising costs and unclear ROI.*
+17 years building affiliate marketing platforms at ShareASale/Awin Global. I understand tracking, attribution, payments, and the systems that power partner marketing at scale.
 
-### Enterprise Architecture
+**What I know:**
+- Affiliate and partner marketing platform architecture
+- Tracking systems and attribution (250M+ monthly requests)
+- Transaction processing and payment systems ($1B+ annual volume)
+- Publisher/merchant relationship management at scale
+- AdTech integrations and campaign management
 
-**[Enterprise Architecture (EA)](services/ea-consulting.md)** — Tired of technology investments that don't align with business priorities? I help organizations create clear technology roadmaps, rationalize bloated application portfolios, and establish governance that enables rather than blocks innovation.
+**Track record:** Built platforms serving 250K+ publishers and 10K+ merchants. Led platform consolidations protecting 99.5% of revenue. Designed tracking integrations with 263ms latency and 75% error rate reduction.
 
-*   Technology Strategy & Roadmapping
-*   Application Portfolio Management (APM)
-*   Architecture Governance & Design Authority
-*   M&A Technology Strategy & Integration
+*Best for: MarTech companies building affiliate, partner, or advertising platforms—or anyone acquiring/integrating marketing technology assets.*
 
-*Best for: Organizations lacking clear tech strategy or managing complex M&A integrations.*
+---
 
-### Site Reliability Engineering
+## How I Work
 
-**[Site Reliability Engineering (SRE)](services/sre-consulting.md)** — Fighting fires instead of building features? I help teams reduce MTTR, eliminate toil through automation, and build a blameless incident response culture. Transform chaos into resilience.
+**Engagements typically start with a conversation** to understand what you're trying to accomplish and whether I'm the right fit. I'm direct about what I can and can't help with.
 
-*   Reliability & Performance Assessment
-*   Observability & Monitoring Strategy (SLOs, SLIs, distributed tracing)
-*   Incident Response & Postmortem Culture
-*   Toil Reduction & Automation (Ansible, Terraform, CI/CD)
+**Flexibility matters.** Some clients need a few hours of architecture review. Others need embedded leadership for months. I structure engagements around outcomes, not billable hours.
 
-*Best for: Teams experiencing frequent outages or drowning in operational work.*
+**I'm also open to full-time roles** for the right opportunity—particularly AI Engineering positions where I can combine my infrastructure background with production AI development.
 
-### Marketing Technology (MarTech) Consulting
+---
 
-**[Marketing Technology (MarTech) Consulting](services/martech-consulting.md)** — Building or scaling a MarTech platform? I bring 17 years of deep expertise from ShareASale (a leading affiliate marketing network), handling 250M+ monthly requests. I understand tracking, attribution, payments, and the revenue-critical systems that power growth.
-
-*   Affiliate & Partner Marketing Platform Development
-*   AdTech & Campaign Management Systems
-*   MarTech Stack Audit & Modernization
-
-*Best for: MarTech companies building affiliate, partner, or advertising platforms at scale.*
+[Get in Touch](https://stevenleve.com/contact/) · [LinkedIn](https://linkedin.com/in/steve-leve)

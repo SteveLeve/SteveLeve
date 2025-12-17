@@ -1,34 +1,45 @@
 # About Me
 
-## 25+ Years of Engineering Evolution
+## Infrastructure Roots. AI Focus. Shipping Mentality.
 
-From building foundational infrastructure to architecting the next generation of AI applications. I bring a depth of experience that ensures innovation is built on a solid, reliable foundation.
+I spent two decades building the systems that power the web—data center migrations, cloud transformations, platforms processing billions in transactions. I learned that reliability isn't just about uptime; it's about trust.
 
-### My Story
+Now I apply that same engineering rigor to AI. The field is full of demos that impress but don't ship. I build production systems with the observability, security, and operational maturity that comes from years of being on-call for revenue-critical infrastructure.
 
-My career has been defined by adaptation and solving the hardest problems in the room. For over two decades, I built and scaled the infrastructure that powers the web—navigating data center exits, cloud migrations, and massive scale. I learned that reliability isn't just about uptime; it's about trust.
+---
 
-In 2025, I recognized a paradigm shift. The same engineering rigor I applied to SRE and platform engineering was now critically needed in the emerging field of AI. I pivoted my focus to AI Engineering, applying my deep background in distributed systems and data pipelines to build production-grade AI applications.
+## What Sets Me Apart
 
-But I didn't leave my past behind. I brought it with me. My experience leading large-scale platform migrations and AI governance initiatives allows me to see the bigger picture. I don't just write AI code; I help organizations build the *context* for AI to succeed. I've spent months exploring agentic coding environments, defining "Context Engineering" patterns that allow developers to work 3-5x faster without sacrificing quality.
+**I Ship**
+Recent work: 4 production RAG systems built and deployed in under a week. Two are live right now with streaming responses and sub-second latency. I don't just prototype; I deliver.
 
-### What I'm Known For
+**I Measure**
+I built a custom evaluation framework for RAG quality—not off-the-shelf tools, but ground-truth datasets and metrics (Precision@K, Recall, MRR, NDCG) that drive systematic improvement. Measured results: +15% precision, +22% overall quality.
 
-*   **Bias for Action:** I don't just plan; I build. Recent work includes shipping multiple production RAG systems with live demos, demonstrating that speed and quality can coexist.
+**I Understand the Full Stack**
+From GPU hardware to React frontends, I know how the pieces fit together. My AI work is grounded in platform engineering experience that most AI practitioners lack.
 
-*   **Evaluation Rigor:** I build custom metrics frameworks to systematically improve RAG quality. Using ground-truth datasets and metrics like Precision@K, Recall, MRR, and NDCG, I achieve measured improvements (+15% Precision, +22% overall) through experimentation, not guesswork.
+**I Know Context Engineering**
+I've spent months exploring how to make AI tools genuinely useful for development teams. The `CLAUDE.md` files, structured data patterns, and workflow designs that turn generic LLMs into specialized assistants—I've mapped this territory and can help teams navigate it.
 
-*   **Deep Technical Roots:** My AI work is grounded in 17+ years of platform engineering. I understand the full stack—from the GPU hardware to the React frontend—and how to optimize every layer.
+---
 
-*   **Agentic Workflow Expert:** I help teams responsibly adopt AI-assisted coding. I design the "Context Engineering" standards—like `CLAUDE.md` and structured data files—that turn generic AI tools into specialized domain experts.
+## Background
 
-*   **Mentorship & Team Growth:** I continue to believe that great software is built by great teams. I'm passionate about upskilling engineers and helping them navigate the rapidly changing technology landscape.
+**17 Years at ShareASale/Awin Global**
+Built and scaled affiliate marketing infrastructure serving 250K+ publishers and 10K+ merchants. Led platform consolidations, zero-downtime migrations, and the kind of crisis response that happens at 3 AM when transactions can't drop.
 
-### Recent Highlights
+**Technical Leadership**
+Scaled engineering teams, established DevSecOps practices, and led AI governance initiatives. Currently serving as Fractional CTO for a stealth MarTech startup.
 
-*   **Shipped Production RAG Systems:** Built 4 RAG applications in December 2025, including 2 live production demos ([Vercel deployment](https://vercel-rag-demo.stevenleve.com), [Cloudflare Workers deployment](https://cloudflare-rag-demo.stevenleve.com)) demonstrating multi-platform expertise with sub-second latency and streaming responses.
-*   **Developed Custom Evaluation Framework:** Designed metrics-driven RAG quality improvement system using Precision@K, Recall, MRR, NDCG, BLEU, and ROUGE, achieving measured improvements of +15% Precision and +22% overall quality through systematic experimentation.
-*   **Open-Sourced LLM Benchmarking:** Created a framework to analyze Intel GPU performance for local inference, helping the community make informed hardware decisions.
-*   **Secured Edge Infrastructure:** Deployed a consulting platform on Cloudflare Workers with a 96% security score, demonstrating "secure by design" principles.
-*   **Fractional CTO Engagement:** Provided strategic technical leadership for stealth MarTech AI startup, shipping beta product to early customers.
-*   **AWS Certified AI Practitioner:** Validated expertise in the AWS AI ecosystem (2025-2028).
+**Credentials**
+- AWS Certified AI Practitioner (2025-2028)
+- B.A., Studio Art — Western Illinois University
+
+---
+
+## Currently
+
+Based in the Chicago suburbs. Open to remote roles, consulting engagements, and collaborations with teams building interesting things.
+
+[Get in Touch](https://stevenleve.com/contact/) · [LinkedIn](https://linkedin.com/in/steve-leve)
