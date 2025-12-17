@@ -14,7 +14,9 @@ But I didn't leave my past behind. I brought it with me. My experience leading l
 
 ### What I'm Known For
 
-*   **Bias for Action:** I don't just plan; I build. In a single month, I architected and shipped three production-quality projects, demonstrating that speed and quality can coexist.
+*   **Bias for Action:** I don't just plan; I build. Recent work includes shipping multiple production RAG systems with live demos, demonstrating that speed and quality can coexist.
+
+*   **Evaluation Rigor:** I build custom metrics frameworks to systematically improve RAG quality. Using ground-truth datasets and metrics like Precision@K, Recall, MRR, and NDCG, I achieve measured improvements (+15% Precision, +22% overall) through experimentation, not guesswork.
 
 *   **Deep Technical Roots:** My AI work is grounded in 17+ years of platform engineering. I understand the full stack—from the GPU hardware to the React frontend—and how to optimize every layer.
 
@@ -24,7 +26,9 @@ But I didn't leave my past behind. I brought it with me. My experience leading l
 
 ### Recent Highlights
 
-*   **Built a Production RAG Application:** Architected a full-stack system with sub-second latency, integrating multiple LLM providers and vector search.
+*   **Shipped Production RAG Systems:** Built 4 RAG applications in December 2025, including 2 live production demos ([Vercel deployment](https://vercel-rag-demo.stevenleve.com), [Cloudflare Workers deployment](https://cloudflare-rag-demo.stevenleve.com)) demonstrating multi-platform expertise with sub-second latency and streaming responses.
+*   **Developed Custom Evaluation Framework:** Designed metrics-driven RAG quality improvement system using Precision@K, Recall, MRR, NDCG, BLEU, and ROUGE, achieving measured improvements of +15% Precision and +22% overall quality through systematic experimentation.
 *   **Open-Sourced LLM Benchmarking:** Created a framework to analyze Intel GPU performance for local inference, helping the community make informed hardware decisions.
 *   **Secured Edge Infrastructure:** Deployed a consulting platform on Cloudflare Workers with a 96% security score, demonstrating "secure by design" principles.
+*   **Fractional CTO Engagement:** Provided strategic technical leadership for stealth MarTech AI startup, shipping beta product to early customers.
 *   **AWS Certified AI Practitioner:** Validated expertise in the AWS AI ecosystem (2025-2028).
