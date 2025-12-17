@@ -1,12 +1,8 @@
 # Contact Me
 
----
-
 ## Let's Solve Your Next Challenge
 
 Whether you're facing a technical crisis, planning a major modernization, or need a trusted advisor to gut-check your strategy, I'm here to help.
-
----
 
 ### How Can I Help?
 

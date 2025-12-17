@@ -4,35 +4,66 @@
 
 I offer a range of services, from fixed-fee assessments to hands-on custom engagements, designed to deliver measurable value and build your team's capabilities.
 
-### Productized Offerings (Fixed-Fee)
+## Service Categories
 
-*These are focused, rapid engagements designed to give you clarity and an actionable plan in a short amount of time.*
+### AI & Emerging Technology
 
-*   **AI Prototype Sprint:** A 2-week engagement to build a functional Proof of Concept (PoC) for your specific AI use case (e.g., RAG chatbot, document processor). Includes architecture design and code handover.
-*   **Agentic Coding Enablement:** A workshop and toolkit to help your engineering team adopt AI-assisted development. Includes context engineering patterns (`CLAUDE.md`), tool selection guidance, and safety protocols (DevContainers).
-*   **Technology Risk & Modernization Assessment:** A comprehensive review of your current architecture, identifying key risks, performance bottlenecks, and opportunities for pragmatic modernization.
-*   **Reliability & Incident Response Audit:** An evaluation of your monitoring, alerting, and on-call processes to reduce MTTR and build a resilient culture.
+**[AI & Emerging Technology Adoption](services/ai-adoption.md)** — Help your organization move beyond AI hype and implement practical, responsible AI solutions.
 
-### Custom Engagements
+*   AI Readiness Assessment & Strategy
+*   AI Governance & Responsible AI Frameworks
+*   AI-Powered Developer Productivity & Experience
+*   Prototyping & Proof-of-Concept (PoC) Development
 
-*For more complex, long-term challenges, I partner with you as a hybrid advisor and hands-on contributor.*
+### Technical Leadership & Strategy
 
-*   **AI Engineering & Strategy:**
-    *   **What it is:** End-to-end development of production AI applications. From selecting the right LLMs and vector databases to building the API and frontend.
-    *   **Best for:** Companies wanting to integrate AI features but lacking internal expertise in RAG, embeddings, or prompt engineering.
+**[Technical Leadership & Strategy](services/technical-leadership.md)** — Experienced technical guidance for engineering teams, from fractional CTO services to team mentoring.
 
-*   **Agentic Workflow Design (DX + AI):**
-    *   **What it is:** I help you design and implement "Context Engineering" standards that make your codebase AI-ready. I define agent personas, create structured context documents, and optimize developer workflows for 2-3x velocity gains.
-    *   **Best for:** Engineering leaders who want to maximize the ROI of tools like Copilot and Claude while maintaining code quality.
+*   Fractional CTO / Interim Technical Leadership
+*   Engineering Team Building & Mentoring
+*   Digital Transformation & Change Management
+*   M&A Technical Due Diligence & Integration
 
-*   **Trusted Advisor (Fractional CTO/Architect):**
-    *   **What it is:** Ongoing, part-time guidance for your leadership and engineering teams. I provide architectural reviews, mentor senior engineers, and help you build a long-term technical vision.
-    *   **Best for:** Startups and SMBs that need senior technical leadership but aren't ready for a full-time executive hire.
+### Legacy System Modernization
 
-*   **Troubleshooting & Problem Solving:**
-    *   **What it is:** Deep, hands-on engagement to resolve a persistent or critical technical issue (outages, performance bottlenecks, security incidents).
-    *   **Best for:** Teams facing recurring stability issues they can't solve.
+**[Legacy System Modernization & Migration](services/legacy-modernization.md)** — Expert guidance to modernize outdated systems, migrate to the cloud, and unlock new performance and scalability.
 
-*   **Roadmapping & Technical Strategy:**
-    *   **What it is:** Collaborative sessions to define the future state of your architecture and create a phased, realistic plan to get there.
-    *   **Best for:** Businesses planning a cloud migration, monolith decomposition, or major re-platforming initiative.
+*   Legacy System Assessment & Modernization Roadmap
+*   Cloud Migration (AWS)
+*   Monolith to Microservices Decomposition
+*   Technology Stack Upgrade & Refactoring
+
+### Cloud Strategy & Operations
+
+**[Cloud Strategy & Cost Optimization](services/cloud-strategy.md)** — Optimize your cloud investment through cost reduction, governance, and financial management.
+
+*   Cloud Cost Optimization Assessment
+*   Observability & Logging Strategy
+*   Cloud Governance & Security
+*   FinOps & Cloud Financial Management
+
+### Enterprise Architecture
+
+**[Enterprise Architecture (EA)](services/ea-consulting.md)** — Align technology strategy with business goals through portfolio management and governance.
+
+*   Technology Strategy & Roadmapping
+*   Application Portfolio Management (APM)
+*   Architecture Governance & Design Authority
+*   M&A Technology Strategy & Integration
+
+### Site Reliability Engineering
+
+**[Site Reliability Engineering (SRE)](services/sre-consulting.md)** — Improve system reliability, reduce operational toil, and create a culture of continuous improvement.
+
+*   Reliability & Performance Assessment
+*   Observability & Monitoring Strategy
+*   Incident Response & Postmortem Culture
+*   Toil Reduction & Automation
+
+### Marketing Technology (MarTech) Consulting
+
+**[Marketing Technology (MarTech) Consulting](services/martech-consulting.md)** — Deep domain expertise for building, scaling, or modernizing MarTech platforms.
+
+*   Affiliate & Partner Marketing Platform Development
+*   AdTech & Campaign Management Systems
+*   MarTech Stack Audit & Modernization

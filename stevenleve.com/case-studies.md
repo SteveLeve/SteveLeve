@@ -4,22 +4,24 @@
 
 Real-world examples of how pragmatic, reliability-first thinking solves critical business challenges.
 
-### Case Studies
+## Featured Case Studies
 
-#### Data Center Exit Under Austerity
+### Infrastructure & Migration
 
-*   **Challenge:** After an acquisition, we had 12 months to exit a closing data center housing our core revenue-generating systems. The infrastructure was a mix of physical servers and legacy code with minimal documentation.
-*   **Action:** I led the reverse-engineering, documentation, and migration of all critical systems to a VMware private cloud. This involved a P2V strategy, automated deployment scripting, and contingency planning to ensure business continuity.
-*   **Result:** Completed the migration ahead of schedule with **zero revenue loss**. We transformed undocumented, high-risk hardware into manageable, virtualized assets, paving the way for a future AWS migration.
+**[Data Center Exit Under Austerity](case-studies/Data-Center-Exit.md)** — With a data center shutting down and no clear documentation, I led a high-stakes migration that stabilized the business and paved the way for modernization. Zero revenue loss through careful reverse-engineering, planning, and a VMware-based lift-and-shift strategy.
 
-#### AWS Migration & Modernization
+**[AWS Migration & Modernization](case-studies/AWS-Migration.md)** — Led a six-month migration from managed hosting to AWS, modernizing critical systems while maintaining operations without downtime. The move unlocked new capabilities and modernization as the organizational standard.
 
-*   **Challenge:** Our managed hosting provider had become a performance bottleneck. We needed to migrate the entire platform to AWS within 6 months to reduce risk and enable modernization.
-*   **Action:** I planned and executed a "lift and shift" migration, managing external consultants, redesigning our observability stack for the cloud, and performing targeted refactoring of legacy code to remove blockers.
-*   **Result:** We completed the migration to AWS in under 6 months with **zero downtime**. The move unlocked new capabilities and was featured in an AWS case study.
+### Platform Strategy & Consolidation
 
-#### Platform Consolidation & Revenue Protection
+**[Platform Consolidation Across Awin Global](case-studies/Platform-Consolidation.md)** — Guided the consolidation of two major affiliate platforms, protecting 99.5% of revenue during one of the company's most complex transitions. Built interim solutions using Cloudflare and AWS Lambda to bridge legacy and modern systems seamlessly.
 
-*   **Challenge:** A multi-year initiative to merge two major MarTech platforms required integrating a legacy tracking system—responsible for 250M monthly requests—without any customer impact.
-*   **Action:** I co-designed a multi-layer reverse proxy architecture using Cloudflare Workers and AWS Lambda. This solution intelligently routed traffic, provided seamless failover, and required zero re-integration from customers.
-*   **Result:** We protected **99.5% of channel revenue** while migrating the legacy system. The new cloud-native architecture reduced error rates by **75%** and ensured forward compatibility.
+### AI & Emerging Technologies
+
+**[Production RAG Application with Sub-Second Latency](case-studies/AI-RAG-Application.md)** — Designed and built a production-ready Retrieval-Augmented Generation (RAG) application for real-time data chat. Demonstrates full-stack AI engineering across FastAPI, React, vector databases, and LLM APIs with sub-second response times.
+
+**[Open-Source Intel GPU LLM Benchmarking Framework](case-studies/LLM-Benchmarking-Framework.md)** — Developed an open-source benchmarking framework to systematically evaluate the performance of Large Language Models on consumer hardware with Intel GPU acceleration. Provides data-driven insights for choosing between local inference and cloud APIs.
+
+### Cloud Architecture & Security
+
+**[Secure Edge Computing Platform on Cloudflare](case-studies/Secure-Edge-Deployment.md)** — Architected a high-performance, secure consulting website using the Cloudflare edge network. Achieved a 96% security score and sub-100ms response times worldwide through serverless architecture, edge compute, and defense-in-depth security.
