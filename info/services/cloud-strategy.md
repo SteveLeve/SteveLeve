@@ -89,7 +89,7 @@ I help you optimize your cloud strategy, improve governance, and significantly r
 - **Static Asset Optimization** — CDN and edge delivery strategies
 
 **Recent Experience:** Built production RAG applications on Cloudflare Workers:
-- Zero external API costs for LLM inference (on-device models)
+- Broad model selection with Workers AI
 - Sub-100ms global latency
 - 90%+ cost reduction vs. traditional cloud deployment
 - Scales automatically without manual intervention
@@ -117,7 +117,6 @@ I help you optimize your cloud strategy, improve governance, and significantly r
 - **Quality Monitoring** — Ensure cost cuts don't degrade quality
 
 **Recent Portfolio Work:**
-- Deployed Llama-3.1-8B at edge (zero API costs)
 - Compared Vercel (OpenAI) vs. Cloudflare Workers (local inference)
 - Built evaluation frameworks to measure quality vs. cost tradeoffs
 - Demonstrated 90%+ cost reduction for suitable use cases
@@ -265,8 +264,8 @@ I've optimized under pressure:
 
 ### 1. Cost Optimization Assessment (Fixed Scope)
 
-**Duration:** 2-4 weeks
-**Deliverable:** Detailed report with prioritized recommendations
+**Duration:** 2-4 weeks  
+**Deliverable:** Detailed report with prioritized recommendations  
 
 **Includes:**
 - Comprehensive cloud spending analysis
@@ -281,8 +280,8 @@ I've optimized under pressure:
 
 ### 2. Observability Strategy (Project-Based)
 
-**Duration:** 3-6 weeks
-**Deliverable:** Optimized observability with reduced costs
+**Duration:** 3-6 weeks  
+**Deliverable:** Optimized observability with reduced costs  
 
 **Includes:**
 - Current observability audit
@@ -295,8 +294,8 @@ I've optimized under pressure:
 
 ### 3. Cloud Strategy & Architecture (Advisory)
 
-**Duration:** 1-3 months
-**Time Commitment:** 10-20 hours/month
+**Duration:** 1-3 months  
+**Time Commitment:** 10-20 hours/month  
 
 **Services:**
 - Architecture review and recommendations
@@ -309,8 +308,8 @@ I've optimized under pressure:
 
 ### 4. Fractional Cloud Leadership
 
-**Duration:** 3-12 months
-**Time Commitment:** 10-20 hours/week
+**Duration:** 3-12 months  
+**Time Commitment:** 10-20 hours/week  
 
 **Services:**
 - Strategic cloud planning and roadmap

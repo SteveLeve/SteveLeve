@@ -1,6 +1,6 @@
 # Services
 
-I work with companies that need senior technical capability without the overhead of a full-time executive hire—or teams building AI applications that need to actually ship.
+I work with companies that need senior technical capability without the overhead of a full-time executive hire—or help teams build high-quality AI applications at scale using modern workflows.
 
 ---
 
@@ -17,7 +17,7 @@ Most AI demos don't survive contact with real users. I build applications with t
 - Platform-flexible deployment (Vercel, Cloudflare Workers, AWS)
 - Full-stack integration with authentication, rate limiting, cost controls
 
-**Recent work:** Shipped 4 production RAG systems in December 2025, including two live public demos. Built custom evaluation framework achieving +15% precision improvement through systematic testing and measurement.
+**Recent work:** RAG Evaluation Framework series of projects for cross platform comparison of agentic RAG applications under different conditions, configuration and constraints for the purpose of comparatative analysis of quality, performance, and cost. Built custom evaluation framework achieving +15% precision improvement through systematic testing and measurement.
 
 **Evidence:**
 - [Vercel RAG Demo](https://vercel-rag-demo.stevenleve.com) — Production chatbot with semantic search (live)
@@ -46,7 +46,7 @@ Fractional CTO and advisory services for companies navigating technical complexi
 
 **Current engagement:** Serving as Fractional CTO for stealth MarTech startup—shipped beta product to early customers with positive feedback. 2x weekly meetings plus async code review and strategic guidance.
 
-**Background:** 17+ years leading technical teams through acquisitions, migrations, and transformations. Scaled engineering teams (8 to 25+ engineers), established governance frameworks, led AI adoption initiatives.
+**Background:** 17+ years leading technical teams through acquisitions, migrations, and transformations. Scaled engineering teams, established governance & DevSecOps frameworks, led AI adoption initiatives.
 
 *Best for: Startups needing senior technical leadership, companies in transition, or teams facing architectural decisions with long-term consequences.*
 
@@ -58,7 +58,7 @@ Fractional CTO and advisory services for companies navigating technical complexi
 
 **Deep expertise in revenue-critical MarTech infrastructure.**
 
-17 years building affiliate marketing platforms at ShareASale/Awin Global. I understand tracking, attribution, payments, and the systems that power partner marketing at scale.
+17 years building affiliate marketing platforms at ShareASale/Awin Global. I understand tracking, attribution, payments, and the systems that power performance marketing at scale.
 
 **What I know:**
 - Affiliate and partner marketing platform architecture
@@ -67,7 +67,7 @@ Fractional CTO and advisory services for companies navigating technical complexi
 - Publisher/merchant relationship management at scale
 - AI opportunities in MarTech (attribution, optimization, intelligence)
 
-**Track record:** Built platforms serving 250K+ publishers and 10K+ merchants. Led platform consolidations protecting 99.5% of revenue. Designed tracking integrations with 263ms latency improvement and 75% error rate reduction.
+**Track record:** Built one of the largest and most popular affiliate platforms serving 250K+ publishers and 10K+ merchants. Led platform consolidations protecting 99.5% of revenue. Designed tracking integrations with 263ms latency improvement and 75% error rate reduction.
 
 **Current work:** Fractional CTO for stealth MarTech startup focused on partner ecosystem management.
 
@@ -86,12 +86,12 @@ Data-driven cloud optimization reducing costs without compromising performance o
 **What I deliver:**
 - Cloud cost optimization assessment (identify 20-40% waste)
 - Observability & logging strategy (reduce costs, improve signal)
-- Edge computing evaluation (Cloudflare Workers, CDN, edge inference)
+- Edge computing evaluation (Cloudflare Workers, Vercel, AWS, CDN, edge inference)
 - AI & LLM cost optimization (model selection, caching, edge inference)
 - Cloud governance & security (compliance, FinOps, cost controls)
 
 **Proven results:**
-- 25% AWS reduction while maintaining 99.95%+ uptime
+- 25% AWS infrastructure cost reduction while maintaining 99.95%+ uptime
 - 50% DataDog reduction while improving observability
 - $20,000+ monthly sustained savings
 - Recent edge computing work: 90%+ cost reduction for suitable AI workloads
@@ -120,10 +120,12 @@ Pragmatic modernization that protects your business while unlocking new capabili
 **Innovation:** AI-augmented modernization achieving 2-3x development velocity through agentic coding tools (Claude Code, GitHub Copilot, Kiro). 4-6x acceleration on refactoring through AI assistance.
 
 **Track record:**
-- Zero-downtime AWS migration protecting $1B+ transactions
-- Multi-year platform consolidation (4 acquired companies)
+- Zero-downtime AWS migration planned and executed in 6 months
+- Multi-year platform consolidation, gap analysis, risk mitigation
 - 99.95%+ uptime maintained throughout transformations
 - ColdFusion → Node.js migrations, legacy .NET → modern .NET
+- Ad-hoc deployments to GitOps CI/CD release train
+- Stabilization through Site-Reliability Engineering principles
 
 *Best for: Companies with critical legacy systems that need modernization, but business continuity is non-negotiable. Organizations open to AI-augmented development for faster delivery.*
 
@@ -145,7 +147,7 @@ Pragmatic modernization that protects your business while unlocking new capabili
 
 **December 2025 — AI Application Development Sprint:**
 
-Shipped 4 production RAG systems in one week demonstrating hands-on AI engineering capability:
+Shipped production ready RAG evaluation systems demonstrating AI platform capabilities:
 
 1. **[Vercel RAG Demo](https://vercel-rag-demo.stevenleve.com)** (Live)
    - Full-stack chatbot with semantic search
@@ -154,21 +156,16 @@ Shipped 4 production RAG systems in one week demonstrating hands-on AI engineeri
    - Production-ready with authentication and rate limiting
 
 2. **[Cloudflare Workers RAG Demo](https://cloudflare-rag-demo.stevenleve.com)** (Live)
-   - Edge-deployed RAG with on-device LLM inference (Llama-3.1-8B)
-   - Zero external API calls for LLM inference
+   - Edge-deployed RAG using Cloudflare Workers AI 
    - Optimized for global latency (~100ms worldwide)
    - Demonstrates 90%+ cost reduction vs. traditional cloud
+   - Vectorize embeddings DB with D1, KV, & R2 for document, keyword, and chunk storage.  
 
-3. **RAG Quality Evaluation Lab** (GitHub)
+3. **[RAG Quality Evaluation Lab](https://github.com/SteveLeve/rag_wiki_demo)** (GitHub)
    - Jupyter-based experimentation framework
    - Custom metrics (Precision@K, Recall, MRR, NDCG)
    - Ground-truth dataset curation methodology
    - Achieved +15% precision, +22% overall quality through systematic testing
-
-4. **Claude Marketplace** (GitHub)
-   - Personal AI marketplace with custom Cloudflare Expert plugin
-   - Context-aware assistance using structured data
-   - MCP (Model Context Protocol) integration
 
 **Technical Evidence:**
 - ~5,000+ lines of production Python and TypeScript

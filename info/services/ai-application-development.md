@@ -8,11 +8,11 @@ I don't just understand LLMs—I understand what happens when your RAG system hi
 
 ---
 
-## Recent Work (December 2025)
+## Portfolio
 
-### Four Production RAG Systems Shipped in One Week
+### RAG Demonstration & Evaluation Systems
 
-Between December 4-9, 2025, I built and deployed four production-grade RAG applications:
+I built and deployed production-grade RAG demonstration applications on multiple platforms:
 
 **Live Production Demos:**
 - **[Vercel RAG Demo](https://vercel-rag-demo.stevenleve.com)** — Full-stack chatbot with semantic search. Next.js 16, React 19, OpenAI GPT-4o, Neon PostgreSQL (pgvector). Sub-second streaming responses across 100+ document corpus.
@@ -20,7 +20,6 @@ Between December 4-9, 2025, I built and deployed four production-grade RAG appli
 
 **Research & Evaluation:**
 - **RAG Quality Evaluation Lab** — Jupyter-based experimentation framework with custom metrics (Precision@K, Recall, MRR, NDCG). Achieved +15% precision improvement through systematic testing. Not RAGAS—ground-truth dataset curation and measurement.
-- **Claude Marketplace** — Personal AI marketplace with custom Cloudflare Expert plugin for context-aware assistance.
 
 **Evidence:**
 - ~5,000+ lines of production-quality Python and TypeScript
@@ -87,15 +86,15 @@ I don't stop at "it works on my machine." My RAG demos have been running in prod
 
 ### I Measure
 
-Ground-truth evaluation, not hunches. When I say "+15% precision improvement," I mean I curated test datasets, measured baseline performance, implemented changes, and validated results with statistical rigor.
+Ground-truth evaluation, not hunches. When I say "+15% precision improvement," I mean I curated test datasets, measured baseline performance, implemented changes, and validated results.
 
 ### I Understand Infrastructure
 
-20+ years of being on-call for revenue-critical systems informs every architectural decision I make. I know what breaks at scale. I know what costs spiral. I know what keeps you up at 3 AM.
+10+ years of observability and on-call for revenue-critical systems informs every architectural decision I make. I know what breaks at scale. I know what costs spiral and I know what keeps you up at 3 AM.
 
 ### I Move Fast
 
-Four production systems in one week isn't luck—it's the result of mastering agentic development tools and building reusable patterns. I can prototype fast, iterate based on feedback, and ship incremental improvements without rewriting everything.
+I prototype fast, iterate based on feedback, and ship incremental improvements without rewriting everything. I advocate "Thinnest Viable Platform" methodology leveraging agentic development tools and reusable patterns for rapid deployment.
 
 ---
 
@@ -115,22 +114,26 @@ Four production systems in one week isn't luck—it's the result of mastering ag
 
 ### Deployment Platforms
 - **Vercel**: Next.js serverless with streaming responses
-- **Cloudflare Workers**: Edge deployment, Vectorize integration, D1, R2
-- **AWS**: Lambda, ECS, RDS, S3
+- **Cloudflare**: Edge deployment, Workers AI, Vectorize, D1, R2, KV
+- **AWS**: Bedrock, SageMaker, Lambda, ECS, RDS, S3, API Gateway, SQS, SNS
 - **Containerized**: Docker, dev-container patterns
 
 ### Languages & Frameworks
-- TypeScript/JavaScript (Node.js, Next.js, React)
+- TypeScript/JavaScript (Node.js, Next.js, React, Astro)
 - Python (Jupyter, FastAPI, data processing)
 - SQL (advanced queries, performance optimization)
 - Markdown/MDX for content management
 
 ### AI Development Tools
-- Claude Code (primary agentic coding tool)
+- Anthropic Claude Code (primary agentic coding tool)
 - GitHub Copilot
-- Kiro (specification-driven development)
+- Amazon Kiro
+- Google Antigravity
+- Warp
+- OpenCode
+- OpenAI CODEX
+- Cursor
 - MCP (Model Context Protocol) servers
-- Custom evaluation frameworks
 
 ---
 
@@ -185,7 +188,7 @@ Four production systems in one week isn't luck—it's the result of mastering ag
 - Cost controls and rate limiting
 - Monitoring and observability for AI-specific metrics
 - Documentation and team training
-
+tter
 **Best for:** Established products adding "ask AI" features, semantic search, or intelligent automation.
 
 ### 5. Consulting & Technical Advisory
@@ -194,7 +197,7 @@ Four production systems in one week isn't luck—it's the result of mastering ag
 
 **Our Solution:** Fractional AI engineering support:
 - Architecture review and recommendations
-- Code review with focus on RAG patterns and quality
+- Code review with focus on RAG pans and quality
 - Evaluation framework design
 - Team mentoring on AI development practices
 - Tool selection guidance (LLM providers, vector databases, deployment platforms)
@@ -215,11 +218,12 @@ Try them. Break them. See how they handle errors, edge cases, and streaming resp
 
 ### Evaluation Expertise
 
-I don't rely on RAGAS or off-the-shelf tools. I build custom evaluation frameworks because every RAG system has unique quality requirements. I know how to measure what matters for your use case.
+I don't rely only on RAGAS or off-the-shelf tools. I build custom evaluation frameworks because every RAG system has unique quality requirements. I know how to measure what matters for your use case and when to use which tool for bost cost:benefit outcome.
 
-### Infrastructure Background
+### Full Stack Background
 
-Most AI engineers come from data science or ML research. I come from 20+ years of keeping revenue-critical systems running. That changes how I think about production AI:
+Most AI engineers come from data science or ML research. I come from 20+ years of designing, delivering, and keeping revenue-critical systems running. That changes how I think about production AI:
+- User experience and fitness for purpose
 - Cost monitoring and optimization
 - Error handling and graceful degradation
 - Observability for debugging production issues
@@ -248,19 +252,16 @@ AWS Certified AI Practitioner (active through 2028). I speak both infrastructure
 ## Ideal Client Profile
 
 **You're a good fit if:**
-- You need AI features that actually ship, not eternal prototypes
+- You want to ship AI enabled products and services now
 - Quality matters—you want measurable improvements, not "it seems better"
 - You value infrastructure thinking alongside AI capabilities
 - You're building a product, not conducting research
 - You need someone who can move fast and iterate based on feedback
 
 **You might not be a good fit if:**
-- You're looking for ML research or model training expertise
+- You need ML research or model training expertise
 - You need cutting-edge ML engineering (custom model architectures)
-- You want someone to build AI infrastructure from scratch (MLOps platforms, model registries)
-- Your timeline is measured in months, not weeks
-
-For ML research or MLOps infrastructure, I can recommend specialists better suited to those needs.
+- You need to build AI infrastructure from scratch (MLOps platforms, model registries)
 
 ---
 

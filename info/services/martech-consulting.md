@@ -62,7 +62,7 @@ Led platform through acquisition and multi-year consolidation with UK-based Awin
 - 99.95%+ uptime requirements for transaction processing
 - Real-time fraud detection without blocking legitimate conversions
 - Financial reconciliation systems processing millions in commissions
-- Payment systems with SOC 2 compliance requirements
+- Payment systems with PCI-DSS & SOC 2 compliance requirements
 - Crisis response for revenue-impacting incidents
 
 ---
@@ -205,9 +205,10 @@ Led platform through acquisition and multi-year consolidation with UK-based Awin
 
 ## Why Choose Me?
 
-### Deep Domain Knowledge
+### Deep MarTech Domain Knowledge
 
-17 years in affiliate marketing gives me insights competitors don't have:
+25+ years in marketing technology gives me insights competitors don't have:
+- Deep knowledge of agency perspectives and customer insights 
 - What works and what breaks at scale
 - Common integration pitfalls and how to avoid them
 - Fraud patterns and detection strategies
@@ -219,9 +220,12 @@ Led platform through acquisition and multi-year consolidation with UK-based Awin
 I've built everything from tracking pixels to payment systems:
 - Frontend UX for publishers and merchants
 - Backend APIs and transaction processing
+- Content Managment Systems (CMS)
+- Customer Relationship Management (DRM) and Support Systems (ZenDesk) 
 - Database design and optimization (massive SQL expertise)
 - Infrastructure and cloud architecture
 - Integration with third-party platforms
+- Comprehensive compliant and scalable email marketing systems 
 
 ### Revenue Focus
 
@@ -231,11 +235,12 @@ In MarTech, every click and conversion counts. I design systems that are:
 - **Secure** — Financial data protection, fraud prevention
 - **Scalable** — Handle growth without degradation
 - **Observable** — Know when something breaks before customers do
+- **Responsive** — smart systems provide business intelligence at scale in real time 
 
 ### AI + MarTech Combination
 
 Unique combination of:
-- Deep MarTech domain expertise (17 years)
+- Deep MarTech domain expertise (25 years)
 - Production AI implementation capability (recent portfolio)
 - AWS AI Practitioner certification
 - Understanding of when AI adds value vs. when it's hype
@@ -243,10 +248,11 @@ Unique combination of:
 ### Crisis-Tested
 
 I've handled:
+- Stabilization of undocumented systems under constraint
 - Payment processing failures affecting millions in commissions
 - Tracking outages during peak shopping seasons
-- Data center failures requiring 24-minute recovery
-- Security incidents requiring immediate response
+- Catastrophic multi-system failures
+- Security incidents requiring immediate action
 - Acquisition integrations under tight deadlines
 
 ### Current & Relevant
@@ -300,14 +306,16 @@ Active fractional CTO work with MarTech startup keeps me engaged with modern cha
 - Experience with Azure and GCP patterns
 
 **Databases:**
-- SQL Server (expert level, 17+ years)
+- SQL Server (expert level, 25+ years)
 - PostgreSQL (including pgvector for AI applications)
-- NoSQL where appropriate (DynamoDB, DocumentDB)
+- MySql, SQLite, DuckDB
+- NoSQL where appropriate (DynamoDB, DocumentDB, Mongo)
 - Data modeling for high-volume transactional systems
 
 **Observability:**
 - DataDog (monitoring, logging, APM)
 - AWS CloudWatch
+- New Relic, LogicMonitor, LanSweeper, PRTG
 - Custom metrics and alerting
 - Incident response and postmortem culture
 
@@ -324,9 +332,9 @@ Active fractional CTO work with MarTech startup keeps me engaged with modern cha
 
 ### 1. Fractional CTO / Technical Advisor
 
-**Time:** 10-20 hours/week
-**Duration:** 3-12 months
-**Best For:** Startups needing senior leadership before full-time hire
+**Time:** 10-20 hours/week  
+**Duration:** 3-12 months  
+**Best For:** Startups needing senior leadership before full-time hire  
 
 **Services:**
 - Architecture decisions and technology strategy
@@ -339,8 +347,8 @@ Active fractional CTO work with MarTech startup keeps me engaged with modern cha
 
 ### 2. Feature Development (Project-Based)
 
-**Duration:** 4-12 weeks typically
-**Best For:** Specific features or integrations
+**Duration:** 4-12 weeks typically  
+**Best For:** Specific features or integrations  
 
 **Examples:**
 - Build Shopify integration with conversion tracking
@@ -353,8 +361,8 @@ Active fractional CTO work with MarTech startup keeps me engaged with modern cha
 
 ### 3. Platform Modernization
 
-**Duration:** 3-9 months
-**Best For:** Legacy platform updates or technology migrations
+**Duration:** 3-9 months  
+**Best For:** Legacy platform updates or technology migrations  
 
 **Services:**
 - Assessment and roadmap development
@@ -367,9 +375,9 @@ Active fractional CTO work with MarTech startup keeps me engaged with modern cha
 
 ### 4. Consulting / Advisory
 
-**Time:** 5-10 hours/week
-**Duration:** 1-3 months
-**Best For:** Strategic decisions, architecture review
+**Time:** 5-10 hours/week  
+**Duration:** 1-3 months  
+**Best For:** Strategic decisions, architecture review  
 
 **Services:**
 - Technology stack evaluation
@@ -456,7 +464,7 @@ Need MarTech expertise that understands both the domain and the technology? Let'
 **Contact:** [Get in Touch](https://stevenleve.com/contact/) · [LinkedIn](https://linkedin.com/in/steve-leve)
 
 **Portfolio:**
-- 17 years at ShareASale/Awin Global
+- 25 years in Marketing Technology with 17 years at ShareASale/Awin Global
 - Current fractional CTO for MarTech startup
 - [AI Application Portfolio](https://vercel-rag-demo.stevenleve.com) (relevant for AI-powered features)
 

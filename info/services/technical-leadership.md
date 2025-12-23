@@ -119,20 +119,19 @@ Currently providing technical leadership for a stealth-mode MarTech startup:
 
 **17+ Years | ShareASale/Awin Global | Principal Software Engineer/Architect**
 - Led technical teams through multiple acquisitions and platform consolidations
-- Scaled engineering organization from 8 to 25+ engineers
+- Scaled engineering organization, designed roles and hired 10+ cross-functional team members
 - Established DevSecOps practices and modern development workflows
 - Served as AI Ambassador, driving adoption across organization
 - On-call leadership for revenue-critical infrastructure (250M monthly requests)
 
 ### Current Work
 
-**Fractional CTO | Stealth MarTech Startup | 2024-Present**
+**Fractional CTO | Stealth MarTech Startup | 2025-Present**
 - Shipping beta product with customers
-- Architecture, code review, infrastructure decisions
+- Architecture, DevOps, code review, infrastructure decisions & implementation
 - 2x weekly meetings plus async guidance
 
 **AI Engineering Portfolio | December 2025**
-- Shipped 4 production RAG systems in one week
 - 2 live demos ([Vercel](https://vercel-rag-demo.stevenleve.com), [Cloudflare Workers](https://cloudflare-rag-demo.stevenleve.com))
 - Custom evaluation framework with measurable improvements (+15% precision)
 - Demonstrates hands-on capability alongside strategic thinking
@@ -148,7 +147,7 @@ Currently providing technical leadership for a stealth-mode MarTech startup:
 ### Communication & Collaboration
 
 - **Executive Communication** — Translate technical complexity for non-technical stakeholders
-- **Distributed Teams** — Led teams across US, UK, Germany through acquisitions
+- **Distributed Teams** — Led teams across US, UK, & EU through acquisitions
 - **Crisis Leadership** — 24-minute disaster recovery, data center failures, production incidents
 - **Consensus Building** — Navigate competing priorities across engineering, product, business
 
@@ -156,7 +155,7 @@ Currently providing technical leadership for a stealth-mode MarTech startup:
 
 ## Why Choose Me?
 
-### Strategic Thinker, Hands-On Executor
+### Strategic Systems Thinker, Hands-On Executor
 
 I don't just advise from the sidelines. My current fractional CTO engagement has me in the code, reviewing PRs, and making architectural decisions. My recent AI portfolio demonstrates I can ship production systems, not just talk strategy.
 
@@ -166,8 +165,8 @@ I don't just advise from the sidelines. My current fractional CTO engagement has
 - High-scale SaaS platforms (250M+ monthly requests)
 - Revenue-critical systems ($1B+ annual transactions)
 - Multiple acquisitions and integrations
-- Team growth (8 to 25+ engineers)
-- Technology transformations (monolith to microservices, on-prem to cloud)
+- Team growth, Performance Management, Team Topologies, role design, recruiting, onboarding
+- Technology transformations (monolith to microservices, digital transformation, cloud migration)
 - AI adoption and governance
 
 ### Crisis-Tested
@@ -176,7 +175,7 @@ When things break at 3 AM and millions in revenue are at risk, you need someone 
 - Data center catastrophic failures (24-minute recovery)
 - Critical production incidents affecting thousands of users
 - Acquisition-driven platform consolidations under tight deadlines
-- Cost spirals requiring immediate intervention
+- Cost spirals requiring immediate intervention 
 
 ### Pragmatic, Not Dogmatic
 
@@ -199,9 +198,9 @@ My fractional CTO work and recent AI portfolio projects keep me current with mod
 
 ### Fractional CTO (Ongoing)
 
-**Time Commitment:** 10-20 hours per week
-**Duration:** 3-12 months (flexible)
-**Best For:** Startups, companies in transition, pre-Series A
+**Time Commitment:** 10-20 hours per week  
+**Duration:** 3-12 months (flexible)  
+**Best For:** Startups, companies in transition, pre-Series A  
 
 **Typical Responsibilities:**
 - Weekly leadership meetings with founders/executives
@@ -214,9 +213,9 @@ My fractional CTO work and recent AI portfolio projects keep me current with mod
 
 ### Interim Leadership (Project-Based)
 
-**Time Commitment:** 20-40 hours per week
-**Duration:** 1-6 months
-**Best For:** Leadership gaps, transformation projects, crisis response
+**Time Commitment:** 20-40 hours per week  
+**Duration:** 1-6 months  
+**Best For:** Leadership gaps, transformation projects, crisis response  
 
 **Typical Scenarios:**
 - CTO departure requiring immediate coverage
@@ -228,9 +227,9 @@ My fractional CTO work and recent AI portfolio projects keep me current with mod
 
 ### Advisory / Consulting (Flexible)
 
-**Time Commitment:** 5-10 hours per week
-**Duration:** 1-3 months
-**Best For:** Specific decisions, architecture review, due diligence
+**Time Commitment:** 5-10 hours per week  
+**Duration:** 1-3 months  
+**Best For:** Specific decisions, architecture review, due diligence  
 
 **Typical Engagements:**
 - Technology stack decisions (build vs. buy, vendor selection)
@@ -256,7 +255,6 @@ My fractional CTO work and recent AI portfolio projects keep me current with mod
 - You need 40+ hours per week of dedicated leadership immediately
 - You're looking for domain-specific expertise I don't have
 - Your needs are primarily recruitment/HR versus technical strategy
-- You're not ready to act on recommendations (analysis paralysis)
 
 ---
 
@@ -311,6 +309,6 @@ Need technical leadership without the full-time commitment? Let's talk.
 
 ---
 
-**Note:** I'm also open to full-time CTO or VP Engineering roles for the right opportunity. If you're hiring and this resonates, let's have that conversation.
+**Note:** I'm also open to full-time CTO, Director, or VP Engineering roles for the right opportunity. If you're hiring and this resonates, let's have that conversation.
 
 **Last Updated:** December 2025

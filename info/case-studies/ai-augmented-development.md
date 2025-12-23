@@ -76,22 +76,22 @@ Rather than anecdotal assessment, created structured evaluation across:
 - **Use case:** Command-line workflow enhancement
 - **Verdict:** Strong complement to IDE work
 
-**Kiro**
-- **Strengths:** Excellent for Spec-Driven Development workflows
-- **Context:** Specification-first approach
-- **Use case:** Complex features with clear requirements
-- **Verdict:** Worth regular evaluation, strong specific use case
-
 **OpenCode / CODEX**
 - **Strengths:** Programmable context via slash commands
 - **Context:** Tool hooks for custom integrations
 - **Use case:** Workflow automation
 - **Verdict:** Promising for advanced users
 
+**Warp**
+- **Strengths:** Strong SDD agent and model selection, keyboard navigable UX
+- **Context:** Most original UX, hybrid CLI
+- **Use case:** multi-step complex planning, code exploration
+- **Verdict:** Strong for command-line heavy workflows
+
 ### IDE Integrations
 
 **GitHub Copilot**
-- **Strengths:** Ubiquitous, well-integrated
+- **Strengths:** Ubiquitous, well-integrated, good model selection, rapid evolution of SDD capability
 - **Context:** Good at boilerplate and patterns
 - **Use case:** Routine coding, autocompletion
 - **Verdict:** Table stakes for modern development
@@ -102,31 +102,25 @@ Rather than anecdotal assessment, created structured evaluation across:
 - **Use case:** Refactoring, code exploration
 - **Verdict:** Not yet tested on Ubuntu (planned evaluation)
 
-**Gemini Code Assist / Amazon Q Developer**
-- **Strengths:** Platform-specific optimizations
-- **Context:** Integration with cloud services
-- **Use case:** GCP/AWS-specific development
-- **Verdict:** Evaluate for platform-specific work
+**Kiro**
+- **Strengths:** Excellent for Spec-Driven Development workflows, specs live with code in .kiro
+- **Context:** Specification-first approach
+- **Use case:** Complex features with clear requirements
+- **Verdict:** Worth regular evaluation, strong specific use case
 
-### Agentic Platforms
+**Google Antigravity**
+- **Strengths:** strong SDD implementation with multi-modal agent and browser automation
+- **Context:** visual design & feedback
+- **Use case:** rapid UX iteration
+- **Verdict:** strong all-around, especially for front-end / UX 
 
-**Continue.dev**
-- **Strengths:** Open-source, customizable
-- **Context:** Custom context providers
-- **Use case:** Team-specific workflows
-- **Verdict:** Good for organizations wanting control
-
-**Warp AI**
-- **Strengths:** Terminal-first AI integration
-- **Context:** Command history and shell integration
-- **Use case:** DevOps and infrastructure work
-- **Verdict:** Strong for command-line heavy workflows
+### Frameworks
 
 **SpecKit**
-- **Strengths:** Specification-driven development
-- **Context:** Structured specification format
-- **Use case:** Complex feature development
-- **Verdict:** Pairs well with Kiro approach
+- **Strengths:** Open source / community driven specification-driven development framework
+- **Context:** Structured specification format (specify, design, plan, build)
+- **Use case:** Developing features or fixing bugs
+- **Verdict:** Excellent opinionated open source solution and learning resource, but redundant with core value proposition of most IDE/CLI tools. Use with OpenCode or vanilla. 
 
 ---
 
@@ -203,7 +197,7 @@ Rather than anecdotal assessment, created structured evaluation across:
 
 ---
 
-### Documentation: 50% Faster
+### Documentation: 10x Faster
 
 **Definition:** README files, API docs, code comments, onboarding guides
 
@@ -213,9 +207,9 @@ Rather than anecdotal assessment, created structured evaluation across:
 - "Add JSDoc comments to functions"
 
 **Measured Impact:**
-- **Without AI:** 3 hours for comprehensive docs
-- **With AI:** 1.5 hours for same coverage
-- **Multiplier:** 50% faster (2x)
+- **Without AI:** 20 hours for comprehensive docs
+- **With AI:** 2 hours for same coverage
+- **Multiplier:** 10x faster
 
 **Why Significant Gains:**
 - AI extracts structure from code
@@ -375,17 +369,17 @@ Rather than anecdotal assessment, created structured evaluation across:
 **Task-Specific:**
 - **3-5x faster:** Exploratory work (learning, prototyping)
 - **4-6x faster:** Refactoring (systematic changes)
-- **2x faster:** Documentation (50% reduction)
+- **10x faster:** Documentation (managed updates)
 - **1.2-1.3x faster:** Routine coding (20-30% improvement)
 
 **Setup Time:**
-- **60-70% reduction** through context engineering (CLAUDE.md, AGENTS.md)
+- **60-70% reduction** through context engineering (CLAUDE.md, AGENTS.md, sub-agents)
 - **Before:** 10-15 minutes per session
 - **After:** <5 minutes to productive work
 
 **Code Volume:**
 - **~5,000+ lines** in portfolio sprint (Python + TypeScript)
-- Estimated **2,000-2,500 lines** without AI assistance
+- Estimated **1,000 lines** without AI assistance
 - 2x+ code production rate maintained quality
 
 ---

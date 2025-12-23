@@ -268,31 +268,6 @@ Beta product enabling affiliate marketers to automate partner recruitment and re
 
 ---
 
-### Personal Value
-
-**For Interview Positioning:**
-
-**Addresses Common Concerns:**
-- "What have you been doing?" → Active fractional CTO work
-- "Do you have recent experience?" → Current, ongoing engagement
-- "Can you show recent results?" → Beta product launched with customers
-
-**Demonstrates:**
-- Technical leadership capability
-- Startup experience and risk navigation
-- Architecture decision-making
-- Cross-functional communication
-- Modern technology stack expertise
-
-**Interview Talking Points:**
-- "Currently serving as fractional CTO for MarTech startup"
-- "Just launched beta product to early customers"
-- "Designed architecture for Next.js + Vercel + PostgreSQL stack"
-- "Managing part-time engagement while job searching"
-- "Can transition to full-time when right opportunity emerges"
-
----
-
 ## Architectural Highlights
 
 ### System Design
@@ -435,7 +410,7 @@ Beta product enabling affiliate marketers to automate partner recruitment and re
 
 ## Engagement Details
 
-**Duration:** October 2024 - Present (ongoing)  
+**Duration:** September 2025 - Present (ongoing)  
 **Time Commitment:** 10-15 hours/week  
 **Engagement Model:** Fractional CTO / Technical Advisor  
 **Compensation:** [Confidential]  

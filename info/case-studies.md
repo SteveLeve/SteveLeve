@@ -6,17 +6,20 @@
 
 ## AI Application Development
 
-### [Production RAG Systems: From Zero to Live in One Week](case-studies/production-rag-systems.md)
+### [Production RAG Systems: Multi-Platform Experimental Lab](case-studies/production-rag-systems.md)
 
-**Challenge:** Interview feedback consistently cited "lacks hands-on AI experience." The gap between theoretical understanding and production implementation was blocking opportunities.
+**Challenge:** Building deployable AI consulting capabilities requires more than theoretical knowledge—clients need consultants who can deploy immediately on diverse platforms, evaluate trade-offs with data, and optimize systematically.
 
-**What I Built:** Coordinated suite of 4 RAG applications across multiple platforms—2 live public demos, custom evaluation framework, and research lab. Not tutorial-following, but production-ready systems with evaluation rigor.
+**What I Built:** Multi-platform RAG experimental unit enabling systematic comparison of AI architectures, platforms, and techniques. Created production-ready implementations on Vercel, Cloudflare Workers, and local Jupyter environments as controlled labs for evaluating cost, performance, and quality trade-offs. Built with simple, open-source stack to maintain proximity to fundamentals—providing perspective when evaluating higher-abstraction platforms like AWS Bedrock or Azure AI Foundry.
 
 **Key Results:**
-- **4 production systems** shipped in <1 week (December 4-9, 2025)
-- **2 live public demos** ([Vercel](https://vercel-rag-demo.stevenleve.com), [Cloudflare](https://cloudflare-rag-demo.stevenleve.com))
-- **+15% Precision, +22% overall quality** through measured improvements
-- **~5,000+ lines** of production Python and TypeScript
+- **2 live production demos** ([Vercel](https://vercel-rag-demo.stevenleve.com), [Cloudflare](https://cloudflare-rag-demo.stevenleve.com)) showcasing different architectural approaches
+- **Custom evaluation framework** with ground-truth curation for systematic improvement
+- **Measured optimization:** +15% Precision (reranking), +22% quality (semantic chunking), +18% NDCG (hybrid search)
+- **Platform comparison insights:** 90%+ cost reduction possible, informed hosting recommendations
+- **~5,000+ lines** production-quality code with reusable patterns for rapid client deployment
+
+**Value Proposition:** Demonstrates balanced mastery of **Accuracy** (engineering trade-offs), **Precision** (measured optimization), and **Speed** (efficient development)—the foundations for effective AI consulting.
 
 [Read full case study →](case-studies/production-rag-systems.md)
 

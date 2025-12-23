@@ -16,8 +16,8 @@ I specialize in pragmatic modernization that protects your business while unlock
 
 I've achieved **2-3x development velocity** through mastery of agentic coding tools:
 - **Claude Code** — Primary tool for code generation and refactoring
-- **GitHub Copilot** — Context-aware code completion
-- **Kiro** — Specification-driven development (SDD) workflows
+- **GitHub Copilot** — multi-model code development and review
+- **Warp, Kiro, Antigravity** — Specification-driven development (SDD) workflows
 - **Context Engineering** — Structured patterns that make AI tools genuinely useful
 
 This isn't just faster coding—it's systematic modernization with AI as a force multiplier.
@@ -34,9 +34,9 @@ This isn't just faster coding—it's systematic modernization with AI as a force
 
 ### 1. Legacy System Assessment & Modernization Roadmap
 
-**Situation:** You have a critical legacy system that is becoming a bottleneck, but you don't know where to start.
+**Situation:** You have a critical legacy system that is becoming a bottleneck, but you don't know where to start.  
 
-**Our Solution:** Comprehensive assessment of your existing systems, code, and infrastructure. We identify key pain points, risks, and opportunities.
+**Our Solution:** Comprehensive assessment of your existing systems, code, and infrastructure. We identify key pain points, risks, and opportunities.  
 
 **We Analyze:**
 - **Code Quality** — Technical debt, maintainability, test coverage
@@ -54,15 +54,15 @@ This isn't just faster coding—it's systematic modernization with AI as a force
 - Risk mitigation strategies
 - Success metrics and measurement plan
 
-**Timeline:** 2-4 weeks for assessment and roadmap development
+**Timeline:** 2-4 weeks for assessment and roadmap development  
 
-**Modern Advantage:** AI-assisted code analysis can scan codebases 10-100x faster than manual review, identifying patterns human reviewers might miss.
+**Modern Advantage:** AI-assisted code analysis can scan codebases 10-100x faster than manual review, identifying patterns human reviewers might miss.  
 
 ### 2. Cloud Migration (AWS)
 
-**Situation:** You want to move your on-premise infrastructure to the cloud to improve scalability, reliability, and cost-efficiency.
+**Situation:** You want to move your on-premise infrastructure to the cloud to improve scalability, reliability, and cost-efficiency.  
 
-**Our Solution:** Plan and execute seamless migrations to Amazon Web Services (AWS) with proven zero-downtime strategies.
+**Our Solution:** Plan and execute seamless migrations to Amazon Web Services (AWS) with proven zero-downtime strategies.  
 
 **Migration Strategies:**
 - **Lift and Shift** — Minimal changes, fast migration, reduce data center costs
@@ -86,9 +86,9 @@ This isn't just faster coding—it's systematic modernization with AI as a force
 
 ### 3. Monolith to Microservices Decomposition
 
-**Situation:** Your monolithic application is difficult to maintain, scale, and update. You want to move to a more agile and scalable microservices architecture.
+**Situation:** Your monolithic application is difficult to maintain, scale, and update. You want to move to a more agile and scalable microservices architecture.  
 
-**Our Solution:** Strategic decomposition using domain-driven design (DDD) principles to identify service boundaries and create loosely coupled architecture.
+**Our Solution:** Strategic decomposition using domain-driven design (DDD) principles to identify service boundaries and create loosely coupled architecture.  
 
 **Our Approach:**
 - **Domain Analysis** — Identify bounded contexts and service boundaries
@@ -118,9 +118,9 @@ This isn't just faster coding—it's systematic modernization with AI as a force
 
 ### 4. Technology Stack Upgrade & Refactoring
 
-**Situation:** Your application is built on an outdated or unsupported technology stack (ColdFusion, legacy .NET, older Java, PHP 5.x).
+**Situation:** Your application is built on an outdated or unsupported technology stack (ColdFusion, legacy .NET, older Java, PHP 5.x).  
 
-**Our Solution:** Refactor codebase and upgrade to modern, high-performance technology stack with minimal business disruption.
+**Our Solution:** Refactor codebase and upgrade to modern, high-performance technology stack with minimal business disruption.  
 
 **Technology Transitions:**
 - **ColdFusion → Node.js/Python/Go** — Modern languages with strong ecosystems
@@ -151,9 +151,9 @@ This isn't just faster coding—it's systematic modernization with AI as a force
 
 ### 5. AI Integration into Legacy Systems
 
-**Situation:** You want to add AI capabilities to your existing system but don't want to rewrite everything.
+**Situation:** You want to add AI capabilities to your existing system but don't want to rewrite everything.  
 
-**Our Solution:** Surgical integration of AI features without architectural upheaval.
+**Our Solution:** Surgical integration of AI features without architectural upheaval.  
 
 **Integration Patterns:**
 - **API Gateway** — AI services behind RESTful APIs
@@ -208,7 +208,7 @@ I understand that technology is a means to an end:
 ### Crisis-Tested
 
 I stay calm when things go wrong:
-- Data center catastrophic failures (24-minute recovery)
+- Catastrophic data center failures
 - Production incidents during migrations
 - Unexpected technical debt discovery mid-project
 - Stakeholder conflicts requiring negotiation
@@ -293,8 +293,8 @@ Current with contemporary approaches:
 
 ### 1. Assessment & Roadmap (Fixed Scope)
 
-**Duration:** 2-4 weeks
-**Deliverable:** Comprehensive modernization roadmap
+**Duration:** 2-4 weeks  
+**Deliverable:** Comprehensive modernization roadmap  
 
 **Includes:**
 - Legacy system analysis (code, architecture, infrastructure)
@@ -304,14 +304,14 @@ Current with contemporary approaches:
 - Budget and timeline estimates
 - ROI analysis
 
-**Pricing:** $8,000 - $20,000 depending on system complexity
+**Pricing:** $8,000 - $20,000 depending on system complexity  
 
-**Follow-on:** Implementation support available
+**Follow-on:** Implementation support available  
 
 ### 2. Cloud Migration (Project-Based)
 
-**Duration:** 3-9 months typically
-**Deliverable:** Production system running in cloud
+**Duration:** 3-9 months typically  
+**Deliverable:** Production system running in cloud  
 
 **Includes:**
 - Migration strategy and planning
@@ -321,12 +321,12 @@ Current with contemporary approaches:
 - Post-migration optimization
 - Team training and documentation
 
-**Pricing:** $30,000 - $150,000 depending on scope and complexity
+**Pricing:** $30,000 - $150,000 depending on scope and complexity  
 
 ### 3. Modernization (Ongoing Engagement)
 
-**Duration:** 6-18 months
-**Time Commitment:** Part-time or full-time depending on scope
+**Duration:** 6-18 months  
+**Time Commitment:** Part-time or full-time depending on scope  
 
 **Services:**
 - Incremental refactoring and modernization
@@ -339,8 +339,8 @@ Current with contemporary approaches:
 
 ### 4. Consulting / Advisory
 
-**Duration:** 1-3 months
-**Time Commitment:** 5-10 hours/week
+**Duration:** 1-3 months  
+**Time Commitment:** 5-10 hours/week  
 
 **Services:**
 - Technology evaluation and recommendations
@@ -404,9 +404,9 @@ Modernization projects are high-risk. Here's how we reduce that risk:
 
 ### Zero-Downtime AWS Migration
 
-**Challenge:** Migrate ShareASale platform to AWS without impacting $1B+ annual transaction volume.
+**Challenge:** Migrate ShareASale platform to AWS without impacting $150M+ in annual partner commission volume.
 
-**Solution:** Parallel run strategy with gradual traffic shift, extensive observability, automated rollback capability.
+**Solution:** Parallel run strategy with safe cut over, extensive observability, automated rollback capability.
 
 **Results:**
 - Zero customer-facing downtime
@@ -416,11 +416,12 @@ Modernization projects are high-risk. Here's how we reduce that risk:
 
 ### Platform Consolidation (Post-Acquisition)
 
-**Challenge:** Integrate four acquired platforms (ShareASale, affilinet, zanox, awin) into unified architecture.
+**Challenge:** Map and bridge the expansive ShareASale feature set onto Awin and migrate customers for a unified architecture and user experience.
 
 **Solution:** Multi-year incremental migration protecting revenue while consolidating infrastructure.
 
 **Results:**
+- Migrated 260k users with 85% terms acceptance on 1st login
 - 99.5% revenue protection during consolidation
 - Zero merchant-facing downtime across critical migrations
 - Successful team integration across US, UK, Germany
