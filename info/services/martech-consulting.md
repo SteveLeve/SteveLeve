@@ -1,3 +1,5 @@
+![Marketing Technology](../images/martech_icon.png)
+
 # Professional Service Offering: Marketing Technology (MarTech) Consulting
 
 ## Deep Domain Expertise in Affiliate & Partner Marketing Platforms

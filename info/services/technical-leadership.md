@@ -1,3 +1,5 @@
+![Technical Leadership](../images/tech_lead_icon.png)
+
 # Professional Service Offering: Technical Leadership & Strategy
 
 ## Experienced Leadership Without the Full-Time Commitment

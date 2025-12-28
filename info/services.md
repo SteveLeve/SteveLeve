@@ -1,4 +1,4 @@
-![Services Workshop](./images/services_hero.png)
+![Services Workshop](./images/geb-abstract-04.webp)
 
 # Services
 

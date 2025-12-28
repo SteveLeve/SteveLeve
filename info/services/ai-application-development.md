@@ -1,3 +1,5 @@
+![AI Development](../images/ai_dev_icon.png)
+
 # Professional Service Offering: AI Application Development
 
 ## From Prototype to Production in Days, Not Months

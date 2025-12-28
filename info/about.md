@@ -1,4 +1,4 @@
-![Shipping Software](./images/about_hero.png)
+![Shipping Software](./images/geb-abstract-05.webp)
 
 # About Me
 

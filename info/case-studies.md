@@ -1,4 +1,4 @@
-![Digital Library](./images/case_studies_hero.png)
+![Digital Library](./images/geb-abstract-06.webp)
 
 # Case Studies
 

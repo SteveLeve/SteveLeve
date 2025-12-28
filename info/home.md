@@ -1,4 +1,4 @@
-![Building Solid Foundations for AI](./images/home_hero.png)
+![Building Solid Foundations for AI](./images/geb-abstract-02.webp)
 
 # Steve Leve | AI Engineering & Technical Leadership
 

@@ -1,3 +1,5 @@
+![Technical Leadership](../images/tech_lead_icon.png)
+
 # Professional Service Offering: Cloud Strategy & Cost Optimization
 
 ## Stop Paying for Resources You Don't Need
