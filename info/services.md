@@ -1,3 +1,5 @@
+![Services Workshop](./images/services_hero.png)
+
 # Services
 
 I work with companies that need senior technical capability without the overhead of a full-time executive hire—or help teams build high-quality AI applications at scale using modern workflows.
@@ -5,6 +7,8 @@ I work with companies that need senior technical capability without the overhead
 ---
 
 ## AI Application Development
+
+![AI Development](./images/ai_dev_icon.png)
 
 **From prototype to production.**
 
@@ -33,6 +37,8 @@ Most AI demos don't survive contact with real users. I build applications with t
 
 ## Technical Leadership
 
+![Technical Leadership](./images/tech_lead_icon.png)
+
 **Strategic guidance without the full-time commitment.**
 
 Fractional CTO and advisory services for companies navigating technical complexity. I help with the decisions that are hard to undo—architecture choices, team structure, technology bets.
@@ -55,6 +61,8 @@ Fractional CTO and advisory services for companies navigating technical complexi
 ---
 
 ## Marketing Technology
+
+![Marketing Technology](./images/martech_icon.png)
 
 **Deep expertise in revenue-critical MarTech infrastructure.**
 

@@ -1,3 +1,5 @@
+![Building Solid Foundations for AI](./images/home_hero.png)
+
 # Steve Leve | AI Engineering & Technical Leadership
 
 ## Building Production AI Applications on Solid Foundations

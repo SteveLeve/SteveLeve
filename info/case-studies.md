@@ -1,3 +1,5 @@
+![Digital Library](./images/case_studies_hero.png)
+
 # Case Studies
 
 > **Delivering Results Across the Stack:** From AI applications shipping in days to zero-downtime cloud migrations protecting billions in transactions. 25+ years of turning complex technical challenges into measurable business outcomes.
