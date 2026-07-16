@@ -310,25 +310,6 @@ Some clients need a quick MVP. Others need ongoing optimization. I structure eng
 
 ---
 
-## Pricing
-
-Pricing varies based on scope, timeline, and complexity:
-
-- **RAG MVP:** $5,000 - $15,000 (2-4 weeks)
-- **Quality Optimization:** $3,000 - $8,000 (1-2 weeks)
-- **Multi-Platform Architecture:** $10,000 - $25,000 (3-6 weeks)
-- **Fractional AI Engineering:** $5,000 - $10,000/month (10-20 hours)
-
-All projects include:
-- Source code with documentation
-- Deployment to your infrastructure
-- 30 days of post-launch support
-- Evaluation framework (where applicable)
-
-**Note:** I'm also open to full-time roles for the right opportunity. If you're hiring an AI Engineer and this resonates, let's talk.
-
----
-
 ## Get Started
 
 Ready to move from prototype to production? Let's talk.
