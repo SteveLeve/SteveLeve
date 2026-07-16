@@ -1,64 +1,52 @@
 ### Hi, I'm Steve 👋
 
-**Full-stack technologist who ships products.** 25 years building software that generates revenue, reduces costs, and runs for years. Now AI-enhanced — I build with LLMs, RAG systems, and agentic tools to ship faster and smarter.
-
-I'm an expert generalist: I go deep where needed, see the whole picture, and move fluidly across domains.
+**Full-stack AI engineer.** I build production software and the agentic development systems that build it: coding-agent harnesses, context engineering, knowledge architecture, and agent memory. 25 years of shipping systems that generate revenue and run for years.
 
 ---
 
 ### What I Build
 
-**🤖 AI Applications**
+**🤖 Agentic Development Systems**
+- Coding-agent harnesses and cross-harness sync (Claude Code, Cursor, Copilot sharing one source of truth)
+- Agent memory and knowledge architecture (self-hosted Honcho, multi-agent memory/skills systems)
+- Semi-autonomous agent teams (Hermes) and verification workflows for AI-generated code
 
-- RAG architectures, vector search, multi-LLM integration (Anthropic, OpenAI, Ollama)  
-- Evaluation frameworks, prompt engineering, streaming interfaces  
-- Agentic development patterns and context engineering
+**⚡ AI Products & Features**
+- Customer-facing AI agent services (AWS Bedrock, LangChain, Temporal)
+- Production RAG: vector search, reranking, hybrid search, custom eval frameworks (Precision@K, MRR, NDCG)
+- Multi-LLM integration: Anthropic, OpenAI, Gemini, Ollama
 
-**⚡ Full-Stack Products**
+**🛠 Full-Stack Foundations**
+- TypeScript, JavaScript, Python, SQL • React, Next.js, tRPC, FastAPI
+- PostgreSQL (pgvector), AWS, Cloudflare Workers, Vercel, Temporal
+- AI-augmented modernization of complex legacy systems
 
-- React, Next.js, TypeScript, Python, Node.js, C#, Java, CFML
-- PostgreSQL, SQL Server, cloud databases  
-- API design, system architecture, legacy modernization
+---
 
-**☁️ Platform & Infrastructure**
+### Now
 
-- AWS (Certified AI Practitioner), Cloudflare Workers, Vercel  
-- DevSecOps, observability (DataDog), cost optimization  
-- Zero-downtime migrations, disaster recovery
+Cofounder and full-stack engineer at **PartnershipTool** — an ad-tech business intelligence platform built with an agent-driven workflow (Cursor + Claude, Honcho agent memory, Hermes agent team).
 
 ---
 
 ### Live Demos
 
 | Project | Description | Stack |
-| :---- | :---- | :---- |
-| [Vercel RAG Demo](https://vercel-rag-demo.stevenleve.com) | Streaming chatbot with semantic search | Next.js 16, pgvector, OpenAI |
-| [Cloudflare RAG Demo](https://cloudflare-rag-demo.stevenleve.com) | Edge-deployed, on-device LLM inference | Workers, Llama-3.1-8b, Vectorize |
-| [stevenleve.com](https://stevenleve.com) | Professional site, 96% security score | Astro, Cloudflare Workers |
-
----
-
-### Recent Work
-
-- [**chatgpt-data-extractor**](https://github.com/SteveLeve/chatgpt-data-extractor) — Production RAG app with multi-LLM support and vector search  
-- [**intel-gpu-llm-inference**](https://github.com/SteveLeve/intel-gpu-llm-inference) — Open-source LLM benchmarking on Intel Arc GPUs  
-- [**rag\_wiki\_demo**](https://github.com/SteveLeve/rag_wiki_demo) — Jupyter evaluation lab with custom metrics framework
+| --- | --- | --- |
+| [Vercel RAG Demo](https://vercel-rag-demo.stevenleve.com) | Streaming chatbot with semantic search | Next.js, pgvector, OpenAI |
+| [Cloudflare RAG Demo](https://cloudflare-rag-demo.stevenleve.com) | Edge RAG, on-device LLM inference | Workers, Llama-3.1-8b, Vectorize |
+| [stevenleve.com](https://stevenleve.com) | Professional site | Astro, Cloudflare Workers |
 
 ---
 
 ### Background
 
-17 years at ShareASale/Awin Global — built products that processed $1B+ in annual transactions:
+Growing from Product Engineer to Principal Architect through 17 years at ShareASale/Awin Global building platforms that processed $1B+ in annual merchant transactions: tracking infrastructure at 250M monthly requests, zero-downtime AWS migration, revenue-critical modernization, post M&A integration.
 
-- Recruitment CRM generating $10M/year in commissions  
-- Email systems delivering 2M+ messages/month  
-- Tracking infrastructure handling 250M monthly requests  
-- Zero-downtime AWS migration saving $20K/month
-
-**Currently:** Fractional CTO for a MarTech startup | Open to interesting problems
+**Certifications:** AWS Certified AI Practitioner
 
 ---
 
 ### Let's Connect
 
-🔗 [LinkedIn](https://linkedin.com/in/steve-leve) • 🌐 [stevenleve.com](https://stevenleve.com)  
+🔗 [LinkedIn](https://linkedin.com/in/steve-leve) • 🌐 [stevenleve.com](https://stevenleve.com)
