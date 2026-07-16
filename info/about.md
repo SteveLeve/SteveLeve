@@ -2,9 +2,9 @@
 
 # About Me
 
-## From Retail Software Innovation to Product Engineering to Platform Leadership
+## From Retail Software Innovation to Product Engineering to Agentic Engineering
 
-I've spent 25+ years solving problems across the full spectrum of technology work—from pioneering CD-ROM distribution platforms in the pre-broadband era, to designing user-facing features that millions use daily, to keeping revenue-critical infrastructure running during crises, to introducing AI responsibly in enterprise environments.
+I've spent 25+ years solving problems across the full spectrum of technology work—from pioneering CD-ROM distribution platforms in the pre-broadband era, to designing user-facing features that millions use daily, to keeping revenue-critical infrastructure running during crises, to building the agentic development systems that now build production software alongside me.
 
 What sets me apart isn't mastery of a single domain. It's the ability to flex between product innovation, client services, infrastructure, leadership, and emerging technologies—often simultaneously—while maintaining focus on what actually matters: delivering value and solving real problems.
 
@@ -302,21 +302,29 @@ Served on AI governance steering group providing policy recommendations during o
 - Established responsible AI governance frameworks balancing innovation with security and quality
 - Early adopter of AI development tools (GitHub Copilot, Claude Code, Cursor, others)
 
-**Current Work — Fractional CTO:**
+**Production AI Applications (December 2025):**
 
-Providing technical leadership for stealth MarTech startup:
-- Shipped beta product to early customers with positive feedback
-- Architecture decisions, code review, infrastructure strategy
-- 2x weekly meetings plus async guidance
-- Team enablement and technical mentoring
+Built 3 RAG demo systems including 2 live public demos. Custom evaluation framework achieving measurable quality improvements (+15% precision, +22% overall quality). Multi-platform deployment (Vercel, Cloudflare Workers). Full-stack integration with authentication, rate limiting, cost controls.
 
-**Recent Portfolio — Production AI Applications:**
+---
 
-Built 3 RAG demo systems in December 2025 including 2 live public demos. Custom evaluation framework achieving measurable quality improvements (+15% precision, +22% overall quality). Multi-platform deployment (Vercel, Cloudflare Workers). Full-stack integration with authentication, rate limiting, cost controls.
+## The Agentic Years: Building Products and the Systems That Build Them (2025-Present)
+
+**PartnershipTool — Cofounder & Full-Stack Engineer (Sep 2025-Present):**
+
+Cofounder (equity) of an ad-tech business intelligence and partner management platform (Next.js, React, PostgreSQL, Stripe, PostHog). This is where my agentic development practice runs at full depth: Cursor + Claude as the core harness, self-hosted Honcho for agent memory, and Hermes as a semi-autonomous agent team. I build the product and the development system that builds it.
+
+**Origami Risk — Senior Full Stack Engineer (Apr-Jun 2026):**
+
+Skunk Works Platform Team, ended by a broad US engineering reduction. In three months I:
+- Co-authored a customer-facing account management AI agent service (AWS Bedrock, LangChain, Temporal, C#, SQL, React), contributing design, code review, and engineer mentoring
+- Built a multi-agent knowledge architecture system with memory and skills, producing citation-backed architecture diagrams and idempotent integration test scripts
+- Designed cross-harness agent synchronization: a single source of truth for agents, skills, and rules shared by Cursor, GitHub Copilot, and Claude Code
+- Migrated legacy queue processors to the Temporal workflow engine using custom sub-agents to analyze and migrate legacy subsystems
 
 **What matters more than the specific AI work:**
 
-I understand how to introduce emerging technologies responsibly. I've lived through enough hype cycles to know the difference between demos that impress and systems that ship. I know how to establish governance frameworks that enable productivity while managing risk.
+I understand how to introduce emerging technologies responsibly. I've lived through enough hype cycles to know the difference between demos that impress and systems that ship. Agentic development is the first wave where I've built the discipline itself: the harnesses, context engineering, knowledge architecture, and verification workflows that make AI-generated code trustworthy.
 
 ---
 
@@ -350,6 +358,12 @@ From XML-driven launchers at Aztech, to order automation at Bean Products, to pl
 
 ## Background & Credentials
 
+**PartnershipTool (Sep 2025-Present)**
+Cofounder and full-stack engineer building an ad-tech business intelligence platform with an agent-driven development workflow (Cursor + Claude, Honcho agent memory, Hermes agent team).
+
+**Origami Risk (Apr-Jun 2026)**
+Senior Full Stack Engineer, Skunk Works Platform Team. Customer AI agent service (Bedrock, LangChain, Temporal), multi-agent knowledge architecture, cross-harness agent synchronization.
+
 **17 Years | ShareASale/Awin Global (2008-2025)**
 Built and scaled affiliate marketing infrastructure serving 250K+ publishers, 10K+ merchants, $1B+ annual transactions. Led platform consolidations, zero-downtime migrations, crisis response, team building, and digital transformations.
 
@@ -372,9 +386,10 @@ New Media Developer pioneering retail software distribution. Developed reusable 
 - AI Integration (2024-2025): Governance, productivity tools, application development
 
 **Current Focus:**
-- Fractional CTO for stealth MarTech startup
-- AI application development and evaluation
-- Exploring modern development workflows and agentic coding
+- Cofounder & full-stack engineer at PartnershipTool (ongoing)
+- Agentic development systems: coding-agent harnesses, context engineering, agent memory, multi-agent teams
+- AI-augmented modernization of complex legacy systems
+- Python depth, grown in the flow of real work (TypeScript/JavaScript remain primary)
 
 **Certifications:**
 - AWS Certified AI Practitioner (2025-2028)
@@ -430,21 +445,20 @@ Over 25+ years across multiple organizations, I've been consistently recognized 
 
 ## Currently
 
-Based in the Chicago suburbs. Open to remote roles, consulting engagements, and collaborations with teams building interesting things.
+Based in the Chicago suburbs. I work remote-only.
+
+I'm looking for **senior IC roles on small, fast-moving, high-ownership teams working at the frontier of agent-driven development** — building products with agentic methods, and building the agentic systems themselves.
 
 I'm particularly interested in:
 
-**AI Engineering roles** combining infrastructure thinking with modern AI capabilities
+**AI-first full-stack engineering roles** where shipping product and advancing agentic development practice are the same job
 
-**Technical leadership positions** (CTO, VP Engineering, Principal Engineer) where strategic thinking and hands-on execution both matter
-
-**Companies navigating digital transformations or platform consolidations** where my 25-year pattern of stepping into complexity and delivering results adds value
+**Teams modernizing complex legacy systems** where AI-augmented methods and 25 years of legacy-scale experience compound
 
 **Organizations valuing:**
-- Flexibility and systems thinking over narrow specialization
-- Servant leadership and collaborative culture
+- Psychological safety, autonomy, and a real learning culture
+- High ownership per engineer
 - Sustainable work practices and work-life balance
-- Learning and continuous improvement
 - Business outcomes over technical perfection
 
 What I bring isn't just technical skills—it's 25 years of successfully navigating change, crisis, and complexity while delivering business value, developing people, and maintaining the bigger picture of what actually matters.
@@ -455,5 +469,5 @@ What I bring isn't just technical skills—it's 25 years of successfully navigat
 
 **Portfolio:**
 - [Live AI Demos](https://vercel-rag-demo.stevenleve.com) (recent work)
-- [GitHub](https://github.com/sleve) (code examples)
-- Case Studies (coming soon)
+- [GitHub](https://github.com/SteveLeve) (code examples)
+- [Case Studies](./case-studies.md)

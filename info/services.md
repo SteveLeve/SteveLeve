@@ -1,190 +1,73 @@
 ![Services Workshop](./images/geb-abstract-04.webp)
 
-# Services
+# What I Do
 
-I work with companies that need senior technical capability without the overhead of a full-time executive hire—or help teams build high-quality AI applications at scale using modern workflows.
+I'm a full-stack AI engineer. I build production software and the agentic development systems that build it: coding-agent harnesses, context engineering, knowledge architecture, agent memory, and verification workflows for AI-generated code.
 
 ---
 
-## AI Application Development
+## Full-Stack AI Engineering
 
 ![AI Development](./images/ai_dev_icon.png)
 
 **From prototype to production.**
 
-Most AI demos don't survive contact with real users. I build applications with the reliability, observability, and operational maturity that production demands.
+Most AI demos don't survive contact with real users. I build AI products and features with the reliability, observability, and operational maturity that production demands.
 
-**What I deliver:**
-- Production RAG systems with sub-second latency and streaming responses
-- Multi-LLM architectures (OpenAI, Anthropic, open-source models)
-- Custom evaluation frameworks that measure quality, not just vibes
-- Platform-flexible deployment (Vercel, Cloudflare Workers, AWS)
-- Full-stack integration with authentication, rate limiting, cost controls
-
-**Recent work:** RAG Evaluation Framework series of projects for cross platform comparison of agentic RAG applications under different conditions, configuration and constraints for the purpose of comparatative analysis of quality, performance, and cost. Built custom evaluation framework achieving +15% precision improvement through systematic testing and measurement.
+**Shipped work:**
+- Co-authored a customer-facing AI agent service (AWS Bedrock, LangChain, Temporal)
+- Production RAG systems with sub-second latency and streaming responses (Vercel, Cloudflare Workers)
+- Multi-LLM architectures (Anthropic, OpenAI, Gemini, open-source models)
+- Custom evaluation frameworks that measure quality, not just vibes: Precision@K, MRR, NDCG, ground-truth datasets
 
 **Evidence:**
 - [Vercel RAG Demo](https://vercel-rag-demo.stevenleve.com) — Production chatbot with semantic search (live)
 - [Cloudflare RAG Demo](https://cloudflare-rag-demo.stevenleve.com) — Edge-deployed with on-device LLM inference (live)
-- ~5,000+ lines of production Python and TypeScript
-- Custom metrics framework (not RAGAS) with ground-truth datasets
-
-*Best for: Teams building AI features who need someone who's shipped production AI applications, not just completed tutorials.*
+- Measured optimization: +15% precision, +22% overall quality through systematic evaluation
 
 [View Details →](./services/ai-application-development.md)
 
 ---
 
-## Technical Leadership
+## Agentic Development Systems
 
-![Technical Leadership](./images/tech_lead_icon.png)
+**I build the systems that build the software.**
 
-**Strategic guidance without the full-time commitment.**
+Agent-driven development is an engineering discipline, not tool adoption. I engineer the harnesses, context, and verification that make it reliable at production stakes.
 
-Fractional CTO and advisory services for companies navigating technical complexity. I help with the decisions that are hard to undo—architecture choices, team structure, technology bets.
+**Shipped work:**
+- Multi-agent knowledge architecture with memory and skills: citation-backed architecture diagrams, idempotent integration test scripts
+- Cross-harness agent synchronization: one source of truth for agents, skills, and rules shared by Cursor, GitHub Copilot, and Claude Code
+- Semi-autonomous agent team at PartnershipTool: Cursor + Claude, Honcho for agent memory, Hermes agent orchestration
+- Custom Claude Code agents, skills, plugins, and MCP servers
 
-**What I offer:**
-- Fractional CTO / interim technical leadership
-- Architecture review and technology strategy
-- Engineering team mentoring and growth planning
-- Enterprise architecture and roadmap development
-- Technical due diligence for M&A or investment
-
-**Current engagement:** Serving as Fractional CTO for stealth MarTech startup—shipped beta product to early customers with positive feedback. 2x weekly meetings plus async code review and strategic guidance.
-
-**Background:** 17+ years leading technical teams through acquisitions, migrations, and transformations. Scaled engineering teams, established governance & DevSecOps frameworks, led AI adoption initiatives.
-
-*Best for: Startups needing senior technical leadership, companies in transition, or teams facing architectural decisions with long-term consequences.*
-
-[View Details →](./services/technical-leadership.md)
+**Why it matters:** One engineer who has mastered agent-driven methods covers ground that used to take a team — with the verification discipline to trust the output.
 
 ---
 
-## Marketing Technology
-
-![Marketing Technology](./images/martech_icon.png)
-
-**Deep expertise in revenue-critical MarTech infrastructure.**
-
-17 years building affiliate marketing platforms at ShareASale/Awin Global. I understand tracking, attribution, payments, and the systems that power performance marketing at scale.
-
-**What I know:**
-- Affiliate and partner marketing platform architecture
-- Tracking systems and attribution (250M+ monthly requests)
-- Transaction processing and payment systems ($1B+ annual volume)
-- Publisher/merchant relationship management at scale
-- AI opportunities in MarTech (attribution, optimization, intelligence)
-
-**Track record:** Built one of the largest and most popular affiliate platforms serving 250K+ publishers and 10K+ merchants. Led platform consolidations protecting 99.5% of revenue. Designed tracking integrations with 263ms latency improvement and 75% error rate reduction.
-
-**Current work:** Fractional CTO for stealth MarTech startup focused on partner ecosystem management.
-
-*Best for: MarTech companies building affiliate, partner, or advertising platforms—or anyone acquiring/integrating marketing technology assets.*
-
-[View Details →](./services/martech-consulting.md)
-
----
-
-## Cloud Strategy & Cost Optimization
-
-**Stop paying for resources you don't need.**
-
-Data-driven cloud optimization reducing costs without compromising performance or reliability. I've delivered 25% AWS reduction and 50% DataDog reduction in production environments.
-
-**What I deliver:**
-- Cloud cost optimization assessment (identify 20-40% waste)
-- Observability & logging strategy (reduce costs, improve signal)
-- Edge computing evaluation (Cloudflare Workers, Vercel, AWS, CDN, edge inference)
-- AI & LLM cost optimization (model selection, caching, edge inference)
-- Cloud governance & security (compliance, FinOps, cost controls)
-
-**Proven results:**
-- 25% AWS infrastructure cost reduction while maintaining 99.95%+ uptime
-- 50% DataDog reduction while improving observability
-- $20,000+ monthly sustained savings
-- Recent edge computing work: 90%+ cost reduction for suitable AI workloads
-
-**Modern expertise:** Edge computing (Cloudflare Workers), AI cost optimization, FinOps practices, infrastructure as code (Terraform).
-
-*Best for: Companies spending $10K+/month on cloud with suspected waste, teams exploring edge computing, or anyone building AI features with unpredictable costs.*
-
-[View Details →](./services/cloud-strategy.md)
-
----
-
-## Legacy System Modernization & Migration
+## AI-Augmented Legacy Modernization
 
 **From legacy to modern, without breaking what works.**
 
-Pragmatic modernization that protects your business while unlocking new capabilities. 25+ years experience with zero-downtime migrations and incremental refactoring.
+25+ years inside complex production systems, 17 of them at $1B+ transaction scale. I modernize legacy systems for a living — and now I do it AI-augmented.
 
-**What I deliver:**
-- Legacy system assessment & modernization roadmap
-- Cloud migration (AWS) with zero-downtime strategies
-- Monolith to microservices decomposition (when appropriate)
-- Technology stack upgrades (ColdFusion, legacy .NET, older Java → modern stacks)
-- AI integration into legacy systems (add AI value without rewriting everything)
-
-**Innovation:** AI-augmented modernization achieving 2-3x development velocity through agentic coding tools (Claude Code, GitHub Copilot, Kiro). 4-6x acceleration on refactoring through AI assistance.
-
-**Track record:**
+**Shipped work:**
+- Migrated legacy queue processors to the Temporal workflow engine using custom sub-agents to analyze and migrate legacy subsystems
 - Zero-downtime AWS migration planned and executed in 6 months
-- Multi-year platform consolidation, gap analysis, risk mitigation
-- 99.95%+ uptime maintained throughout transformations
-- ColdFusion → Node.js migrations, legacy .NET → modern .NET
-- Ad-hoc deployments to GitOps CI/CD release train
-- Stabilization through Site-Reliability Engineering principles
+- Multi-year platform consolidation protecting 98% of revenue: 260K accounts migrated, 250M monthly requests at 263ms latency
+- ColdFusion → Node.js and legacy .NET → modern stack migrations; ad-hoc deployments → GitOps CI/CD
 
-*Best for: Companies with critical legacy systems that need modernization, but business continuity is non-negotiable. Organizations open to AI-augmented development for faster delivery.*
+**Why it matters:** Legacy modernization is where agentic methods pay off most — sub-agents can exhaustively analyze entangled subsystems that would take humans months to map. The 25 years of scar tissue is what makes the agent output trustworthy.
 
 [View Details →](./services/legacy-modernization.md)
 
 ---
 
-## How I Work
+## Current Work
 
-**Engagements typically start with a conversation** to understand what you're trying to accomplish and whether I'm the right fit. I'm direct about what I can and can't help with.
+**PartnershipTool — Cofounder & Full-Stack Engineer (Sep 2025-Present)**
 
-**Flexibility matters.** Some clients need a few hours of architecture review. Others need embedded leadership for months. I structure engagements around outcomes, not billable hours.
-
-**I'm also open to full-time roles** for the right opportunity—particularly AI Engineering positions where I can combine my infrastructure background with production AI development, or CTO/VP Engineering roles for companies building interesting things.
-
----
-
-## Recent Portfolio Work
-
-**December 2025 — AI Application Development Sprint:**
-
-Shipped production ready RAG evaluation systems demonstrating AI platform capabilities:
-
-1. **[Vercel RAG Demo](https://vercel-rag-demo.stevenleve.com)** (Live)
-   - Full-stack chatbot with semantic search
-   - Next.js 16, React 19, OpenAI GPT-4o, Neon PostgreSQL (pgvector)
-   - Sub-second streaming responses across 100+ document corpus
-   - Production-ready with authentication and rate limiting
-
-2. **[Cloudflare Workers RAG Demo](https://cloudflare-rag-demo.stevenleve.com)** (Live)
-   - Edge-deployed RAG using Cloudflare Workers AI 
-   - Optimized for global latency (~100ms worldwide)
-   - Demonstrates 90%+ cost reduction vs. traditional cloud
-   - Vectorize embeddings DB with D1, KV, & R2 for document, keyword, and chunk storage.  
-
-3. **[RAG Quality Evaluation Lab](https://github.com/SteveLeve/rag_wiki_demo)** (GitHub)
-   - Jupyter-based experimentation framework
-   - Custom metrics (Precision@K, Recall, MRR, NDCG)
-   - Ground-truth dataset curation methodology
-   - Achieved +15% precision, +22% overall quality through systematic testing
-
-**Technical Evidence:**
-- ~5,000+ lines of production Python and TypeScript
-- Advanced RAG patterns: reranking, query expansion, hybrid search, semantic chunking
-- Multi-platform deployment demonstrating architectural flexibility
-- Evaluation rigor differentiating from tutorial-based developers
-
-**Current Engagement:**
-- Fractional CTO for stealth MarTech startup (2024-present)
-- Beta product shipped to early customers
-- Technical strategy, code review, infrastructure decisions
+Ad-tech business intelligence and partner management platform (Next.js, React, PostgreSQL, Stripe, PostHog). Built and shipped with an agent-driven workflow: Cursor + Claude, self-hosted Honcho for agent memory, Hermes as a semi-autonomous agent team.
 
 ---
 
@@ -195,31 +78,33 @@ Shipped production ready RAG evaluation systems demonstrating AI platform capabi
 - AWS Certified Cloud Practitioner (expired 2022)
 
 **Professional Experience:**
-- **17+ Years | ShareASale/Awin Global** — Principal Software Engineer/Architect
+- **PartnershipTool** — Cofounder & Full-Stack Engineer (2025-present)
+- **Origami Risk** — Senior Full Stack Engineer, Skunk Works Platform Team (2026)
+- **17+ Years | ShareASale/Awin Global** — Senior Developer → Lead Architect → Principal Architect
   - Platform serving 250K+ publishers, 10K+ merchants, $1B+ annual transactions
-  - Led acquisitions, platform consolidations, cloud migrations
-  - Scaled engineering team 8 → 25+ engineers
-  - AI Ambassador driving 200%+ velocity improvements
+  - Led acquisitions, platform consolidations, cloud migrations, AI adoption ($500K annualized savings)
 
 **Education:**
-- B.A., Studio Art — Western Illinois University
+- B.A. — Western Illinois University
 
-**Location:** Chicago suburbs (remote-first preferred)
+**Location:** Chicago suburbs (remote-only)
 
 ---
 
 ## Get in Touch
 
-Ready to discuss your project or explore working together?
+I'm looking for senior IC roles on small, fast-moving, high-ownership teams working at the frontier of agent-driven development.
 
 **Contact:** [Get in Touch](https://stevenleve.com/contact/) · [LinkedIn](https://linkedin.com/in/steve-leve)
 
 **Portfolio:**
 - [Vercel RAG Demo](https://vercel-rag-demo.stevenleve.com) (live)
 - [Cloudflare RAG Demo](https://cloudflare-rag-demo.stevenleve.com) (live)
-- [GitHub](https://github.com/sleve) (code examples)
-- [Personal Website](https://stevenleve.com) (case studies, writing)
+- [GitHub](https://github.com/SteveLeve) (code examples)
+- [Case Studies](./case-studies.md)
 
 ---
 
-**Last Updated:** December 2025
+**Last Updated:** July 2026
+
+<!-- Retired detail pages (do not link from nav): services/technical-leadership.md, services/martech-consulting.md, services/cloud-strategy.md — consulting-services framing retired per messaging-core.md 2026-07. Historical content preserved in case-studies/. -->

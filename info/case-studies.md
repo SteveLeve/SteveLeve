@@ -10,7 +10,7 @@
 
 ### [Production RAG Systems: Multi-Platform Experimental Lab](case-studies/production-rag-systems.md)
 
-**Challenge:** Building deployable AI consulting capabilities requires more than theoretical knowledge—clients need consultants who can deploy immediately on diverse platforms, evaluate trade-offs with data, and optimize systematically.
+**Challenge:** Production AI engineering requires more than theoretical knowledge—teams need engineers who can deploy immediately on diverse platforms, evaluate trade-offs with data, and optimize systematically.
 
 **What I Built:** Multi-platform RAG experimental unit enabling systematic comparison of AI architectures, platforms, and techniques. Created production-ready implementations on Vercel, Cloudflare Workers, and local Jupyter environments as controlled labs for evaluating cost, performance, and quality trade-offs. Built with simple, open-source stack to maintain proximity to fundamentals—providing perspective when evaluating higher-abstraction platforms like AWS Bedrock or Azure AI Foundry.
 
@@ -21,7 +21,7 @@
 - **Platform comparison insights:** 90%+ cost reduction possible, informed hosting recommendations
 - **~5,000+ lines** production-quality code with reusable patterns for rapid client deployment
 
-**Value Proposition:** Demonstrates balanced mastery of **Accuracy** (engineering trade-offs), **Precision** (measured optimization), and **Speed** (efficient development)—the foundations for effective AI consulting.
+**Value Proposition:** Demonstrates balanced mastery of **Accuracy** (engineering trade-offs), **Precision** (measured optimization), and **Speed** (efficient development)—the foundations of production AI engineering.
 
 [Read full case study →](case-studies/production-rag-systems.md)
 
@@ -45,19 +45,19 @@
 
 ## Technical Leadership
 
-### [Fractional CTO: Stealth MarTech Startup](case-studies/fractional-cto.md)
+### [PartnershipTool: Cofounder, Full-Stack, Agent-Driven](case-studies/partnershiptool.md)
 
-**Challenge:** Early-stage startup needed technical leadership for beta product launch but couldn't justify full-time executive hire during customer validation phase.
+**Challenge:** Ship an ad-tech business intelligence and partner management platform to early customers with a two-person founding team.
 
-**My Role:** Fractional CTO providing strategic guidance, architecture reviews, and infrastructure decisions (10-15 hours/week).
+**My Role:** Cofounder (equity) and full-stack engineer. Built the product and the agent-driven development system behind it: Cursor + Claude harness, self-hosted Honcho for agent memory, Hermes as a semi-autonomous agent team.
 
 **Key Results:**
-- **Beta product launched** on schedule to early customers
-- **Positive initial feedback** validating product-market fit
-- **Technical foundation** established for scaling
-- **Part-time engagement** maintained during job search
+- **Beta product shipped** to early customers with positive feedback
+- **Production full-stack architecture:** Next.js, React, PostgreSQL, Stripe, PostHog
+- **AI agents in the product:** account configuration and performance insights (Gemini)
+- **Ongoing engagement** — the platform and the agentic practice keep advancing together
 
-[Read full case study →](case-studies/fractional-cto.md)
+[Read full case study →](case-studies/partnershiptool.md)
 
 ---
 
@@ -187,8 +187,8 @@
 - Multi-platform deployment demonstrating architectural flexibility
 - 2-3x velocity gains through systematic AI augmentation
 
-**Technical Leadership:**
-- Active fractional CTO work with beta product launched
+**Ownership & Execution:**
+- Cofounder-level ownership: beta product shipped with a two-person founding team
 - Multi-year, 15-team platform consolidation protecting $100M+ revenue
 - Strategic thinking combined with hands-on architecture
 
@@ -209,11 +209,9 @@
 
 ---
 
-## Let's Talk About Your Challenge
+## Let's Talk
 
-Every case study above started with a problem that seemed insurmountable—and became a solution that delivered measurable results.
-
-What's your challenge?
+Every case study above started with a problem that seemed insurmountable—and became a solution that delivered measurable results. If your team is working on problems like these, I'd like to hear about them.
 
 **Get in Touch:** [Contact Page](https://stevenleve.com/contact/) · [LinkedIn](https://linkedin.com/in/steve-leve)
 
@@ -223,4 +221,4 @@ What's your challenge?
 
 ---
 
-**Last Updated:** December 2025
+**Last Updated:** July 2026
