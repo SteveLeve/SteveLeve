@@ -218,10 +218,6 @@ My work isn't theoretical. You can visit my live demos right now:
 
 Try them. Break them. See how they handle errors, edge cases, and streaming responses.
 
-### Evaluation Expertise
-
-I don't rely only on RAGAS or off-the-shelf tools. I build custom evaluation frameworks because every RAG system has unique quality requirements. I know how to measure what matters for your use case and when to use which tool for bost cost:benefit outcome.
-
 ### Full Stack Background
 
 Most AI engineers come from data science or ML research. I come from 20+ years of designing, delivering, and keeping revenue-critical systems running. That changes how I think about production AI:
