@@ -319,4 +319,4 @@ Ready to move from prototype to production? Let's talk.
 
 ---
 
-**Last Updated:** December 2025
+**Last Updated:** July 2026
